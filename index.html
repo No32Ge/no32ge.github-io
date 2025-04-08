@@ -13,32 +13,32 @@
 
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(135deg, #f0f9ff, #fefce8);
+      background: radial-gradient(circle at top left, #dbeafe, #f0fdf4);
       color: #1f2937;
-      line-height: 1.6;
+      overflow-x: hidden;
     }
 
     header {
-      background-color: #ffffffcc;
-      backdrop-filter: blur(10px);
+      background-color: rgba(255, 255, 255, 0.6);
+      backdrop-filter: blur(12px);
       padding: 20px 40px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
       position: sticky;
       top: 0;
-      z-index: 10;
+      z-index: 100;
     }
 
     .logo {
-      font-size: 1.6rem;
+      font-size: 1.8rem;
       font-weight: 700;
       color: #2563eb;
     }
 
     nav a {
-      margin-left: 20px;
+      margin-left: 24px;
       text-decoration: none;
       color: #374151;
       font-weight: 500;
@@ -51,11 +51,27 @@
 
     .hero {
       text-align: center;
-      padding: 80px 20px;
+      padding: 100px 20px 80px;
+      perspective: 1000px;
+    }
+
+    .hero-content {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.4);
+      backdrop-filter: blur(20px);
+      padding: 60px 40px;
+      border-radius: 24px;
+      box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
+      transform: rotateX(5deg) rotateY(2deg);
+      transition: transform 0.5s;
+    }
+
+    .hero-content:hover {
+      transform: rotateX(0deg) rotateY(0deg) scale(1.02);
     }
 
     .hero h1 {
-      font-size: 3rem;
+      font-size: 3.2rem;
       margin-bottom: 20px;
       color: #111827;
     }
@@ -70,48 +86,59 @@
     .btn-primary {
       display: inline-block;
       padding: 14px 32px;
-      background-color: #3b82f6;
+      background: linear-gradient(135deg, #3b82f6, #2563eb);
       color: white;
-      border-radius: 12px;
+      border-radius: 14px;
       text-decoration: none;
       font-weight: 600;
-      transition: background-color 0.3s ease, transform 0.2s;
+      box-shadow: 0 8px 20px rgba(59, 130, 246, 0.3);
+      transition: all 0.3s ease;
     }
 
     .btn-primary:hover {
-      background-color: #2563eb;
-      transform: translateY(-2px);
+      background: linear-gradient(135deg, #2563eb, #1e40af);
+      transform: translateY(-2px) scale(1.05);
     }
 
     .section {
-      padding: 60px 20px;
-      max-width: 1000px;
+      padding: 80px 20px;
+      max-width: 1200px;
       margin: 0 auto;
       text-align: center;
     }
 
     .section h2 {
-      font-size: 2rem;
-      margin-bottom: 20px;
+      font-size: 2.5rem;
+      margin-bottom: 30px;
       color: #111827;
     }
 
     .features {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 30px;
-      margin-top: 30px;
+      gap: 40px;
+      margin-top: 40px;
+      perspective: 1000px;
     }
 
     .feature {
-      background: white;
-      padding: 30px;
-      border-radius: 16px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+      background: rgba(255, 255, 255, 0.4);
+      backdrop-filter: blur(12px);
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      transform-style: preserve-3d;
+    }
+
+    .feature:hover {
+      transform: translateY(-10px) rotateX(3deg);
+      box-shadow: 0 30px 60px rgba(0,0,0,0.15);
     }
 
     .feature h3 {
       margin-bottom: 10px;
+      font-size: 1.3rem;
       color: #2563eb;
     }
 
@@ -131,6 +158,10 @@
       .hero p {
         font-size: 1rem;
       }
+
+      .hero-content {
+        padding: 40px 20px;
+      }
     }
   </style>
 </head>
@@ -145,14 +176,16 @@
   </header>
 
   <section class="hero">
-    <h1>Learn English Smarter, Not Harder</h1>
-    <p>GE32 English is a modern platform designed to help you master English faster, with personalized resources and intelligent guidance.</p>
-    <a class="btn-primary" href="#contact">Join Our Journey</a>
+    <div class="hero-content">
+      <h1>Learn English Smarter, Not Harder</h1>
+      <p>GE32 English is a future-ready platform designed to help you master English with intelligent tools, curated resources, and a personal growth mindset.</p>
+      <a class="btn-primary" href="#contact">Get Started</a>
+    </div>
   </section>
 
   <section class="section" id="about">
     <h2>About GE32 English</h2>
-    <p>We're building an ecosystem for English learners that bridges AI technology with proven teaching methods. Whether you're a beginner or an advanced learner, GE32 has something for you.</p>
+    <p>We blend smart algorithms, authentic content, and real human guidance to create an immersive English-learning experience. Our mission is to empower learners across all stages with confidence and clarity.</p>
   </section>
 
   <section class="section" id="features">
@@ -160,22 +193,22 @@
     <div class="features">
       <div class="feature">
         <h3>🎯 Personalized Learning</h3>
-        <p>Get content tailored to your level and goals. Our system learns with you.</p>
+        <p>AI-driven progress tracking and adaptive materials that evolve with you.</p>
       </div>
       <div class="feature">
-        <h3>📚 Resource Hub</h3>
-        <p>Access curated vocabulary, grammar tips, videos, and practical exercises.</p>
+        <h3>📚 Curated Resources</h3>
+        <p>Premium learning modules, listening labs, speaking rooms and flashcards.</p>
       </div>
       <div class="feature">
-        <h3>🤖 Smart Guidance</h3>
-        <p>Our future AI tutor will guide you just like a private coach.</p>
+        <h3>🤖 Smart Coaching</h3>
+        <p>Future AI tutor with real-time feedback, mock exams, and motivation support.</p>
       </div>
     </div>
   </section>
 
   <section class="section" id="contact">
     <h2>Get Connected</h2>
-    <p>Follow us on WeChat for early access, updates, and community support.</p>
+    <p>Want to be the first to experience the future of English learning? Follow us now on WeChat!</p>
     <a class="btn-primary" href="https://mp.weixin.qq.com/s/2fl20AFoDMuyPynDmDnHvg" target="_blank">Follow on WeChat</a>
   </section>
 
