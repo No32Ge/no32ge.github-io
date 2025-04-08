@@ -13,27 +13,52 @@
     }
     html, body {
       font-family: 'Inter', sans-serif;
-      background: #f9fafb;
+      background: #000;
+      color: #fff;
       scroll-behavior: smooth;
       overflow-x: hidden;
+    }
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle, rgba(59,130,246,0.15), transparent 70%), url('https://www.transparenttextures.com/patterns/stardust.png');
+      background-size: cover;
+      z-index: -2;
+      animation: bgShift 30s infinite linear;
+    }
+    canvas#particles-js {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+    @keyframes bgShift {
+      0% { background-position: 0 0; }
+      100% { background-position: 1000px 1000px; }
     }
     header {
       position: fixed;
       top: 0;
       width: 100%;
-      background: rgba(255,255,255,0.9);
+      background: rgba(0, 0, 0, 0.6);
       backdrop-filter: blur(10px);
       padding: 20px 30px;
       display: flex;
       justify-content: space-between;
       align-items: center;
       z-index: 1000;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      box-shadow: 0 2px 8px rgba(255, 255, 255, 0.05);
     }
     .logo {
       font-weight: 800;
       font-size: 1.6rem;
-      color: #3b82f6;
+      color: #60a5fa;
     }
     nav {
       display: flex;
@@ -41,12 +66,12 @@
     }
     nav a {
       text-decoration: none;
-      color: #374151;
+      color: #d1d5db;
       font-weight: 600;
       transition: color 0.3s;
     }
     nav a:hover {
-      color: #2563eb;
+      color: #3b82f6;
     }
     .section {
       min-height: 100vh;
@@ -66,14 +91,16 @@
       transform: translateY(0) rotateX(0);
     }
     .section h1, .section h2 {
-      font-size: 2.5rem;
+      font-size: 3rem;
       margin-bottom: 1rem;
-      color: #111827;
+      color: #f3f4f6;
+      text-shadow: 0 0 10px rgba(255, 255, 255, 0.15);
+      animation: floatText 3s ease-in-out infinite;
     }
     .section p {
       font-size: 1.2rem;
       max-width: 700px;
-      color: #4b5563;
+      color: #9ca3af;
     }
     .btn-primary {
       margin-top: 2rem;
@@ -93,16 +120,22 @@
       text-align: center;
       padding: 40px 20px;
       font-size: 0.9rem;
-      color: #9ca3af;
+      color: #6b7280;
     }
     @media (max-width: 768px) {
       nav {
         display: none;
       }
     }
+    @keyframes floatText {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0); }
+    }
   </style>
 </head>
 <body>
+  <canvas id="particles-js"></canvas>
   <header>
     <div class="logo">GE32 English</div>
     <nav>
@@ -115,17 +148,17 @@
 
   <section class="section" id="intro">
     <h1>Learn English Smarter</h1>
-    <p>Experience English learning like never before. Immersive, intuitive, intelligent.</p>
+    <p>Experience English learning like never before. Immersive, intuitive, effective.</p>
   </section>
 
   <section class="section" id="about">
     <h2>About GE32</h2>
-    <p>We combine AI with effective education to create the most engaging English learning experience.</p>
+    <p>We build real, personalized learning experiences using tech and design. GE32 empowers your growth.</p>
   </section>
 
   <section class="section" id="features">
     <h2>Smart Features</h2>
-    <p>Personalized curriculum. Real-time feedback. AI-powered recommendations and more.</p>
+    <p>Personalized curriculum. Real-time feedback. Beautiful, immersive environments for learning.</p>
   </section>
 
   <section class="section" id="contact">
@@ -149,6 +182,28 @@
 
     document.querySelectorAll('.section').forEach(section => {
       observer.observe(section);
+    });
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script>
+    particlesJS("particles-js", {
+      "particles": {
+        "number": { "value": 60 },
+        "size": { "value": 3 },
+        "color": { "value": "#60a5fa" },
+        "opacity": { "value": 0.4 },
+        "line_linked": {
+          "enable": true,
+          "distance": 150,
+          "color": "#3b82f6",
+          "opacity": 0.3,
+          "width": 1
+        },
+        "move": {
+          "enable": true,
+          "speed": 1.2
+        }
+      }
     });
   </script>
 </body>
