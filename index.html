@@ -18,7 +18,7 @@
       background: #000;
       color: #fff;
       scroll-behavior: smooth;
-      overflow-x: hidden;
+      
     }
     body::before {
       content: '';
@@ -31,20 +31,9 @@
       background-size: cover;
       z-index: -2;
       animation: bgShift 30s infinite linear;
+      overflow-y: hidden;
     }
-    #flowing-text {
-      position: fixed;
-      top: 50%;
-      left: 100%;
-      transform: translateY(-50%);
-      font-size: 6rem;
-      font-weight: 800;
-      color: rgba(255, 255, 255, 0.03);
-      white-space: nowrap;
-      pointer-events: none;
-      z-index: -3;
-      animation: scrollText 60s linear infinite;
-    }
+
     @keyframes scrollText {
       0% { left: 100%; }
       100% { left: -100%; }
@@ -55,6 +44,7 @@
       100% { background-position: 1000px 1000px; }
     }
     header {
+      overflow: hidden;
       position: fixed;
       top: 0;
       width: 100%;
@@ -70,7 +60,7 @@
     .logo {
       font-weight: 800;
       font-size: 1.6rem;
-      color: #60e8fa;
+      color: #ffffff;
     }
     nav {
       display: flex;
@@ -97,10 +87,12 @@
       transform: translateY(60px) rotateX(15deg);
       transition: all 1s ease-in-out;
       perspective: 1000px;
+      overflow-y: hidden;
     }
     .section.visible {
       opacity: 1;
       transform: translateY(0) rotateX(0);
+      overflow-y: hidden;
     }
     .section h1, .section h2 {
       font-size: 3rem;
@@ -108,11 +100,13 @@
       color: #f3f4f6;
       text-shadow: 0 0 10px rgba(255, 255, 255, 0.15);
       animation: floatText 3s ease-in-out infinite;
+      overflow-y: hidden;
     }
     .section p {
       font-size: 1.2rem;
       max-width: 700px;
       color: #9ca3af;
+      overflow-y: hidden;
     }
     .btn-primary {
       margin-top: 2rem;
@@ -123,6 +117,7 @@
       text-decoration: none;
       font-weight: 600;
       transition: background 0.3s, transform 0.3s;
+      overflow-y: hidden;
     }
     .btn-primary:hover {
       background: #2563eb;
@@ -137,11 +132,43 @@
       font-size: 0.9rem;
       color: #6b7280;
     }
-    @media (max-width: 768px) {
-      nav {
-        display: none;
-      }
-    }
+    .mobile-nav {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 70px;
+  right: 20px;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  padding: 20px;
+  gap: 12px;
+  z-index: 999;
+  transition: all 0.3s ease-in-out;
+}
+
+/* 汉堡按钮 */
+.hamburger {
+  display: none;
+  font-size: 1.8rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* 移动端样式 */
+@media (max-width: 768px) {
+  .desktop-nav {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .mobile-nav.active {
+    display: flex;
+  }
+}
     @keyframes floatText {
       0% { transform: translateY(0); }
       50% { transform: translateY(-10px); }
@@ -153,46 +180,76 @@
     position: fixed;
     width: 50vw;
     height: 100vh;
-    perspective: 1000px;
+    perspective: 2000px;
     overflow: hidden;
     background-color: aqua;
     border-top-right-radius: 80px;
   }
 
   .word {
-    position: absolute;
+    z-index: 0;
+    position: fixed;
     font-size: 2rem;
     font-weight: bold;
-    color: rgb(0, 0, 0);
+    color: rgb(158, 158, 158);
     transform-style: preserve-3d;
     will-change: transform, opacity;
     pointer-events: none;
+    overflow-y: hidden;
   }
 
   </style>
 </head>
 <body>
-  <div id="flowing-text">GE32 English GE32 English GE32 English</div>
   <header>
     <div class="logo">GE32 English</div>
-    <nav>
+    <nav class="desktop-nav">
       <a href="#intro">Intro</a>
       <a href="#about">About</a>
       <a href="#features">Features</a>
       <a href="#contact">Contact</a>
     </nav>
-  </header>
-  <div class="scene" id="scene">
-    <div class="word">语法</div>
-    <div class="word">主页</div>
-    <div class="word">阅读</div>
-    <div class="word">.</div>
-    <div class="word">公众号</div>
-    <div class="word">Page</div>
+
+  <div class="hamburger" id="hamburger">&#9776;</div> <!-- 汉堡按钮 -->
+  <div class="mobile-nav" id="mobileNav">
+    <a href="#intro">Intro</a>
+    <a href="#about">About</a>
+    <a href="#features">Features</a>
+    <a href="#contact">Contact</a>
   </div>
+  </header>
+  <div id="particles-js" style="position:fixed; width:100%; height:100%; z-index:2;"></div>
+  
+    <div class="word">a</div>
+    <div class="word">b</div>
+    <div class="word">c</div>
+    <div class="word">d</div>
+    <div class="word">e</div>
+    <div class="word">f</div>
+    <div class="word">g</div>
+    <div class="word">h</div>
+    <div class="word">i</div>
+    <div class="word">j</div>
+    <div class="word">k</div>
+    <div class="word">l</div>
+    <div class="word">m</div>
+    <div class="word">n</div>
+    <div class="word">o</div>
+    <div class="word">p</div>
+    <div class="word">q</div>
+    <div class="word">r</div>
+    <div class="word">s</div>
+    <div class="word">t</div>
+    <div class="word">u</div>
+    <div class="word">v</div>
+    <div class="word">w</div>
+    <div class="word">x</div>
+    <div class="word">y</div>
+    <div class="word">z</div>
+
   <section class="section" id="intro">
     <h1>Learn English Smarter</h1>
-    <p>A space for curious learners to grow with clarity and confidence — step by step.</p>
+    <p style="z-index: 2;">A space for curious learners to grow with clarity and confidence — step by step.</p>
    
 </section>
 
@@ -218,7 +275,7 @@
 
   <script>
     const words = document.querySelectorAll('.word');
-    const radius = 200;
+    const radius = 80;
 
     let centerX = window.innerWidth / 4;
     let centerY = window.innerHeight / 2;
@@ -264,11 +321,6 @@
       centerY = window.innerHeight / 2;
     });
 
-
-
-
-
-
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -303,6 +355,22 @@
         }
       }
     });
+
+
+
+
+    const hamburger = document.getElementById('hamburger');
+    const mobileNav = document.getElementById('mobileNav');
+    hamburger.addEventListener('click', () => {
+  mobileNav.classList.toggle('active');
+});
+
+// 可选：点击菜单项时关闭菜单（更优雅）
+mobileNav.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', () => {
+    mobileNav.classList.remove('active');
+  });
+});
   </script>
 </body>
 </html>
