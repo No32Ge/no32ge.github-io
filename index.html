@@ -1,48 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Welcome to GE32 English</title>
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
     body {
-      font-family: Arial, sans-serif;
-      background-color: #f2f6fc;
-      color: #333;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #e0f2fe, #f0fdf4);
       display: flex;
-      flex-direction: column;
       align-items: center;
       justify-content: center;
-      height: 100vh;
-      margin: 0;
+      min-height: 100vh;
+      color: #1f2937;
+    }
+
+    .card {
+      background: white;
+      padding: 40px 30px;
+      border-radius: 20px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
       text-align: center;
+      max-width: 500px;
+      animation: fadeInUp 1s ease;
     }
+
     h1 {
-      font-size: 2.5rem;
+      font-size: 2.8rem;
       margin-bottom: 1rem;
+      color: #111827;
     }
+
     p {
       font-size: 1.2rem;
-      max-width: 600px;
       margin-bottom: 2rem;
+      line-height: 1.6;
+      color: #4b5563;
     }
+
     a {
       display: inline-block;
-      padding: 10px 20px;
-      background-color: #007BFF;
+      padding: 12px 28px;
+      background-color: #3b82f6;
       color: white;
       text-decoration: none;
-      border-radius: 6px;
-      transition: background-color 0.3s ease;
+      border-radius: 10px;
+      font-weight: 600;
+      transition: all 0.3s ease;
     }
+
     a:hover {
-      background-color: #0056b3;
+      background-color: #2563eb;
+      transform: scale(1.05);
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .card {
+        padding: 30px 20px;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
     }
   </style>
 </head>
 <body>
-  <h1>Welcome to GE32 English</h1>
-  <p>We're working on something exciting to help you learn English better and faster. Stay tuned for updates and new resources!</p>
-  <a href="https://mp.weixin.qq.com/s/2fl20AFoDMuyPynDmDnHvg" target="_blank">Read More on WeChat</a>
+  <div class="card">
+    <h1>Welcome to GE32 English</h1>
+    <p>We're working on something exciting to help you learn English better and faster. Stay tuned for updates and new resources!</p>
+    <a href="https://mp.weixin.qq.com/s/2fl20AFoDMuyPynDmDnHvg" target="_blank">Read More on WeChat</a>
+  </div>
 </body>
 </html>
