@@ -2,165 +2,102 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>GE32 English - Learn Smarter</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
-
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: radial-gradient(circle at top left, #dbeafe, #f0fdf4);
-      color: #1f2937;
+    html, body {
+      font-family: 'Inter', sans-serif;
+      background: #f9fafb;
+      scroll-behavior: smooth;
       overflow-x: hidden;
     }
-
     header {
-      background-color: rgba(255, 255, 255, 0.6);
-      backdrop-filter: blur(12px);
-      padding: 20px 40px;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(255,255,255,0.9);
+      backdrop-filter: blur(10px);
+      padding: 20px 30px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-      position: sticky;
-      top: 0;
-      z-index: 100;
+      z-index: 1000;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
     }
-
     .logo {
-      font-size: 1.8rem;
-      font-weight: 700;
-      color: #2563eb;
+      font-weight: 800;
+      font-size: 1.6rem;
+      color: #3b82f6;
     }
-
+    nav {
+      display: flex;
+      gap: 20px;
+    }
     nav a {
-      margin-left: 24px;
       text-decoration: none;
       color: #374151;
-      font-weight: 500;
+      font-weight: 600;
       transition: color 0.3s;
     }
-
     nav a:hover {
       color: #2563eb;
     }
-
-    .hero {
+    .section {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       text-align: center;
-      padding: 100px 20px 80px;
+      padding: 120px 20px 80px;
+      opacity: 0;
+      transform: translateY(60px) rotateX(15deg);
+      transition: all 1s ease-in-out;
       perspective: 1000px;
     }
-
-    .hero-content {
-      display: inline-block;
-      background: rgba(255, 255, 255, 0.4);
-      backdrop-filter: blur(20px);
-      padding: 60px 40px;
-      border-radius: 24px;
-      box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
-      transform: rotateX(5deg) rotateY(2deg);
-      transition: transform 0.5s;
+    .section.visible {
+      opacity: 1;
+      transform: translateY(0) rotateX(0);
     }
-
-    .hero-content:hover {
-      transform: rotateX(0deg) rotateY(0deg) scale(1.02);
-    }
-
-    .hero h1 {
-      font-size: 3.2rem;
-      margin-bottom: 20px;
+    .section h1, .section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
       color: #111827;
     }
-
-    .hero p {
-      font-size: 1.25rem;
+    .section p {
+      font-size: 1.2rem;
       max-width: 700px;
-      margin: 0 auto 30px;
       color: #4b5563;
     }
-
     .btn-primary {
-      display: inline-block;
-      padding: 14px 32px;
-      background: linear-gradient(135deg, #3b82f6, #2563eb);
-      color: white;
-      border-radius: 14px;
+      margin-top: 2rem;
+      padding: 14px 28px;
+      background: #3b82f6;
+      color: #fff;
+      border-radius: 12px;
       text-decoration: none;
       font-weight: 600;
-      box-shadow: 0 8px 20px rgba(59, 130, 246, 0.3);
-      transition: all 0.3s ease;
+      transition: background 0.3s, transform 0.3s;
     }
-
     .btn-primary:hover {
-      background: linear-gradient(135deg, #2563eb, #1e40af);
-      transform: translateY(-2px) scale(1.05);
+      background: #2563eb;
+      transform: translateY(-2px);
     }
-
-    .section {
-      padding: 80px 20px;
-      max-width: 1200px;
-      margin: 0 auto;
-      text-align: center;
-    }
-
-    .section h2 {
-      font-size: 2.5rem;
-      margin-bottom: 30px;
-      color: #111827;
-    }
-
-    .features {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 40px;
-      margin-top: 40px;
-      perspective: 1000px;
-    }
-
-    .feature {
-      background: rgba(255, 255, 255, 0.4);
-      backdrop-filter: blur(12px);
-      padding: 40px;
-      border-radius: 20px;
-      box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-      transition: transform 0.4s ease, box-shadow 0.4s ease;
-      transform-style: preserve-3d;
-    }
-
-    .feature:hover {
-      transform: translateY(-10px) rotateX(3deg);
-      box-shadow: 0 30px 60px rgba(0,0,0,0.15);
-    }
-
-    .feature h3 {
-      margin-bottom: 10px;
-      font-size: 1.3rem;
-      color: #2563eb;
-    }
-
     footer {
-      background-color: #f9fafb;
-      padding: 30px 20px;
       text-align: center;
+      padding: 40px 20px;
       font-size: 0.9rem;
-      color: #6b7280;
+      color: #9ca3af;
     }
-
-    @media (max-width: 600px) {
-      .hero h1 {
-        font-size: 2rem;
-      }
-
-      .hero p {
-        font-size: 1rem;
-      }
-
-      .hero-content {
-        padding: 40px 20px;
+    @media (max-width: 768px) {
+      nav {
+        display: none;
       }
     }
   </style>
@@ -169,51 +106,50 @@
   <header>
     <div class="logo">GE32 English</div>
     <nav>
+      <a href="#intro">Intro</a>
       <a href="#about">About</a>
       <a href="#features">Features</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
 
-  <section class="hero">
-    <div class="hero-content">
-      <h1>Learn English Smarter, Not Harder</h1>
-      <p>GE32 English is a future-ready platform designed to help you master English with intelligent tools, curated resources, and a personal growth mindset.</p>
-      <a class="btn-primary" href="#contact">Get Started</a>
-    </div>
+  <section class="section" id="intro">
+    <h1>Learn English Smarter</h1>
+    <p>Experience English learning like never before. Immersive, intuitive, intelligent.</p>
   </section>
 
   <section class="section" id="about">
-    <h2>About GE32 English</h2>
-    <p>We blend smart algorithms, authentic content, and real human guidance to create an immersive English-learning experience. Our mission is to empower learners across all stages with confidence and clarity.</p>
+    <h2>About GE32</h2>
+    <p>We combine AI with effective education to create the most engaging English learning experience.</p>
   </section>
 
   <section class="section" id="features">
-    <h2>What We Offer</h2>
-    <div class="features">
-      <div class="feature">
-        <h3>🎯 Personalized Learning</h3>
-        <p>AI-driven progress tracking and adaptive materials that evolve with you.</p>
-      </div>
-      <div class="feature">
-        <h3>📚 Curated Resources</h3>
-        <p>Premium learning modules, listening labs, speaking rooms and flashcards.</p>
-      </div>
-      <div class="feature">
-        <h3>🤖 Smart Coaching</h3>
-        <p>Future AI tutor with real-time feedback, mock exams, and motivation support.</p>
-      </div>
-    </div>
+    <h2>Smart Features</h2>
+    <p>Personalized curriculum. Real-time feedback. AI-powered recommendations and more.</p>
   </section>
 
   <section class="section" id="contact">
     <h2>Get Connected</h2>
-    <p>Want to be the first to experience the future of English learning? Follow us now on WeChat!</p>
+    <p>Follow our WeChat for early access and updates to GE32 English.</p>
     <a class="btn-primary" href="https://mp.weixin.qq.com/s/2fl20AFoDMuyPynDmDnHvg" target="_blank">Follow on WeChat</a>
   </section>
 
   <footer>
     &copy; 2025 GE32 English. All rights reserved.
   </footer>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.3 });
+
+    document.querySelectorAll('.section').forEach(section => {
+      observer.observe(section);
+    });
+  </script>
 </body>
 </html>
