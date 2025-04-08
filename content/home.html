@@ -1,1 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>GE32 English</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+    <style>
+      body, html {
+        margin: 0;
+        padding: 0;
+        font-family: 'Segoe UI', sans-serif;
+        height: 100%;
+        overflow-x: hidden;
+      }
+
+      .card {
+        backdrop-filter: blur(10px);
+        background-color: rgba(255, 255, 255, 0.1);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+        border-radius: 20px;
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        transition: transform 0.3s ease-in-out;
+      }
+
+      .card:hover {
+        transform: translateY(-5px) scale(1.03);
+      }
+    </style>
+  </head>
+
+  <body class="relative text-white">
+    <!-- Vanta.js 动画背景 -->
+    <div id="vanta-bg" class="absolute inset-0 -z-10"></div>
+
+    <!-- 页面内容 -->
+    <div class="min-h-screen flex flex-col justify-center items-center text-center px-4">
+      <h1 class="text-4xl md:text-6xl font-bold mb-4 drop-shadow-md">GE32</h1>
+      <p class="text-lg md:text-xl text-blue-200 mb-12">您的英语学习助手</p>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full max-w-6xl">
+        <a href="articles.html" class="card p-6 text-center">
+          <div class="text-4xl mb-2">📖</div>
+          <h2 class="text-xl font-semibold">文章阅读</h2>
+          <p class="text-sm text-blue-100">提升你的阅读能力</p>
+        </a>
+        <a href="grammar.html" class="card p-6 text-center">
+          <div class="text-4xl mb-2">🧠</div>
+          <h2 class="text-xl font-semibold">语法学习</h2>
+          <p class="text-sm text-blue-100">深入理解英文结构</p>
+        </a>
+        <a href="vocabulary.html" class="card p-6 text-center">
+          <div class="text-4xl mb-2">📚</div>
+          <h2 class="text-xl font-semibold">单词记忆</h2>
+          <p class="text-sm text-blue-100">掌握核心词汇</p>
+        </a>
+        <a href="tools.html" class="card p-6 text-center">
+          <div class="text-4xl mb-2">🛠️</div>
+          <h2 class="text-xl font-semibold">小工具</h2>
+          <p class="text-sm text-blue-100">翻译、发音等工具</p>
+        </a>
+      </div>
+
+      <footer class="mt-16 text-sm text-blue-200" style="position: fixed; left: auto; bottom: 20px;">
+        © 2025 GE32 English. All rights reserved.
+      </footer>
+    </div>
+
+    <!-- 初始化 Vanta 背景 -->
+    <script>
+      VANTA.NET({
+        el: "#vanta-bg",
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+        minHeight: 200.00,
+        minWidth: 200.00,
+        scale: 1.00,
+        scaleMobile: 1.00,
+        color: 0x3b82f6,
+        backgroundColor: 0x0f172a,
+        points: 12.0,
+        maxDistance: 22.0,
+        spacing: 18.0
+      })
+    </script>
+  </body>
+</html>
 
