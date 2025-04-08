@@ -1,91 +1,402 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>GE32 English</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
-    <style>
-      body, html {
-        margin: 0;
-        padding: 0;
-        font-family: 'Segoe UI', sans-serif;
-        height: 100%;
-        overflow-x: hidden;
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GE32 English - Learn Smarter</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel = "stylesheet" href="css/flowtext.css">
+  <style>
+   
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html, body {
+      font-family: 'Inter', sans-serif;
+      background: #000;
+      color: #fff;
+      scroll-behavior: smooth;
+      
+    }
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle, rgba(59,130,246,0.1), transparent 70%), url('https://www.transparenttextures.com/patterns/stardust.png');
+      background-size: cover;
+      z-index: -2;
+      animation: bgShift 30s infinite linear;
+      overflow-y: hidden;
+    }
+
+    @keyframes scrollText {
+      0% { left: 100%; }
+      100% { left: -100%; }
+    }
+
+    @keyframes bgShift {
+      0% { background-position: 0 0; }
+      100% { background-position: 1000px 1000px; }
+    }
+    header {
+      overflow: hidden;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(10px);
+      padding: 20px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+      box-shadow: 0 2px 8px rgba(134, 84, 84, 0.05);
+    }
+    .logo {
+      font-weight: 800;
+      font-size: 1.6rem;
+      color: #ffffff;
+    }
+    nav {
+      display: flex;
+      gap: 20px;
+    }
+    nav a {
+      text-decoration: none;
+      color: #d1d5db;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #3b82f6;
+    }
+    .section {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 120px 20px 80px;
+      opacity: 0;
+      transform: translateY(60px) rotateX(15deg);
+      transition: all 1s ease-in-out;
+      perspective: 1000px;
+      overflow-y: hidden;
+    }
+    .section.visible {
+      opacity: 1;
+      transform: translateY(0) rotateX(0);
+      overflow-y: hidden;
+    }
+    .section h1, .section h2 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      color: #f3f4f6;
+      text-shadow: 0 0 10px rgba(255, 255, 255, 0.15);
+      animation: floatText 3s ease-in-out infinite;
+      overflow-y: hidden;
+    }
+    .section p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      color: #9ca3af;
+      overflow-y: hidden;
+    }
+    .btn-primary {
+      margin-top: 2rem;
+      padding: 14px 28px;
+      background: #3b82f6;
+      color: #fff;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.3s, transform 0.3s;
+      overflow-y: hidden;
+    }
+    .btn-primary:hover {
+      background: #2563eb;
+      transform: translateY(-2px);
+    }
+    footer {
+      bottom: 20px; /* 距离页面底部20px */
+      right: 20px;  /* 距离页面右边20px */
+      position: fixed;
+      text-align: center;
+      padding: 40px 20px;
+      font-size: 0.9rem;
+      color: #6b7280;
+    }
+    .mobile-nav {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 70px;
+  right: 20px;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  padding: 20px;
+  gap: 12px;
+  z-index: 999;
+  transition: all 0.3s ease-in-out;
+}
+
+/* 汉堡按钮 */
+.hamburger {
+  display: none;
+  font-size: 1.8rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* 移动端样式 */
+@media (max-width: 768px) {
+  .desktop-nav {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .mobile-nav.active {
+    display: flex;
+  }
+}
+    @keyframes floatText {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0); }
+    }
+
+    .scene {
+    top: 90px;
+    position: fixed;
+    width: 50vw;
+    height: 100vh;
+    perspective: 2000px;
+    overflow: hidden;
+    background-color: aqua;
+    border-top-right-radius: 80px;
+  }
+
+  .word {
+    z-index: 0;
+    position: fixed;
+    font-size: 2rem;
+    font-weight: bold;
+    color: rgb(158, 158, 158);
+    transform-style: preserve-3d;
+    will-change: transform, opacity;
+    pointer-events: none;
+    overflow-y: hidden;
+  }
+
+  .enter-button {
+  position: fixed;
+  bottom: 40px;
+  left: 40px;
+  padding: 16px 32px;
+  background-color: #2563eb;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 999px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  z-index: 999;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.enter-button:hover {
+  background-color: #1d4ed8;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+}
+
+
+
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">GE32 English</div>
+    <nav class="desktop-nav">
+      <a href="#intro">Intro</a>
+      <a href="#about">About</a>
+      <a href="#features">Features</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+  <div class="hamburger" id="hamburger">&#9776;</div> <!-- 汉堡按钮 -->
+  <div class="mobile-nav" id="mobileNav">
+    <a href="#intro">Intro</a>
+    <a href="#about">About</a>
+    <a href="#features">Features</a>
+    <a href="#contact">Contact</a>
+  </div>
+  </header>
+  <div id="particles-js" style="position:fixed; width:100%; height:100%; z-index:2;"></div>
+  
+    <div class="word">a</div>
+    <div class="word">b</div>
+    <div class="word">c</div>
+    <div class="word">d</div>
+    <div class="word">e</div>
+    <div class="word">f</div>
+    <div class="word">g</div>
+    <div class="word">h</div>
+    <div class="word">i</div>
+    <div class="word">j</div>
+    <div class="word">k</div>
+    <div class="word">l</div>
+    <div class="word">m</div>
+    <div class="word">n</div>
+    <div class="word">o</div>
+    <div class="word">p</div>
+    <div class="word">q</div>
+    <div class="word">r</div>
+    <div class="word">s</div>
+    <div class="word">t</div>
+    <div class="word">u</div>
+    <div class="word">v</div>
+    <div class="word">w</div>
+    <div class="word">x</div>
+    <div class="word">y</div>
+    <div class="word">z</div>
+
+  <section class="section" id="intro">
+    <h1>Learn English Smarter</h1>
+    <p style="z-index: 2;">A space for curious learners to grow with clarity and confidence — step by step.</p>
+</section>
+<a href="content/home.html" class="enter-button">Tap to Enter</a>
+  <section class="section" id="about">
+    <h2>About GE32</h2>
+    <p>We're creating solid English learning tools — clear paths, focused content, and a better way to practice what matters most.</p>
+  </section>
+
+  <section class="section" id="features">
+    <h2>What We Offer</h2>
+    <p>High-quality resources. Organized knowledge. A roadmap for progress that works with you, not against you.</p>
+  </section>
+
+  <section class="section" id="contact">
+    <h2>Get Connected</h2>
+    <p>Follow our WeChat for early access and updates to GE32 English.</p>
+    <a class="btn-primary" href="https://mp.weixin.qq.com/s/2fl20AFoDMuyPynDmDnHvg" target="_blank">Follow on WeChat</a>
+  </section>
+
+  <footer>
+    &copy; 2025 GE32 English. All rights reserved.
+  </footer>
+
+  <script>
+    const words = document.querySelectorAll('.word');
+    const radius = 80;
+
+    let centerX = window.innerWidth / 4;
+    let centerY = window.innerHeight / 2;
+
+    // 每个文字的角度分布
+    const wordData = Array.from(words).map((word, i) => {
+      const theta = (i / words.length) * 2 * Math.PI; // 横向分布
+      const phi = Math.PI / 4 + (i % 3) * (Math.PI / 8); // 控制纵向分布
+      return { word, theta, phi };
+    });
+
+    function render() {
+      wordData.forEach(data => {
+        // 球面坐标
+        const x = radius * Math.cos(data.theta) * Math.sin(data.phi);
+        const y = radius * Math.sin(data.theta) * Math.sin(data.phi);
+        const z = radius * Math.cos(data.phi);
+
+        // 透视缩放
+        const scale = (z + radius) / (2 * radius); // 0~1
+        const opacity = scale;
+
+        // 以屏幕中心为球心
+        data.word.style.transform = `
+          translate3d(${x + centerX}px, ${y + centerY}px, ${z}px)
+          scale(${scale})
+        `;
+        data.word.style.opacity = opacity;
+
+        // 动态旋转角度
+        data.theta += 0.01;
+        data.phi += 0.002;
+      });
+
+      requestAnimationFrame(render);
+    }
+
+    render();
+
+    // 响应窗口变化
+    window.addEventListener('resize', () => {
+      centerX = window.innerWidth / 2;
+      centerY = window.innerHeight / 2;
+    });
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.3 });
+
+    document.querySelectorAll('.section').forEach(section => {
+      observer.observe(section);
+    });
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script>
+    
+    particlesJS("particles-js", {
+      "particles": {
+        "number": { "value": 60 },
+        "size": { "value": 3 },
+        "color": { "value": "#60a5fa" },
+        "opacity": { "value": 0.4 },
+        "line_linked": {
+          "enable": true,
+          "distance": 150,
+          "color": "#3b82f6",
+          "opacity": 0.3,
+          "width": 1
+        },
+        "move": {
+          "enable": true,
+          "speed": 1.2
+        }
       }
+    });
 
-      .card {
-        backdrop-filter: blur(10px);
-        background-color: rgba(255, 255, 255, 0.1);
-        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-        border-radius: 20px;
-        border: 1px solid rgba(255, 255, 255, 0.18);
-        transition: transform 0.3s ease-in-out;
-      }
 
-      .card:hover {
-        transform: translateY(-5px) scale(1.03);
-      }
-    </style>
-  </head>
 
-  <body class="relative text-white">
-    <!-- Vanta.js 动画背景 -->
-    <div id="vanta-bg" class="absolute inset-0 -z-10"></div>
 
-    <!-- 页面内容 -->
-    <div class="min-h-screen flex flex-col justify-center items-center text-center px-4">
-      <h1 class="text-4xl md:text-6xl font-bold mb-4 drop-shadow-md">GE32</h1>
-      <p class="text-lg md:text-xl text-blue-200 mb-12">您的英语学习助手</p>
+    const hamburger = document.getElementById('hamburger');
+    const mobileNav = document.getElementById('mobileNav');
+    hamburger.addEventListener('click', () => {
+  mobileNav.classList.toggle('active');
+});
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full max-w-6xl">
-        <a href="articles.html" class="card p-6 text-center">
-          <div class="text-4xl mb-2">📖</div>
-          <h2 class="text-xl font-semibold">文章阅读</h2>
-          <p class="text-sm text-blue-100">提升你的阅读能力</p>
-        </a>
-        <a href="grammar.html" class="card p-6 text-center">
-          <div class="text-4xl mb-2">🧠</div>
-          <h2 class="text-xl font-semibold">语法学习</h2>
-          <p class="text-sm text-blue-100">深入理解英文结构</p>
-        </a>
-        <a href="vocabulary.html" class="card p-6 text-center">
-          <div class="text-4xl mb-2">📚</div>
-          <h2 class="text-xl font-semibold">单词记忆</h2>
-          <p class="text-sm text-blue-100">掌握核心词汇</p>
-        </a>
-        <a href="tools.html" class="card p-6 text-center">
-          <div class="text-4xl mb-2">🛠️</div>
-          <h2 class="text-xl font-semibold">小工具</h2>
-          <p class="text-sm text-blue-100">翻译、发音等工具</p>
-        </a>
-      </div>
-
-      <footer class="mt-16 text-sm text-blue-200" style="position: fixed; left: auto; bottom: 20px;">
-        © 2025 GE32 English. All rights reserved.
-      </footer>
-    </div>
-
-    <!-- 初始化 Vanta 背景 -->
-    <script>
-      VANTA.NET({
-        el: "#vanta-bg",
-        mouseControls: true,
-        touchControls: true,
-        gyroControls: false,
-        minHeight: 200.00,
-        minWidth: 200.00,
-        scale: 1.00,
-        scaleMobile: 1.00,
-        color: 0x3b82f6,
-        backgroundColor: 0x0f172a,
-        points: 12.0,
-        maxDistance: 22.0,
-        spacing: 18.0
-      })
-    </script>
-  </body>
+// 可选：点击菜单项时关闭菜单（更优雅）
+mobileNav.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', () => {
+    mobileNav.classList.remove('active');
+  });
+});
+  </script>
+</body>
 </html>
-
