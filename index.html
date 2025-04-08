@@ -1,6 +1,5901 @@
 <!DOCTYPE html>
-<html>
-<body>
-  <h1>Hello! ge32english.com is working!</h1>
-</body>
-</html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Ge32学习星球</title>
+</head>
+<body><section id="output">
+    <section style="
+  position: relative;
+  max-width: 600px;
+  margin: 32px auto;
+  padding: 40px;
+  background: #f5fae6;
+  border: 2px solid #8c9772;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(140, 151, 114, 0.2);
+">
+
+<!-- 树叶纹理背景 -->
+<div style="
+  position: absolute;
+  top: -20%; left: -20%; right: -20%; bottom: -20%;
+  background: url('data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20200%20200%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cg%20opacity%3D%220.15%22%3E%3Cpath%20d%3D%22M30%2015Q45%205%2060%2015%2075%2025%2090%2015%22%20stroke%3D%22%238c9772%22%20fill%3D%22none%22%20stroke-width%3D%222%22%2F%3E%3Cpath%20d%3D%22M15%2040Q25%2020%2040%2030%2055%2040%2070%2025%22%20stroke%3D%22%236b8c42%22%20fill%3D%22none%22%20stroke-width%3D%221.5%22%2F%3E%3Cpath%20d%3D%22M50%2050l20-15%20-10%2025z%22%20fill%3D%22%2394b447%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E');
+  animation: leaf-flow 40s linear infinite;
+"></div>
+
+<!-- 动态飘落树叶 -->
+<div style="
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: url('data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20200%20200%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cg%20opacity%3D%220.3%22%3E%3Cpath%20d%3D%22M10%2010Q15%205%2020%2010%2025%2015%2030%2010%22%20stroke%3D%22%238c9772%22%20fill%3D%22none%22%20stroke-width%3D%221%22%20transform%3D%22rotate(45)%22%3E%3Canimate%20attributeName%3D%22opacity%22%20values%3D%220.3;0.6;0.3%22%20dur%3D%228s%22%20repeatCount%3D%22indefinite%22%2F%3E%3C%2Fpath%3E%3C%2Fg%3E%3C%2Fsvg%3E');
+  animation: leaf-fall 20s linear infinite;
+"></div>
+
+<!-- 内容容器 -->
+<div style="position: relative; z-index: 1;">
+  <h2 style="
+    font-family: '楷体';
+    color: #4a593d;
+    font-size: 2em;
+    margin: 0 0 20px 0;
+    text-shadow: 1px 1px 2px rgba(255,255,255,0.5);
+  ">
+    🍃 阅读之约 🌿
+  </h2>
+  <p style="
+    color: #556b2f;
+    line-height: 1.6;
+    background: rgba(255,255,255,0.7);
+    padding: 20px;
+    border-radius: 6px;
+  ">
+    ge32学习文档
+  </p>
+</div>
+</section>
+
+<style>
+@keyframes leaf-flow {
+  from { background-position: 0 0; }
+  to { background-position: 200px 200px; }
+}
+
+@keyframes leaf-fall {
+  from { background-position: 0 -100%; }
+  to { background-position: 0 100%; }
+}
+</style>
+    
+            <section id="target" style="
+            
+    position: relative;
+    background: #fffef7;
+    border: 1px solid #e0e0e0;
+    border-radius: 0 8px 8px 8px;
+    padding: 2rem 2rem 2rem 3rem;
+    margin: 1.5rem 0;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.08), inset 0 0 12px rgba(0, 0, 0, 0.04);
+    font-family: Georgia, serif;
+    min-height: 200px;
+">
+    <div style="
+        position: absolute;
+        top: -12px;
+        left: -12px;
+        width: 60px;
+        height: 60px;
+        background: #f0f4c3;
+        transform: rotate(-15deg);
+        border-radius: 4px;
+        box-shadow: 1px 1px 4px rgba(0,0,0,0.1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    ">
+        <svg onclick="document.getElementById('target').remove()" style="width:30px;height:30px;transform: rotate(10deg)" viewBox="0 0 24 24">
+            <path fill="#4CAF50" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path>
+        </svg>
+    </div>
+    <div style="
+        position: absolute;
+        left: 2rem;
+        right: 2rem;
+        height: 100%;
+        background: repeating-linear-gradient(to bottom, transparent, transparent 23px, rgba(0,0,0,0.08) 24px, rgba(0,0,0,0.08) 24px);
+        pointer-events: none;
+    "></div>
+    <div style="position: relative; z-index: 2; line-height: 24px;">
+        <h2 style="
+            color: #2e7d32;
+            margin: 0 0 1rem 0;
+            padding-left: 2em;
+            position: relative;
+            font-size: 1.4rem;
+        ">
+           标题
+        </h2>
+        <p style="
+            color: #424242;
+            margin: 0 0 24px 0;
+            padding-left: 28px;
+            position: relative;">
+            <span style="
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 20px;
+                height: 24px;
+            "></span>
+            <strong style="color: #1b5e20;">One sunny day, I decided to make my own <span style="text-shadow:
+        0 0 8px rgba(255,107,107,0.3),
+        0 0 12px rgba(78,205,196,0.3);color: rgba(16, 150, 212, 0.8); font-weight: bolder;">kite</span>. I had always loved <span style="text-shadow:
+        0 0 8px rgba(255,107,107,0.3),
+        0 0 12px rgba(78,205,196,0.3);color: rgba(16, 150, 212, 0.8); font-weight: bolder;">flying kites</span>, but making one felt like a big <span style="text-shadow:
+        0 0 8px rgba(255,107,107,0.3),
+        0 0 12px rgba(78,205,196,0.3);color: rgba(16, 150, 212, 0.8); font-weight: bolder;">adventure</span>. I asked my dad to help me, and he said yes with a big smile.</strong>
+        </p>
+        <section style="line-height: 1.4; 
+				orphans: 4; 
+				font-family: Times New Roman; 
+				overflow-x: auto; 
+				display: flex; 
+				visibility: visible;">
+        <section style="flex: none; width: calc(100% - 10px);" onclick="this.style.height='0px';this.style.width='0';this.style.opacity='0'; this.style.transform='translateY(-20px) scale(0.9)'; setTimeout(()=>this.remove(), 500)">
+
+<section id="cloudCard" style="
+    width: 100%;
+    font-family: 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background: linear-gradient(145deg, #f5fae6 0%, #e3edd1 100%);
+    border-radius: 25px;
+    box-shadow: 
+        0 6px 20px rgba(140, 151, 114, 0.15),
+        inset 2px 2px 4px rgba(255,255,255,0.8),
+        inset -2px -2px 4px rgba(203,214,170,0.3);
+    position: relative;
+    border: 1px solid #8c9772;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    animation: leaf-float 3s ease-in-out infinite;
+  " onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+
+  <!-- 树叶装饰 -->
+  <div style="
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: url('data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22%236b8c42%22%3E%3Cpath%20d%3D%22M12%2021.35l-1.45-1.32C5.4%2015.36%202%2012.28%202%208.5%202%205.42%204.42%203%207.5%203c1.74%200%203.41.81%204.5%202.09C13.09%203.81%2014.76%203%2016.5%203%2019.58%203%2022%205.42%2022%208.5c0%203.78-3.4%206.86-8.55%2011.54L12%2021.35z%22%2F%3E%3C%2Fsvg%3E');
+    
+    background-size: cover;
+    top: -25px;
+    left: -20px;
+    opacity: 0.8;
+    transform: rotate(-15deg);
+  "></div>
+  
+  <div style="
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background: url('data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22%234a593d%22%3E%3Cpath%20d%3D%22M12%2021.35l-1.45-1.32C5.4%2015.36%202%2012.28%202%208.5%202%205.42%204.42%203%207.5%203c1.74%200%203.41.81%204.5%202.09C13.09%203.81%2014.76%203%2016.5%203%2019.58%203%2022%205.42%2022%208.5c0%203.78-3.4%206.86-8.55%2011.54L12%2021.35z%22%2F%3E%3C%2Fsvg%3E');
+    
+    background-size: cover;
+    top: -35px;
+    right: -30px;
+    opacity: 0.6;
+    transform: rotate(15deg);
+  "></div>
+
+  <!-- 内容区 -->
+  <section style="
+    display: flex; 
+    align-items: center; 
+    background: rgba(255,255,255,0.8);
+    padding: 15px; 
+    border-radius: 15px;
+    margin-bottom: 15px;
+    box-shadow: 
+        0 2px 4px rgba(140,151,114,0.1),
+        inset 1px 1px 2px rgba(255,255,255,0.8);
+    backdrop-filter: blur(2px);
+  ">
+    <span style="
+      font-size: 14px; 
+      font-weight: 600; 
+      background: linear-gradient(145deg, #d8e2c3, #c1d6a9);
+      width: 40px; 
+      height: 40px; 
+      display: flex; 
+      align-items: center; 
+      justify-content: center; 
+      border-radius: 50%; 
+      margin-right: 12px; 
+      color: #4a593d;
+      box-shadow: 
+          0 2px 4px rgba(140,151,114,0.2),
+          inset 1px 1px 2px rgba(255,255,255,0.8);
+    ">
+      1
+    </span>
+    <h2 style="
+      font-size: 14px; 
+      font-weight: 700; 
+      margin: 0; 
+      color: #556b2f;
+      text-shadow: 1px 1px 1px rgba(255,255,255,0.5);
+    ">
+      kite
+    </h2>
+  </section>
+
+  <p style="
+    font-size: 12px; 
+    font-weight: 500; 
+    color: #6b8c42;
+    padding: 15px;
+    background: rgba(255,255,255,0.85);
+    border-radius: 10px;
+    margin: 10px 0;
+    line-height: 1.6;
+    box-shadow: 
+        inset 1px 1px 2px rgba(255,255,255,0.8),
+        inset -1px -1px 2px rgba(203,214,170,0.3);
+  ">
+    n. 风筝 
+  </p>
+
+  <section style="
+    padding: 15px; 
+    background: rgba(255,255,255,0.8);
+    border-radius: 15px; 
+    margin-top: 10px;
+    box-shadow: 
+        0 2px 4px rgba(140,151,114,0.1),
+        inset 1px 1px 2px rgba(255,255,255,0.8);
+    backdrop-filter: blur(2px);
+  ">
+    <p style="
+      font-size: 12px; 
+      font-weight: bold; 
+      color: #4a593d;
+      margin-bottom: 8px; 
+      text-shadow: 1px 1px 1px rgba(255,255,255,0.5);
+    ">
+      例句
+    </p>
+    <p style="
+      font-size: 12px; 
+      color: #556b2f;
+      margin: 0; 
+      line-height: 1.5;
+    ">
+      Children often fly kites in the park during spring.
+    </p>
+    <p style="
+      font-size: 8px; 
+      color: #8c9772;
+      margin-top: 6px; 
+      letter-spacing: 0.5px;
+    ">
+      春天孩子们常在公园放风筝。
+    </p>
+  </section>
+</section>
+</section>
+
+<style>
+@keyframes leaf-float {
+  0% { transform: translateY(0px) rotate(-1deg); }
+  50% { transform: translateY(-8px) rotate(1deg); }
+  100% { transform: translateY(0px) rotate(-1deg); }
+}
+</style><section style="flex: none; width: calc(100% - 10px);" onclick="this.style.height='0px';this.style.width='0';this.style.opacity='0'; this.style.transform='translateY(-20px) scale(0.9)'; setTimeout(()=>this.remove(), 500)">
+
+<section id="cloudCard" style="
+    width: 100%;
+    font-family: 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background: linear-gradient(145deg, #f5fae6 0%, #e3edd1 100%);
+    border-radius: 25px;
+    box-shadow: 
+        0 6px 20px rgba(140, 151, 114, 0.15),
+        inset 2px 2px 4px rgba(255,255,255,0.8),
+        inset -2px -2px 4px rgba(203,214,170,0.3);
+    position: relative;
+    border: 1px solid #8c9772;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    animation: leaf-float 3s ease-in-out infinite;
+  " onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+
+  <!-- 树叶装饰 -->
+  <div style="
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: url('data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22%236b8c42%22%3E%3Cpath%20d%3D%22M12%2021.35l-1.45-1.32C5.4%2015.36%202%2012.28%202%208.5%202%205.42%204.42%203%207.5%203c1.74%200%203.41.81%204.5%202.09C13.09%203.81%2014.76%203%2016.5%203%2019.58%203%2022%205.42%2022%208.5c0%203.78-3.4%206.86-8.55%2011.54L12%2021.35z%22%2F%3E%3C%2Fsvg%3E');
+    
+    background-size: cover;
+    top: -25px;
+    left: -20px;
+    opacity: 0.8;
+    transform: rotate(-15deg);
+  "></div>
+  
+  <div style="
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background: url('data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22%234a593d%22%3E%3Cpath%20d%3D%22M12%2021.35l-1.45-1.32C5.4%2015.36%202%2012.28%202%208.5%202%205.42%204.42%203%207.5%203c1.74%200%203.41.81%204.5%202.09C13.09%203.81%2014.76%203%2016.5%203%2019.58%203%2022%205.42%2022%208.5c0%203.78-3.4%206.86-8.55%2011.54L12%2021.35z%22%2F%3E%3C%2Fsvg%3E');
+    
+    background-size: cover;
+    top: -35px;
+    right: -30px;
+    opacity: 0.6;
+    transform: rotate(15deg);
+  "></div>
+
+  <!-- 内容区 -->
+  <section style="
+    display: flex; 
+    align-items: center; 
+    background: rgba(255,255,255,0.8);
+    padding: 15px; 
+    border-radius: 15px;
+    margin-bottom: 15px;
+    box-shadow: 
+        0 2px 4px rgba(140,151,114,0.1),
+        inset 1px 1px 2px rgba(255,255,255,0.8);
+    backdrop-filter: blur(2px);
+  ">
+    <span style="
+      font-size: 14px; 
+      font-weight: 600; 
+      background: linear-gradient(145deg, #d8e2c3, #c1d6a9);
+      width: 40px; 
+      height: 40px; 
+      display: flex; 
+      align-items: center; 
+      justify-content: center; 
+      border-radius: 50%; 
+      margin-right: 12px; 
+      color: #4a593d;
+      box-shadow: 
+          0 2px 4px rgba(140,151,114,0.2),
+          inset 1px 1px 2px rgba(255,255,255,0.8);
+    ">
+      2
+    </span>
+    <h2 style="
+      font-size: 14px; 
+      font-weight: 700; 
+      margin: 0; 
+      color: #556b2f;
+      text-shadow: 1px 1px 1px rgba(255,255,255,0.5);
+    ">
+      flying kites
+    </h2>
+  </section>
+
+  <p style="
+    font-size: 12px; 
+    font-weight: 500; 
+    color: #6b8c42;
+    padding: 15px;
+    background: rgba(255,255,255,0.85);
+    border-radius: 10px;
+    margin: 10px 0;
+    line-height: 1.6;
+    box-shadow: 
+        inset 1px 1px 2px rgba(255,255,255,0.8),
+        inset -1px -1px 2px rgba(203,214,170,0.3);
+  ">
+    v. 放风筝 
+  </p>
+
+  <section style="
+    padding: 15px; 
+    background: rgba(255,255,255,0.8);
+    border-radius: 15px; 
+    margin-top: 10px;
+    box-shadow: 
+        0 2px 4px rgba(140,151,114,0.1),
+        inset 1px 1px 2px rgba(255,255,255,0.8);
+    backdrop-filter: blur(2px);
+  ">
+    <p style="
+      font-size: 12px; 
+      font-weight: bold; 
+      color: #4a593d;
+      margin-bottom: 8px; 
+      text-shadow: 1px 1px 1px rgba(255,255,255,0.5);
+    ">
+      例句
+    </p>
+    <p style="
+      font-size: 12px; 
+      color: #556b2f;
+      margin: 0; 
+      line-height: 1.5;
+    ">
+      Flying kites on a windy day is a popular outdoor activity.
+    </p>
+    <p style="
+      font-size: 8px; 
+      color: #8c9772;
+      margin-top: 6px; 
+      letter-spacing: 0.5px;
+    ">
+      在风大的日子放风筝是受欢迎的户外活动。
+    </p>
+  </section>
+</section>
+</section>
+
+<style>
+@keyframes leaf-float {
+  0% { transform: translateY(0px) rotate(-1deg); }
+  50% { transform: translateY(-8px) rotate(1deg); }
+  100% { transform: translateY(0px) rotate(-1deg); }
+}
+</style><section style="flex: none; width: calc(100% - 10px);" onclick="this.style.height='0px';this.style.width='0';this.style.opacity='0'; this.style.transform='translateY(-20px) scale(0.9)'; setTimeout(()=>this.remove(), 500)">
+
+<section id="cloudCard" style="
+    width: 100%;
+    font-family: 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background: linear-gradient(145deg, #f5fae6 0%, #e3edd1 100%);
+    border-radius: 25px;
+    box-shadow: 
+        0 6px 20px rgba(140, 151, 114, 0.15),
+        inset 2px 2px 4px rgba(255,255,255,0.8),
+        inset -2px -2px 4px rgba(203,214,170,0.3);
+    position: relative;
+    border: 1px solid #8c9772;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    animation: leaf-float 3s ease-in-out infinite;
+  " onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+
+  <!-- 树叶装饰 -->
+  <div style="
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: url('data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22%236b8c42%22%3E%3Cpath%20d%3D%22M12%2021.35l-1.45-1.32C5.4%2015.36%202%2012.28%202%208.5%202%205.42%204.42%203%207.5%203c1.74%200%203.41.81%204.5%202.09C13.09%203.81%2014.76%203%2016.5%203%2019.58%203%2022%205.42%2022%208.5c0%203.78-3.4%206.86-8.55%2011.54L12%2021.35z%22%2F%3E%3C%2Fsvg%3E');
+    
+    background-size: cover;
+    top: -25px;
+    left: -20px;
+    opacity: 0.8;
+    transform: rotate(-15deg);
+  "></div>
+  
+  <div style="
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background: url('data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22%234a593d%22%3E%3Cpath%20d%3D%22M12%2021.35l-1.45-1.32C5.4%2015.36%202%2012.28%202%208.5%202%205.42%204.42%203%207.5%203c1.74%200%203.41.81%204.5%202.09C13.09%203.81%2014.76%203%2016.5%203%2019.58%203%2022%205.42%2022%208.5c0%203.78-3.4%206.86-8.55%2011.54L12%2021.35z%22%2F%3E%3C%2Fsvg%3E');
+    
+    background-size: cover;
+    top: -35px;
+    right: -30px;
+    opacity: 0.6;
+    transform: rotate(15deg);
+  "></div>
+
+  <!-- 内容区 -->
+  <section style="
+    display: flex; 
+    align-items: center; 
+    background: rgba(255,255,255,0.8);
+    padding: 15px; 
+    border-radius: 15px;
+    margin-bottom: 15px;
+    box-shadow: 
+        0 2px 4px rgba(140,151,114,0.1),
+        inset 1px 1px 2px rgba(255,255,255,0.8);
+    backdrop-filter: blur(2px);
+  ">
+    <span style="
+      font-size: 14px; 
+      font-weight: 600; 
+      background: linear-gradient(145deg, #d8e2c3, #c1d6a9);
+      width: 40px; 
+      height: 40px; 
+      display: flex; 
+      align-items: center; 
+      justify-content: center; 
+      border-radius: 50%; 
+      margin-right: 12px; 
+      color: #4a593d;
+      box-shadow: 
+          0 2px 4px rgba(140,151,114,0.2),
+          inset 1px 1px 2px rgba(255,255,255,0.8);
+    ">
+      3
+    </span>
+    <h2 style="
+      font-size: 14px; 
+      font-weight: 700; 
+      margin: 0; 
+      color: #556b2f;
+      text-shadow: 1px 1px 1px rgba(255,255,255,0.5);
+    ">
+      adventure
+    </h2>
+  </section>
+
+  <p style="
+    font-size: 12px; 
+    font-weight: 500; 
+    color: #6b8c42;
+    padding: 15px;
+    background: rgba(255,255,255,0.85);
+    border-radius: 10px;
+    margin: 10px 0;
+    line-height: 1.6;
+    box-shadow: 
+        inset 1px 1px 2px rgba(255,255,255,0.8),
+        inset -1px -1px 2px rgba(203,214,170,0.3);
+  ">
+    n. 冒险；奇遇 
+  </p>
+
+  <section style="
+    padding: 15px; 
+    background: rgba(255,255,255,0.8);
+    border-radius: 15px; 
+    margin-top: 10px;
+    box-shadow: 
+        0 2px 4px rgba(140,151,114,0.1),
+        inset 1px 1px 2px rgba(255,255,255,0.8);
+    backdrop-filter: blur(2px);
+  ">
+    <p style="
+      font-size: 12px; 
+      font-weight: bold; 
+      color: #4a593d;
+      margin-bottom: 8px; 
+      text-shadow: 1px 1px 1px rgba(255,255,255,0.5);
+    ">
+      例句
+    </p>
+    <p style="
+      font-size: 12px; 
+      color: #556b2f;
+      margin: 0; 
+      line-height: 1.5;
+    ">
+      Planning a camping trip feels like an exciting adventure.
+    </p>
+    <p style="
+      font-size: 8px; 
+      color: #8c9772;
+      margin-top: 6px; 
+      letter-spacing: 0.5px;
+    ">
+      策划露营活动就像一场激动人心的冒险。
+    </p>
+  </section>
+</section>
+</section>
+
+<style>
+@keyframes leaf-float {
+  0% { transform: translateY(0px) rotate(-1deg); }
+  50% { transform: translateY(-8px) rotate(1deg); }
+  100% { transform: translateY(0px) rotate(-1deg); }
+}
+</style>
+    <section style="flex: none;width: calc(100% - 10px);">
+<section style="width: 100%; font-family: 'SF Pro Text', 'Helvetica Neue', sans-serif; max-width: 400px; margin: 0 auto; padding: 20px; background: #fefefe; border-radius: 12px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);">
+<p style="font-size: 12px; font-weight: 500; color: #333; padding-left: 20px 0;">
+在一个阳光明媚的日子，我决定自己制作**风筝**。我一直热爱**放风筝**，但亲手制作感觉像一场大**冒险**。我请爸爸帮忙，他带着灿烂的笑容答应了。
+</p>
+</section>
+</section>
+        </section>
+    </div>
+</section><section class="section-term"></section>
+            <section id="target" style="
+            
+    position: relative;
+    background: #fffef7;
+    border: 1px solid #e0e0e0;
+    border-radius: 0 8px 8px 8px;
+    padding: 2rem 2rem 2rem 3rem;
+    margin: 1.5rem 0;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.08), inset 0 0 12px rgba(0, 0, 0, 0.04);
+    font-family: Georgia, serif;
+    min-height: 200px;
+">
+    <div style="
+        position: absolute;
+        top: -12px;
+        left: -12px;
+        width: 60px;
+        height: 60px;
+        background: #f0f4c3;
+        transform: rotate(-15deg);
+        border-radius: 4px;
+        box-shadow: 1px 1px 4px rgba(0,0,0,0.1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    ">
+        <svg onclick="document.getElementById('target').remove()" style="width:30px;height:30px;transform: rotate(10deg)" viewBox="0 0 24 24">
+            <path fill="#4CAF50" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path>
+        </svg>
+    </div>
+    <div style="
+        position: absolute;
+        left: 2rem;
+        right: 2rem;
+        height: 100%;
+        background: repeating-linear-gradient(to bottom, transparent, transparent 23px, rgba(0,0,0,0.08) 24px, rgba(0,0,0,0.08) 24px);
+        pointer-events: none;
+    "></div>
+    <div style="position: relative; z-index: 2; line-height: 24px;">
+        <h2 style="
+            color: #2e7d32;
+            margin: 0 0 1rem 0;
+            padding-left: 2em;
+            position: relative;
+            font-size: 1.4rem;
+        ">
+           标题
+        </h2>
+        <p style="
+            color: #424242;
+            margin: 0 0 24px 0;
+            padding-left: 28px;
+            position: relative;">
+            <span style="
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 20px;
+                height: 24px;
+            "></span>
+            <strong style="color: #1b5e20;"><span style="text-shadow:
+        0 0 8px rgba(255,107,107,0.3),
+        0 0 12px rgba(78,205,196,0.3);color: rgba(16, 150, 212, 0.8); font-weight: bolder;">First</span>, we went to the store to buy some <span style="text-shadow:
+        0 0 8px rgba(255,107,107,0.3),
+        0 0 12px rgba(78,205,196,0.3);color: rgba(16, 150, 212, 0.8); font-weight: bolder;">materials</span>. We needed <span style="text-shadow:
+        0 0 8px rgba(255,107,107,0.3),
+        0 0 12px rgba(78,205,196,0.3);color: rgba(16, 150, 212, 0.8); font-weight: bolder;">sticks</span>, <span style="text-shadow:
+        0 0 8px rgba(255,107,107,0.3),
+        0 0 12px rgba(78,205,196,0.3);color: rgba(16, 150, 212, 0.8); font-weight: bolder;">string</span>, and <span style="text-shadow:
+        0 0 8px rgba(255,107,107,0.3),
+        0 0 12px rgba(78,205,196,0.3);color: rgba(16, 150, 212, 0.8); font-weight: bolder;">colorful</span> paper. The sticks were like little trees, and the paper was <span style="text-shadow:
+        0 0 8px rgba(255,107,107,0.3),
+        0 0 12px rgba(78,205,196,0.3);color: rgba(16, 150, 212, 0.8); font-weight: bolder;">bright</span> and <span style="text-shadow:
+        0 0 8px rgba(255,107,107,0.3),
+        0 0 12px rgba(78,205,196,0.3);color: rgba(16, 150, 212, 0.8); font-weight: bolder;">shiny</span>. I <span style="text-shadow:
+        0 0 8px rgba(255,107,107,0.3),
+        0 0 12px rgba(78,205,196,0.3);color: rgba(16, 150, 212, 0.8); font-weight: bolder;">chose</span> a piece of blue paper with yellow stars on it. It looked like the sky with <span style="text-shadow:
+        0 0 8px rgba(255,107,107,0.3),
+        0 0 12px rgba(78,205,196,0.3);color: rgba(16, 150, 212, 0.8); font-weight: bolder;">twinkling</span> stars.</strong>
+        </p>
+        <section style="line-height: 1.4; 
+				orphans: 4; 
+				font-family: Times New Roman; 
+				overflow-x: auto; 
+				display: flex; 
+				visibility: visible;">
+        <section style="flex: none; width: calc(100% - 10px);" onclick="this.style.height='0px';this.style.width='0';this.style.opacity='0'; this.style.transform='translateY(-20px) scale(0.9)'; setTimeout(()=>this.remove(), 500)">
+
+<section id="cloudCard" style="
+    width: 100%;
+    font-family: 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background: linear-gradient(145deg, #f5fae6 0%, #e3edd1 100%);
+    border-radius: 25px;
+    box-shadow: 
+        0 6px 20px rgba(140, 151, 114, 0.15),
+        inset 2px 2px 4px rgba(255,255,255,0.8),
+        inset -2px -2px 4px rgba(203,214,170,0.3);
+    position: relative;
+    border: 1px solid #8c9772;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    animation: leaf-float 3s ease-in-out infinite;
+  " onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+
+  <!-- 树叶装饰 -->
+  <div style="
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: url('data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22%236b8c42%22%3E%3Cpath%20d%3D%22M12%2021.35l-1.45-1.32C5.4%2015.36%202%2012.28%202%208.5%202%205.42%204.42%203%207.5%203c1.74%200%203.41.81%204.5%202.09C13.09%203.81%2014.76%203%2016.5%203%2019.58%203%2022%205.42%2022%208.5c0%203.78-3.4%206.86-8.55%2011.54L12%2021.35z%22%2F%3E%3C%2Fsvg%3E');
+    
+    background-size: cover;
+    top: -25px;
+    left: -20px;
+    opacity: 0.8;
+    transform: rotate(-15deg);
+  "></div>
+  
+  <div style="
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background: url('data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22%234a593d%22%3E%3Cpath%20d%3D%22M12%2021.35l-1.45-1.32C5.4%2015.36%202%2012.28%202%208.5%202%205.42%204.42%203%207.5%203c1.74%200%203.41.81%204.5%202.09C13.09%203.81%2014.76%203%2016.5%203%2019.58%203%2022%205.42%2022%208.5c0%203.78-3.4%206.86-8.55%2011.54L12%2021.35z%22%2F%3E%3C%2Fsvg%3E');
+    
+    background-size: cover;
+    top: -35px;
+    right: -30px;
+    opacity: 0.6;
+    transform: rotate(15deg);
+  "></div>
+
+  <!-- 内容区 -->
+  <section style="
+    display: flex; 
+    align-items: center; 
+    background: rgba(255,255,255,0.8);
+    padding: 15px; 
+    border-radius: 15px;
+    margin-bottom: 15px;
+    box-shadow: 
+        0 2px 4px rgba(140,151,114,0.1),
+        inset 1px 1px 2px rgba(255,255,255,0.8);
+    backdrop-filter: blur(2px);
+  ">
+    <span style="
+      font-size: 14px; 
+      font-weight: 600; 
+      background: linear-gradient(145deg, #d8e2c3, #c1d6a9);
+      width: 40px; 
+      height: 40px; 
+      display: flex; 
+      align-items: center; 
+      justify-content: center; 
+      border-radius: 50%; 
+      margin-right: 12px; 
+      color: #4a593d;
+      box-shadow: 
+          0 2px 4px rgba(140,151,114,0.2),
+          inset 1px 1px 2px rgba(255,255,255,0.8);
+    ">
+      4
+    </span>
+    <h2 style="
+      font-size: 14px; 
+      font-weight: 700; 
+      margin: 0; 
+      color: #556b2f;
+      text-shadow: 1px 1px 1px rgba(255,255,255,0.5);
+    ">
+      First
+    </h2>
+  </section>
+
+  <p style="
+    font-size: 12px; 
+    font-weight: 500; 
+    color: #6b8c42;
+    padding: 15px;
+    background: rgba(255,255,255,0.85);
+    border-radius: 10px;
+    margin: 10px 0;
+    line-height: 1.6;
+    box-shadow: 
+        inset 1px 1px 2px rgba(255,255,255,0.8),
+        inset -1px -1px 2px rgba(203,214,170,0.3);
+  ">
+    adv. 首先；最初 
+  </p>
+
+  <section style="
+    padding: 15px; 
+    background: rgba(255,255,255,0.8);
+    border-radius: 15px; 
+    margin-top: 10px;
+    box-shadow: 
+        0 2px 4px rgba(140,151,114,0.1),
+        inset 1px 1px 2px rgba(255,255,255,0.8);
+    backdrop-filter: blur(2px);
+  ">
+    <p style="
+      font-size: 12px; 
+      font-weight: bold; 
+      color: #4a593d;
+      margin-bottom: 8px; 
+      text-shadow: 1px 1px 1px rgba(255,255,255,0.5);
+    ">
+      例句
+    </p>
+    <p style="
+      font-size: 12px; 
+      color: #556b2f;
+      margin: 0; 
+      line-height: 1.5;
+    ">
+      First, let's review the safety rules before starting the experiment.
+    </p>
+    <p style="
+      font-size: 8px; 
+      color: #8c9772;
+      margin-top: 6px; 
+      letter-spacing: 0.5px;
+    ">
+      首先，请在开始实验前回顾安全守则。
+    </p>
+  </section>
+</section>
+</section>
+
+<style>
+@keyframes leaf-float {
+  0% { transform: translateY(0px) rotate(-1deg); }
+  50% { transform: translateY(-8px) rotate(1deg); }
+  100% { transform: translateY(0px) rotate(-1deg); }
+}
+</style><section style="flex: none; width: calc(100% - 10px);" onclick="this.style.height='0px';this.style.width='0';this.style.opacity='0'; this.style.transform='translateY(-20px) scale(0.9)'; setTimeout(()=>this.remove(), 500)">
+
+<section id="cloudCard" style="
+    width: 100%;
+    font-family: 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background: linear-gradient(145deg, #f5fae6 0%, #e3edd1 100%);
+    border-radius: 25px;
+    box-shadow: 
+        0 6px 20px rgba(140, 151, 114, 0.15),
+        inset 2px 2px 4px rgba(255,255,255,0.8),
+        inset -2px -2px 4px rgba(203,214,170,0.3);
+    position: relative;
+    border: 1px solid #8c9772;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    animation: leaf-float 3s ease-in-out infinite;
+  " onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+
+  <!-- 树叶装饰 -->
+  <div style="
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: url('data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22%236b8c42%22%3E%3Cpath%20d%3D%22M12%2021.35l-1.45-1.32C5.4%2015.36%202%2012.28%202%208.5%202%205.42%204.42%203%207.5%203c1.74%200%203.41.81%204.5%202.09C13.09%203.81%2014.76%203%2016.5%203%2019.58%203%2022%205.42%2022%208.5c0%203.78-3.4%206.86-8.55%2011.54L12%2021.35z%22%2F%3E%3C%2Fsvg%3E');
+    
+    background-size: cover;
+    top: -25px;
+    left: -20px;
+    opacity: 0.8;
+    transform: rotate(-15deg);
+  "></div>
+  
+  <div style="
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background: url('data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22%234a593d%22%3E%3Cpath%20d%3D%22M12%2021.35l-1.45-1.32C5.4%2015.36%202%2012.28%202%208.5%202%205.42%204.42%203%207.5%203c1.74%200%203.41.81%204.5%202.09C13.09%203.81%2014.76%203%2016.5%203%2019.58%203%2022%205.42%2022%208.5c0%203.78-3.4%206.86-8.55%2011.54L12%2021.35z%22%2F%3E%3C%2Fsvg%3E');
+    
+    background-size: cover;
+    top: -35px;
+    right: -30px;
+    opacity: 0.6;
+    transform: rotate(15deg);
+  "></div>
+
+  <!-- 内容区 -->
+  <section style="
+    display: flex; 
+    align-items: center; 
+    background: rgba(255,255,255,0.8);
+    padding: 15px; 
+    border-radius: 15px;
+    margin-bottom: 15px;
+    box-shadow: 
+        0 2px 4px rgba(140,151,114,0.1),
+        inset 1px 1px 2px rgba(255,255,255,0.8);
+    backdrop-filter: blur(2px);
+  ">
+    <span style="
+      font-size: 14px; 
+      font-weight: 600; 
+      background: linear-gradient(145deg, #d8e2c3, #c1d6a9);
+      width: 40px; 
+      height: 40px; 
+      display: flex; 
+      align-items: center; 
+      justify-content: center; 
+      border-radius: 50%; 
+      margin-right: 12px; 
+      color: #4a593d;
+      box-shadow: 
+          0 2px 4px rgba(140,151,114,0.2),
+          inset 1px 1px 2px rgba(255,255,255,0.8);
+    ">
+      5
+    </span>
+    <h2 style="
+      font-size: 14px; 
+      font-weight: 700; 
+      margin: 0; 
+      color: #556b2f;
+      text-shadow: 1px 1px 1px rgba(255,255,255,0.5);
+    ">
+      materials
+    </h2>
+  </section>
+
+  <p style="
+    font-size: 12px; 
+    font-weight: 500; 
+    color: #6b8c42;
+    padding: 15px;
+    background: rgba(255,255,255,0.85);
+    border-radius: 10px;
+    margin: 10px 0;
+    line-height: 1.6;
+    box-shadow: 
+        inset 1px 1px 2px rgba(255,255,255,0.8),
+        inset -1px -1px 2px rgba(203,214,170,0.3);
+  ">
+    n. 材料；原料 
+  </p>
+
+  <section style="
+    padding: 15px; 
+    background: rgba(255,255,255,0.8);
+    border-radius: 15px; 
+    margin-top: 10px;
+    box-shadow: 
+        0 2px 4px rgba(140,151,114,0.1),
+        inset 1px 1px 2px rgba(255,255,255,0.8);
+    backdrop-filter: blur(2px);
+  ">
+    <p style="
+      font-size: 12px; 
+      font-weight: bold; 
+      color: #4a593d;
+      margin-bottom: 8px; 
+      text-shadow: 1px 1px 1px rgba(255,255,255,0.5);
+    ">
+      例句
+    </p>
+    <p style="
+      font-size: 12px; 
+      color: #556b2f;
+      margin: 0; 
+      line-height: 1.5;
+    ">
+      The artist gathered natural materials like leaves and stones for her project.
+    </p>
+    <p style="
+      font-size: 8px; 
+      color: #8c9772;
+      margin-top: 6px; 
+      letter-spacing: 0.5px;
+    ">
+      艺术家收集了树叶和石头等天然材料用于创作。
+    </p>
+  </section>
+</section>
+</section>
+
+<style>
+@keyframes leaf-float {
+  0% { transform: translateY(0px) rotate(-1deg); }
+  50% { transform: translateY(-8px) rotate(1deg); }
+  100% { transform: translateY(0px) rotate(-1deg); }
+}
+</style><section style="flex: none; width: calc(100% - 10px);" onclick="this.style.height='0px';this.style.width='0';this.style.opacity='0'; this.style.transform='translateY(-20px) scale(0.9)'; setTimeout(()=>this.remove(), 500)">
+
+<section id="cloudCard" style="
+    width: 100%;
+    font-family: 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background: linear-gradient(145deg, #f5fae6 0%, #e3edd1 100%);
+    border-radius: 25px;
+    box-shadow: 
+        0 6px 20px rgba(140, 151, 114, 0.15),
+        inset 2px 2px 4px rgba(255,255,255,0.8),
+        inset -2px -2px 4px rgba(203,214,170,0.3);
+    position: relative;
+    border: 1px solid #8c9772;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    animation: leaf-float 3s ease-in-out infinite;
+  " onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+
+  <!-- 树叶装饰 -->
+  <div style="
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: url('data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22%236b8c42%22%3E%3Cpath%20d%3D%22M12%2021.35l-1.45-1.32C5.4%2015.36%202%2012.28%202%208.5%202%205.42%204.42%203%207.5%203c1.74%200%203.41.81%204.5%202.09C13.09%203.81%2014.76%203%2016.5%203%2019.58%203%2022%205.42%2022%208.5c0%203.78-3.4%206.86-8.55%2011.54L12%2021.35z%22%2F%3E%3C%2Fsvg%3E');
+    
+    background-size: cover;
+    top: -25px;
+    left: -20px;
+    opacity: 0.8;
+    transform: rotate(-15deg);
+  "></div>
+  
+  <div style="
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background: url('data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22%234a593d%22%3E%3Cpath%20d%3D%22M12%2021.35l-1.45-1.32C5.4%2015.36%202%2012.28%202%208.5%202%205.42%204.42%203%207.5%203c1.74%200%203.41.81%204.5%202.09C13.09%203.81%2014.76%203%2016.5%203%2019.58%203%2022%205.42%2022%208.5c0%203.78-3.4%206.86-8.55%2011.54L12%2021.35z%22%2F%3E%3C%2Fsvg%3E');
+    
+    background-size: cover;
+    top: -35px;
+    right: -30px;
+    opacity: 0.6;
+    transform: rotate(15deg);
+  "></div>
+
+  <!-- 内容区 -->
+  <section style="
+    display: flex; 
+    align-items: center; 
+    background: rgba(255,255,255,0.8);
+    padding: 15px; 
+    border-radius: 15px;
+    margin-bottom: 15px;
+    box-shadow: 
+        0 2px 4px rgba(140,151,114,0.1),
+        inset 1px 1px 2px rgba(255,255,255,0.8);
+    backdrop-filter: blur(2px);
+  ">
+    <span style="
+      font-size: 14px; 
+      font-weight: 600; 
+      background: linear-gradient(145deg, #d8e2c3, #c1d6a9);
+      width: 40px; 
+      height: 40px; 
+      display: flex; 
+      align-items: center; 
+      justify-content: center; 
+      border-radius: 50%; 
+      margin-right: 12px; 
+      color: #4a593d;
+      box-shadow: 
+          0 2px 4px rgba(140,151,114,0.2),
+          inset 1px 1px 2px rgba(255,255,255,0.8);
+    ">
+      6
+    </span>
+    <h2 style="
+      font-size: 14px; 
+      font-weight: 700; 
+      margin: 0; 
+      color: #556b2f;
+      text-shadow: 1px 1px 1px rgba(255,255,255,0.5);
+    ">
+      sticks
+    </h2>
+  </section>
+
+  <p style="
+    font-size: 12px; 
+    font-weight: 500; 
+    color: #6b8c42;
+    padding: 15px;
+    background: rgba(255,255,255,0.85);
+    border-radius: 10px;
+    margin: 10px 0;
+    line-height: 1.6;
+    box-shadow: 
+        inset 1px 1px 2px rgba(255,255,255,0.8),
+        inset -1px -1px 2px rgba(203,214,170,0.3);
+  ">
+    n. 木棍；枝条 
+  </p>
+
+  <section style="
+    padding: 15px; 
+    background: rgba(255,255,255,0.8);
+    border-radius: 15px; 
+    margin-top: 10px;
+    box-shadow: 
+        0 2px 4px rgba(140,151,114,0.1),
+        inset 1px 1px 2px rgba(255,255,255,0.8);
+    backdrop-filter: blur(2px);
+  ">
+    <p style="
+      font-size: 12px; 
+      font-weight: bold; 
+      color: #4a593d;
+      margin-bottom: 8px; 
+      text-shadow: 1px 1px 1px rgba(255,255,255,0.5);
+    ">
+      例句
+    </p>
+    <p style="
+      font-size: 12px; 
+      color: #556b2f;
+      margin: 0; 
+      line-height: 1.5;
+    ">
+      We used dry sticks to build a small campfire.
+    </p>
+    <p style="
+      font-size: 8px; 
+      color: #8c9772;
+      margin-top: 6px; 
+      letter-spacing: 0.5px;
+    ">
+      我们用干木棍搭了一个小篝火。
+    </p>
+  </section>
+</section>
+</section>
+
+<style>
+@keyframes leaf-float {
+  0% { transform: translateY(0px) rotate(-1deg); }
+  50% { transform: translateY(-8px) rotate(1deg); }
+  100% { transform: translateY(0px) rotate(-1deg); }
+}
+</style><section style="flex: none; width: calc(100% - 10px);" onclick="this.style.height='0px';this.style.width='0';this.style.opacity='0'; this.style.transform='translateY(-20px) scale(0.9)'; setTimeout(()=>this.remove(), 500)">
+
+<section id="cloudCard" style="
+    width: 100%;
+    font-family: 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background: linear-gradient(145deg, #f5fae6 0%, #e3edd1 100%);
+    border-radius: 25px;
+    box-shadow: 
+        0 6px 20px rgba(140, 151, 114, 0.15),
+        inset 2px 2px 4px rgba(255,255,255,0.8),
+        inset -2px -2px 4px rgba(203,214,170,0.3);
+    position: relative;
+    border: 1px solid #8c9772;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    animation: leaf-float 3s ease-in-out infinite;
+  " onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+
+  <!-- 树叶装饰 -->
+  <div style="
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: url('data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22%236b8c42%22%3E%3Cpath%20d%3D%22M12%2021.35l-1.45-1.32C5.4%2015.36%202%2012.28%202%208.5%202%205.42%204.42%203%207.5%203c1.74%200%203.41.81%204.5%202.09C13.09%203.81%2014.76%203%2016.5%203%2019.58%203%2022%205.42%2022%208.5c0%203.78-3.4%206.86-8.55%2011.54L12%2021.35z%22%2F%3E%3C%2Fsvg%3E');
+    
+    background-size: cover;
+    top: -25px;
+    left: -20px;
+    opacity: 0.8;
+    transform: rotate(-15deg);
+  "></div>
+  
+  <div style="
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background: url('data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22%234a593d%22%3E%3Cpath%20d%3D%22M12%2021.35l-1.45-1.32C5.4%2015.36%202%2012.28%202%208.5%202%205.42%204.42%203%207.5%203c1.74%200%203.41.81%204.5%202.09C13.09%203.81%2014.76%203%2016.5%203%2019.58%203%2022%205.42%2022%208.5c0%203.78-3.4%206.86-8.55%2011.54L12%2021.35z%22%2F%3E%3C%2Fsvg%3E');
+    
+    background-size: cover;
+    top: -35px;
+    right: -30px;
+    opacity: 0.6;
+    transform: rotate(15deg);
+  "></div>
+
+  <!-- 内容区 -->
+  <section style="
+    display: flex; 
+    align-items: center; 
+    background: rgba(255,255,255,0.8);
+    padding: 15px; 
+    border-radius: 15px;
+    margin-bottom: 15px;
+    box-shadow: 
+        0 2px 4px rgba(140,151,114,0.1),
+        inset 1px 1px 2px rgba(255,255,255,0.8);
+    backdrop-filter: blur(2px);
+  ">
+    <span style="
+      font-size: 14px; 
+      font-weight: 600; 
+      background: linear-gradient(145deg, #d8e2c3, #c1d6a9);
+      width: 40px; 
+      height: 40px; 
+      display: flex; 
+      align-items: center; 
+      justify-content: center; 
+      border-radius: 50%; 
+      margin-right: 12px; 
+      color: #4a593d;
+      box-shadow: 
+          0 2px 4px rgba(140,151,114,0.2),
+          inset 1px 1px 2px rgba(255,255,255,0.8);
+    ">
+      7
+    </span>
+    <h2 style="
+      font-size: 14px; 
+      font-weight: 700; 
+      margin: 0; 
+      color: #556b2f;
+      text-shadow: 1px 1px 1px rgba(255,255,255,0.5);
+    ">
+      string
+    </h2>
+  </section>
+
+  <p style="
+    font-size: 12px; 
+    font-weight: 500; 
+    color: #6b8c42;
+    padding: 15px;
+    background: rgba(255,255,255,0.85);
+    border-radius: 10px;
+    margin: 10px 0;
+    line-height: 1.6;
+    box-shadow: 
+        inset 1px 1px 2px rgba(255,255,255,0.8),
+        inset -1px -1px 2px rgba(203,214,170,0.3);
+  ">
+    n. 细绳；线 
+  </p>
+
+  <section style="
+    padding: 15px; 
+    background: rgba(255,255,255,0.8);
+    border-radius: 15px; 
+    margin-top: 10px;
+    box-shadow: 
+        0 2px 4px rgba(140,151,114,0.1),
+        inset 1px 1px 2px rgba(255,255,255,0.8);
+    backdrop-filter: blur(2px);
+  ">
+    <p style="
+      font-size: 12px; 
+      font-weight: bold; 
+      color: #4a593d;
+      margin-bottom: 8px; 
+      text-shadow: 1px 1px 1px rgba(255,255,255,0.5);
+    ">
+      例句
+    </p>
+    <p style="
+      font-size: 12px; 
+      color: #556b2f;
+      margin: 0; 
+      line-height: 1.5;
+    ">
+      She tied the package with a red string for decoration.
+    </p>
+    <p style="
+      font-size: 8px; 
+      color: #8c9772;
+      margin-top: 6px; 
+      letter-spacing: 0.5px;
+    ">
+      她用红绳系包裹作为装饰。
+    </p>
+  </section>
+</section>
+</section>
+
+<style>
+@keyframes leaf-float {
+  0% { transform: translateY(0px) rotate(-1deg); }
+  50% { transform: translateY(-8px) rotate(1deg); }
+  100% { transform: translateY(0px) rotate(-1deg); }
+}
+</style><section style="flex: none; width: calc(100% - 10px);" onclick="this.style.height='0px';this.style.width='0';this.style.opacity='0'; this.style.transform='translateY(-20px) scale(0.9)'; setTimeout(()=>this.remove(), 500)">
+
+<section id="cloudCard" style="
+    width: 100%;
+    font-family: 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background: linear-gradient(145deg, #f5fae6 0%, #e3edd1 100%);
+    border-radius: 25px;
+    box-shadow: 
+        0 6px 20px rgba(140, 151, 114, 0.15),
+        inset 2px 2px 4px rgba(255,255,255,0.8),
+        inset -2px -2px 4px rgba(203,214,170,0.3);
+    position: relative;
+    border: 1px solid #8c9772;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    animation: leaf-float 3s ease-in-out infinite;
+  " onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+
+  <!-- 树叶装饰 -->
+  <div style="
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: url('data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22%236b8c42%22%3E%3Cpath%20d%3D%22M12%2021.35l-1.45-1.32C5.4%2015.36%202%2012.28%202%208.5%202%205.42%204.42%203%207.5%203c1.74%200%203.41.81%204.5%202.09C13.09%203.81%2014.76%203%2016.5%203%2019.58%203%2022%205.42%2022%208.5c0%203.78-3.4%206.86-8.55%2011.54L12%2021.35z%22%2F%3E%3C%2Fsvg%3E');
+    
+    background-size: cover;
+    top: -25px;
+    left: -20px;
+    opacity: 0.8;
+    transform: rotate(-15deg);
+  "></div>
+  
+  <div style="
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background: url('data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22%234a593d%22%3E%3Cpath%20d%3D%22M12%2021.35l-1.45-1.32C5.4%2015.36%202%2012.28%202%208.5%202%205.42%204.42%203%207.5%203c1.74%200%203.41.81%204.5%202.09C13.09%203.81%2014.76%203%2016.5%203%2019.58%203%2022%205.42%2022%208.5c0%203.78-3.4%206.86-8.55%2011.54L12%2021.35z%22%2F%3E%3C%2Fsvg%3E');
+    
+    background-size: cover;
+    top: -35px;
+    right: -30px;
+    opacity: 0.6;
+    transform: rotate(15deg);
+  "></div>
+
+  <!-- 内容区 -->
+  <section style="
+    display: flex; 
+    align-items: center; 
+    background: rgba(255,255,255,0.8);
+    padding: 15px; 
+    border-radius: 15px;
+    margin-bottom: 15px;
+    box-shadow: 
+        0 2px 4px rgba(140,151,114,0.1),
+        inset 1px 1px 2px rgba(255,255,255,0.8);
+    backdrop-filter: blur(2px);
+  ">
+    <span style="
+      font-size: 14px; 
+      font-weight: 600; 
+      background: linear-gradient(145deg, #d8e2c3, #c1d6a9);
+      width: 40px; 
+      height: 40px; 
+      display: flex; 
+      align-items: center; 
+      justify-content: center; 
+      border-radius: 50%; 
+      margin-right: 12px; 
+      color: #4a593d;
+      box-shadow: 
+          0 2px 4px rgba(140,151,114,0.2),
+          inset 1px 1px 2px rgba(255,255,255,0.8);
+    ">
+      8
+    </span>
+    <h2 style="
+      font-size: 14px; 
+      font-weight: 700; 
+      margin: 0; 
+      color: #556b2f;
+      text-shadow: 1px 1px 1px rgba(255,255,255,0.5);
+    ">
+      colorful
+    </h2>
+  </section>
+
+  <p style="
+    font-size: 12px; 
+    font-weight: 500; 
+    color: #6b8c42;
+    padding: 15px;
+    background: rgba(255,255,255,0.85);
+    border-radius: 10px;
+    margin: 10px 0;
+    line-height: 1.6;
+    box-shadow: 
+        inset 1px 1px 2px rgba(255,255,255,0.8),
+        inset -1px -1px 2px rgba(203,214,170,0.3);
+  ">
+    adj. 色彩丰富的 
+  </p>
+
+  <section style="
+    padding: 15px; 
+    background: rgba(255,255,255,0.8);
+    border-radius: 15px; 
+    margin-top: 10px;
+    box-shadow: 
+        0 2px 4px rgba(140,151,114,0.1),
+        inset 1px 1px 2px rgba(255,255,255,0.8);
+    backdrop-filter: blur(2px);
+  ">
+    <p style="
+      font-size: 12px; 
+      font-weight: bold; 
+      color: #4a593d;
+      margin-bottom: 8px; 
+      text-shadow: 1px 1px 1px rgba(255,255,255,0.5);
+    ">
+      例句
+    </p>
+    <p style="
+      font-size: 12px; 
+      color: #556b2f;
+      margin: 0; 
+      line-height: 1.5;
+    ">
+      The market was filled with colorful fabrics and spices.
+    </p>
+    <p style="
+      font-size: 8px; 
+      color: #8c9772;
+      margin-top: 6px; 
+      letter-spacing: 0.5px;
+    ">
+      集市上摆满了色彩斑斓的布料和香料。
+    </p>
+  </section>
+</section>
+</section>
+
+<style>
+@keyframes leaf-float {
+  0% { transform: translateY(0px) rotate(-1deg); }
+  50% { transform: translateY(-8px) rotate(1deg); }
+  100% { transform: translateY(0px) rotate(-1deg); }
+}
+</style><section style="flex: none; width: calc(100% - 10px);" onclick="this.style.height='0px';this.style.width='0';this.style.opacity='0'; this.style.transform='translateY(-20px) scale(0.9)'; setTimeout(()=>this.remove(), 500)">
+
+<section id="cloudCard" style="
+    width: 100%;
+    font-family: 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background: linear-gradient(145deg, #f5fae6 0%, #e3edd1 100%);
+    border-radius: 25px;
+    box-shadow: 
+        0 6px 20px rgba(140, 151, 114, 0.15),
+        inset 2px 2px 4px rgba(255,255,255,0.8),
+        inset -2px -2px 4px rgba(203,214,170,0.3);
+    position: relative;
+    border: 1px solid #8c9772;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    animation: leaf-float 3s ease-in-out infinite;
+  " onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+
+  <!-- 树叶装饰 -->
+  <div style="
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: url('data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22%236b8c42%22%3E%3Cpath%20d%3D%22M12%2021.35l-1.45-1.32C5.4%2015.36%202%2012.28%202%208.5%202%205.42%204.42%203%207.5%203c1.74%200%203.41.81%204.5%202.09C13.09%203.81%2014.76%203%2016.5%203%2019.58%203%2022%205.42%2022%208.5c0%203.78-3.4%206.86-8.55%2011.54L12%2021.35z%22%2F%3E%3C%2Fsvg%3E');
+    
+    background-size: cover;
+    top: -25px;
+    left: -20px;
+    opacity: 0.8;
+    transform: rotate(-15deg);
+  "></div>
+  
+  <div style="
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background: url('data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22%234a593d%22%3E%3Cpath%20d%3D%22M12%2021.35l-1.45-1.32C5.4%2015.36%202%2012.28%202%208.5%202%205.42%204.42%203%207.5%203c1.74%200%203.41.81%204.5%202.09C13.09%203.81%2014.76%203%2016.5%203%2019.58%203%2022%205.42%2022%208.5c0%203.78-3.4%206.86-8.55%2011.54L12%2021.35z%22%2F%3E%3C%2Fsvg%3E');
+    
+    background-size: cover;
+    top: -35px;
+    right: -30px;
+    opacity: 0.6;
+    transform: rotate(15deg);
+  "></div>
+
+  <!-- 内容区 -->
+  <section style="
+    display: flex; 
+    align-items: center; 
+    background: rgba(255,255,255,0.8);
+    padding: 15px; 
+    border-radius: 15px;
+    margin-bottom: 15px;
+    box-shadow: 
+        0 2px 4px rgba(140,151,114,0.1),
+        inset 1px 1px 2px rgba(255,255,255,0.8);
+    backdrop-filter: blur(2px);
+  ">
+    <span style="
+      font-size: 14px; 
+      font-weight: 600; 
+      background: linear-gradient(145deg, #d8e2c3, #c1d6a9);
+      width: 40px; 
+      height: 40px; 
+      display: flex; 
+      align-items: center; 
+      justify-content: center; 
+      border-radius: 50%; 
+      margin-right: 12px; 
+      color: #4a593d;
+      box-shadow: 
+          0 2px 4px rgba(140,151,114,0.2),
+          inset 1px 1px 2px rgba(255,255,255,0.8);
+    ">
+      9
+    </span>
+    <h2 style="
+      font-size: 14px; 
+      font-weight: 700; 
+      margin: 0; 
+      color: #556b2f;
+      text-shadow: 1px 1px 1px rgba(255,255,255,0.5);
+    ">
+      bright
+    </h2>
+  </section>
+
+  <p style="
+    font-size: 12px; 
+    font-weight: 500; 
+    color: #6b8c42;
+    padding: 15px;
+    background: rgba(255,255,255,0.85);
+    border-radius: 10px;
+    margin: 10px 0;
+    line-height: 1.6;
+    box-shadow: 
+        inset 1px 1px 2px rgba(255,255,255,0.8),
+        inset -1px -1px 2px rgba(203,214,170,0.3);
+  ">
+    adj. 明亮的；鲜艳的 
+  </p>
+
+  <section style="
+    padding: 15px; 
+    background: rgba(255,255,255,0.8);
+    border-radius: 15px; 
+    margin-top: 10px;
+    box-shadow: 
+        0 2px 4px rgba(140,151,114,0.1),
+        inset 1px 1px 2px rgba(255,255,255,0.8);
+    backdrop-filter: blur(2px);
+  ">
+    <p style="
+      font-size: 12px; 
+      font-weight: bold; 
+      color: #4a593d;
+      margin-bottom: 8px; 
+      text-shadow: 1px 1px 1px rgba(255,255,255,0.5);
+    ">
+      例句
+    </p>
+    <p style="
+      font-size: 12px; 
+      color: #556b2f;
+      margin: 0; 
+      line-height: 1.5;
+    ">
+      The bright neon lights illuminated the city at night.
+    </p>
+    <p style="
+      font-size: 8px; 
+      color: #8c9772;
+      margin-top: 6px; 
+      letter-spacing: 0.5px;
+    ">
+      夜晚明亮的霓虹灯照亮了城市。
+    </p>
+  </section>
+</section>
+</section>
+
+<style>
+@keyframes leaf-float {
+  0% { transform: translateY(0px) rotate(-1deg); }
+  50% { transform: translateY(-8px) rotate(1deg); }
+  100% { transform: translateY(0px) rotate(-1deg); }
+}
+</style><section style="flex: none; width: calc(100% - 10px);" onclick="this.style.height='0px';this.style.width='0';this.style.opacity='0'; this.style.transform='translateY(-20px) scale(0.9)'; setTimeout(()=>this.remove(), 500)">
+
+<section id="cloudCard" style="
+    width: 100%;
+    font-family: 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background: linear-gradient(145deg, #f5fae6 0%, #e3edd1 100%);
+    border-radius: 25px;
+    box-shadow: 
+        0 6px 20px rgba(140, 151, 114, 0.15),
+        inset 2px 2px 4px rgba(255,255,255,0.8),
+        inset -2px -2px 4px rgba(203,214,170,0.3);
+    position: relative;
+    border: 1px solid #8c9772;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    animation: leaf-float 3s ease-in-out infinite;
+  " onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+
+  <!-- 树叶装饰 -->
+  <div style="
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: url('data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22%236b8c42%22%3E%3Cpath%20d%3D%22M12%2021.35l-1.45-1.32C5.4%2015.36%202%2012.28%202%208.5%202%205.42%204.42%203%207.5%203c1.74%200%203.41.81%204.5%202.09C13.09%203.81%2014.76%203%2016.5%203%2019.58%203%2022%205.42%2022%208.5c0%203.78-3.4%206.86-8.55%2011.54L12%2021.35z%22%2F%3E%3C%2Fsvg%3E');
+    
+    background-size: cover;
+    top: -25px;
+    left: -20px;
+    opacity: 0.8;
+    transform: rotate(-15deg);
+  "></div>
+  
+  <div style="
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background: url('data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22%234a593d%22%3E%3Cpath%20d%3D%22M12%2021.35l-1.45-1.32C5.4%2015.36%202%2012.28%202%208.5%202%205.42%204.42%203%207.5%203c1.74%200%203.41.81%204.5%202.09C13.09%203.81%2014.76%203%2016.5%203%2019.58%203%2022%205.42%2022%208.5c0%203.78-3.4%206.86-8.55%2011.54L12%2021.35z%22%2F%3E%3C%2Fsvg%3E');
+    
+    background-size: cover;
+    top: -35px;
+    right: -30px;
+    opacity: 0.6;
+    transform: rotate(15deg);
+  "></div>
+
+  <!-- 内容区 -->
+  <section style="
+    display: flex; 
+    align-items: center; 
+    background: rgba(255,255,255,0.8);
+    padding: 15px; 
+    border-radius: 15px;
+    margin-bottom: 15px;
+    box-shadow: 
+        0 2px 4px rgba(140,151,114,0.1),
+        inset 1px 1px 2px rgba(255,255,255,0.8);
+    backdrop-filter: blur(2px);
+  ">
+    <span style="
+      font-size: 14px; 
+      font-weight: 600; 
+      background: linear-gradient(145deg, #d8e2c3, #c1d6a9);
+      width: 40px; 
+      height: 40px; 
+      display: flex; 
+      align-items: center; 
+      justify-content: center; 
+      border-radius: 50%; 
+      margin-right: 12px; 
+      color: #4a593d;
+      box-shadow: 
+          0 2px 4px rgba(140,151,114,0.2),
+          inset 1px 1px 2px rgba(255,255,255,0.8);
+    ">
+      10
+    </span>
+    <h2 style="
+      font-size: 14px; 
+      font-weight: 700; 
+      margin: 0; 
+      color: #556b2f;
+      text-shadow: 1px 1px 1px rgba(255,255,255,0.5);
+    ">
+      shiny
+    </h2>
+  </section>
+
+  <p style="
+    font-size: 12px; 
+    font-weight: 500; 
+    color: #6b8c42;
+    padding: 15px;
+    background: rgba(255,255,255,0.85);
+    border-radius: 10px;
+    margin: 10px 0;
+    line-height: 1.6;
+    box-shadow: 
+        inset 1px 1px 2px rgba(255,255,255,0.8),
+        inset -1px -1px 2px rgba(203,214,170,0.3);
+  ">
+    adj. 闪亮的；反光的 
+  </p>
+
+  <section style="
+    padding: 15px; 
+    background: rgba(255,255,255,0.8);
+    border-radius: 15px; 
+    margin-top: 10px;
+    box-shadow: 
+        0 2px 4px rgba(140,151,114,0.1),
+        inset 1px 1px 2px rgba(255,255,255,0.8);
+    backdrop-filter: blur(2px);
+  ">
+    <p style="
+      font-size: 12px; 
+      font-weight: bold; 
+      color: #4a593d;
+      margin-bottom: 8px; 
+      text-shadow: 1px 1px 1px rgba(255,255,255,0.5);
+    ">
+      例句
+    </p>
+    <p style="
+      font-size: 12px; 
+      color: #556b2f;
+      margin: 0; 
+      line-height: 1.5;
+    ">
+      Her new shoes were so shiny that they reflected sunlight.
+    </p>
+    <p style="
+      font-size: 8px; 
+      color: #8c9772;
+      margin-top: 6px; 
+      letter-spacing: 0.5px;
+    ">
+      她的新鞋闪闪发亮，甚至能反射阳光。
+    </p>
+  </section>
+</section>
+</section>
+
+<style>
+@keyframes leaf-float {
+  0% { transform: translateY(0px) rotate(-1deg); }
+  50% { transform: translateY(-8px) rotate(1deg); }
+  100% { transform: translateY(0px) rotate(-1deg); }
+}
+</style><section style="flex: none; width: calc(100% - 10px);" onclick="this.style.height='0px';this.style.width='0';this.style.opacity='0'; this.style.transform='translateY(-20px) scale(0.9)'; setTimeout(()=>this.remove(), 500)">
+
+<section id="cloudCard" style="
+    width: 100%;
+    font-family: 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background: linear-gradient(145deg, #f5fae6 0%, #e3edd1 100%);
+    border-radius: 25px;
+    box-shadow: 
+        0 6px 20px rgba(140, 151, 114, 0.15),
+        inset 2px 2px 4px rgba(255,255,255,0.8),
+        inset -2px -2px 4px rgba(203,214,170,0.3);
+    position: relative;
+    border: 1px solid #8c9772;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    animation: leaf-float 3s ease-in-out infinite;
+  " onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+
+  <!-- 树叶装饰 -->
+  <div style="
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: url('data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22%236b8c42%22%3E%3Cpath%20d%3D%22M12%2021.35l-1.45-1.32C5.4%2015.36%202%2012.28%202%208.5%202%205.42%204.42%203%207.5%203c1.74%200%203.41.81%204.5%202.09C13.09%203.81%2014.76%203%2016.5%203%2019.58%203%2022%205.42%2022%208.5c0%203.78-3.4%206.86-8.55%2011.54L12%2021.35z%22%2F%3E%3C%2Fsvg%3E');
+    
+    background-size: cover;
+    top: -25px;
+    left: -20px;
+    opacity: 0.8;
+    transform: rotate(-15deg);
+  "></div>
+  
+  <div style="
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background: url('data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22%234a593d%22%3E%3Cpath%20d%3D%22M12%2021.35l-1.45-1.32C5.4%2015.36%202%2012.28%202%208.5%202%205.42%204.42%203%207.5%203c1.74%200%203.41.81%204.5%202.09C13.09%203.81%2014.76%203%2016.5%203%2019.58%203%2022%205.42%2022%208.5c0%203.78-3.4%206.86-8.55%2011.54L12%2021.35z%22%2F%3E%3C%2Fsvg%3E');
+    
+    background-size: cover;
+    top: -35px;
+    right: -30px;
+    opacity: 0.6;
+    transform: rotate(15deg);
+  "></div>
+
+  <!-- 内容区 -->
+  <section style="
+    display: flex; 
+    align-items: center; 
+    background: rgba(255,255,255,0.8);
+    padding: 15px; 
+    border-radius: 15px;
+    margin-bottom: 15px;
+    box-shadow: 
+        0 2px 4px rgba(140,151,114,0.1),
+        inset 1px 1px 2px rgba(255,255,255,0.8);
+    backdrop-filter: blur(2px);
+  ">
+    <span style="
+      font-size: 14px; 
+      font-weight: 600; 
+      background: linear-gradient(145deg, #d8e2c3, #c1d6a9);
+      width: 40px; 
+      height: 40px; 
+      display: flex; 
+      align-items: center; 
+      justify-content: center; 
+      border-radius: 50%; 
+      margin-right: 12px; 
+      color: #4a593d;
+      box-shadow: 
+          0 2px 4px rgba(140,151,114,0.2),
+          inset 1px 1px 2px rgba(255,255,255,0.8);
+    ">
+      11
+    </span>
+    <h2 style="
+      font-size: 14px; 
+      font-weight: 700; 
+      margin: 0; 
+      color: #556b2f;
+      text-shadow: 1px 1px 1px rgba(255,255,255,0.5);
+    ">
+      chose
+    </h2>
+  </section>
+
+  <p style="
+    font-size: 12px; 
+    font-weight: 500; 
+    color: #6b8c42;
+    padding: 15px;
+    background: rgba(255,255,255,0.85);
+    border-radius: 10px;
+    margin: 10px 0;
+    line-height: 1.6;
+    box-shadow: 
+        inset 1px 1px 2px rgba(255,255,255,0.8),
+        inset -1px -1px 2px rgba(203,214,170,0.3);
+  ">
+    v. 选择（choose的过去式） 
+  </p>
+
+  <section style="
+    padding: 15px; 
+    background: rgba(255,255,255,0.8);
+    border-radius: 15px; 
+    margin-top: 10px;
+    box-shadow: 
+        0 2px 4px rgba(140,151,114,0.1),
+        inset 1px 1px 2px rgba(255,255,255,0.8);
+    backdrop-filter: blur(2px);
+  ">
+    <p style="
+      font-size: 12px; 
+      font-weight: bold; 
+      color: #4a593d;
+      margin-bottom: 8px; 
+      text-shadow: 1px 1px 1px rgba(255,255,255,0.5);
+    ">
+      例句
+    </p>
+    <p style="
+      font-size: 12px; 
+      color: #556b2f;
+      margin: 0; 
+      line-height: 1.5;
+    ">
+      After comparing all options, he chose the blue backpack.
+    </p>
+    <p style="
+      font-size: 8px; 
+      color: #8c9772;
+      margin-top: 6px; 
+      letter-spacing: 0.5px;
+    ">
+      对比所有选项后，他选择了蓝色背包。
+    </p>
+  </section>
+</section>
+</section>
+
+<style>
+@keyframes leaf-float {
+  0% { transform: translateY(0px) rotate(-1deg); }
+  50% { transform: translateY(-8px) rotate(1deg); }
+  100% { transform: translateY(0px) rotate(-1deg); }
+}
+</style><section style="flex: none; width: calc(100% - 10px);" onclick="this.style.height='0px';this.style.width='0';this.style.opacity='0'; this.style.transform='translateY(-20px) scale(0.9)'; setTimeout(()=>this.remove(), 500)">
+
+<section id="cloudCard" style="
+    width: 100%;
+    font-family: 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background: linear-gradient(145deg, #f5fae6 0%, #e3edd1 100%);
+    border-radius: 25px;
+    box-shadow: 
+        0 6px 20px rgba(140, 151, 114, 0.15),
+        inset 2px 2px 4px rgba(255,255,255,0.8),
+        inset -2px -2px 4px rgba(203,214,170,0.3);
+    position: relative;
+    border: 1px solid #8c9772;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    animation: leaf-float 3s ease-in-out infinite;
+  " onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+
+  <!-- 树叶装饰 -->
+  <div style="
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: url('data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22%236b8c42%22%3E%3Cpath%20d%3D%22M12%2021.35l-1.45-1.32C5.4%2015.36%202%2012.28%202%208.5%202%205.42%204.42%203%207.5%203c1.74%200%203.41.81%204.5%202.09C13.09%203.81%2014.76%203%2016.5%203%2019.58%203%2022%205.42%2022%208.5c0%203.78-3.4%206.86-8.55%2011.54L12%2021.35z%22%2F%3E%3C%2Fsvg%3E');
+    
+    background-size: cover;
+    top: -25px;
+    left: -20px;
+    opacity: 0.8;
+    transform: rotate(-15deg);
+  "></div>
+  
+  <div style="
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background: url('data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22%234a593d%22%3E%3Cpath%20d%3D%22M12%2021.35l-1.45-1.32C5.4%2015.36%202%2012.28%202%208.5%202%205.42%204.42%203%207.5%203c1.74%200%203.41.81%204.5%202.09C13.09%203.81%2014.76%203%2016.5%203%2019.58%203%2022%205.42%2022%208.5c0%203.78-3.4%206.86-8.55%2011.54L12%2021.35z%22%2F%3E%3C%2Fsvg%3E');
+    
+    background-size: cover;
+    top: -35px;
+    right: -30px;
+    opacity: 0.6;
+    transform: rotate(15deg);
+  "></div>
+
+  <!-- 内容区 -->
+  <section style="
+    display: flex; 
+    align-items: center; 
+    background: rgba(255,255,255,0.8);
+    padding: 15px; 
+    border-radius: 15px;
+    margin-bottom: 15px;
+    box-shadow: 
+        0 2px 4px rgba(140,151,114,0.1),
+        inset 1px 1px 2px rgba(255,255,255,0.8);
+    backdrop-filter: blur(2px);
+  ">
+    <span style="
+      font-size: 14px; 
+      font-weight: 600; 
+      background: linear-gradient(145deg, #d8e2c3, #c1d6a9);
+      width: 40px; 
+      height: 40px; 
+      display: flex; 
+      align-items: center; 
+      justify-content: center; 
+      border-radius: 50%; 
+      margin-right: 12px; 
+      color: #4a593d;
+      box-shadow: 
+          0 2px 4px rgba(140,151,114,0.2),
+          inset 1px 1px 2px rgba(255,255,255,0.8);
+    ">
+      12
+    </span>
+    <h2 style="
+      font-size: 14px; 
+      font-weight: 700; 
+      margin: 0; 
+      color: #556b2f;
+      text-shadow: 1px 1px 1px rgba(255,255,255,0.5);
+    ">
+      twinkling
+    </h2>
+  </section>
+
+  <p style="
+    font-size: 12px; 
+    font-weight: 500; 
+    color: #6b8c42;
+    padding: 15px;
+    background: rgba(255,255,255,0.85);
+    border-radius: 10px;
+    margin: 10px 0;
+    line-height: 1.6;
+    box-shadow: 
+        inset 1px 1px 2px rgba(255,255,255,0.8),
+        inset -1px -1px 2px rgba(203,214,170,0.3);
+  ">
+    adj. 闪烁的；闪亮的 
+  </p>
+
+  <section style="
+    padding: 15px; 
+    background: rgba(255,255,255,0.8);
+    border-radius: 15px; 
+    margin-top: 10px;
+    box-shadow: 
+        0 2px 4px rgba(140,151,114,0.1),
+        inset 1px 1px 2px rgba(255,255,255,0.8);
+    backdrop-filter: blur(2px);
+  ">
+    <p style="
+      font-size: 12px; 
+      font-weight: bold; 
+      color: #4a593d;
+      margin-bottom: 8px; 
+      text-shadow: 1px 1px 1px rgba(255,255,255,0.5);
+    ">
+      例句
+    </p>
+    <p style="
+      font-size: 12px; 
+      color: #556b2f;
+      margin: 0; 
+      line-height: 1.5;
+    ">
+      The twinkling lights on the Christmas tree looked magical.
+    </p>
+    <p style="
+      font-size: 8px; 
+      color: #8c9772;
+      margin-top: 6px; 
+      letter-spacing: 0.5px;
+    ">
+      圣诞树上闪烁的灯光显得很神奇。
+    </p>
+  </section>
+</section>
+</section>
+
+<style>
+@keyframes leaf-float {
+  0% { transform: translateY(0px) rotate(-1deg); }
+  50% { transform: translateY(-8px) rotate(1deg); }
+  100% { transform: translateY(0px) rotate(-1deg); }
+}
+</style>
+    <section style="flex: none;width: calc(100% - 10px);">
+<section style="width: 100%; font-family: 'SF Pro Text', 'Helvetica Neue', sans-serif; max-width: 400px; margin: 0 auto; padding: 20px; background: #fefefe; border-radius: 12px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);">
+<p style="font-size: 12px; font-weight: 500; color: #333; padding-left: 20px 0;">
+**首先**，我们去商店购买**材料**。需要准备**木棍**、**细绳**和**彩纸**。木棍像小树苗，纸张**鲜艳**且**闪亮**。我**选择**了印有黄色星星的蓝色彩纸，宛如缀满**闪烁**星辰的天空。
+</p>
+</section>
+</section>
+        </section>
+    </div>
+</section>
+            <section id="target" style="
+            
+    position: relative;
+    background: #fffef7;
+    border: 1px solid #e0e0e0;
+    border-radius: 0 8px 8px 8px;
+    padding: 2rem 2rem 2rem 3rem;
+    margin: 1.5rem 0;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.08), inset 0 0 12px rgba(0, 0, 0, 0.04);
+    font-family: Georgia, serif;
+    min-height: 200px;
+">
+    <div style="
+        position: absolute;
+        top: -12px;
+        left: -12px;
+        width: 60px;
+        height: 60px;
+        background: #f0f4c3;
+        transform: rotate(-15deg);
+        border-radius: 4px;
+        box-shadow: 1px 1px 4px rgba(0,0,0,0.1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    ">
+        <svg onclick="document.getElementById('target').remove()" style="width:30px;height:30px;transform: rotate(10deg)" viewBox="0 0 24 24">
+            <path fill="#4CAF50" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path>
+        </svg>
+    </div>
+    <div style="
+        position: absolute;
+        left: 2rem;
+        right: 2rem;
+        height: 100%;
+        background: repeating-linear-gradient(to bottom, transparent, transparent 23px, rgba(0,0,0,0.08) 24px, rgba(0,0,0,0.08) 24px);
+        pointer-events: none;
+    "></div>
+    <div style="position: relative; z-index: 2; line-height: 24px;">
+        <h2 style="
+            color: #2e7d32;
+            margin: 0 0 1rem 0;
+            padding-left: 2em;
+            position: relative;
+            font-size: 1.4rem;
+        ">
+           标题
+        </h2>
+        <p style="
+            color: #424242;
+            margin: 0 0 24px 0;
+            padding-left: 28px;
+            position: relative;">
+            <span style="
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 20px;
+                height: 24px;
+            "></span>
+            <strong style="color: #1b5e20;">When we <span style="text-shadow:
+        0 0 8px rgba(255,107,107,0.3),
+        0 0 12px rgba(78,205,196,0.3);color: rgba(16, 150, 212, 0.8); font-weight: bolder;">got home</span>, we started making the kite. My dad showed me how to <span style="text-shadow:
+        0 0 8px rgba(255,107,107,0.3),
+        0 0 12px rgba(78,205,196,0.3);color: rgba(16, 150, 212, 0.8); font-weight: bolder;">tie</span> the sticks together to make a <span style="text-shadow:
+        0 0 8px rgba(255,107,107,0.3),
+        0 0 12px rgba(78,205,196,0.3);color: rgba(16, 150, 212, 0.8); font-weight: bolder;">frame</span>. The sticks looked like the <span style="text-shadow:
+        0 0 8px rgba(255,107,107,0.3),
+        0 0 12px rgba(78,205,196,0.3);color: rgba(16, 150, 212, 0.8); font-weight: bolder;">bones</span> of the kite. We used string to <span style="text-shadow:
+        0 0 8px rgba(255,107,107,0.3),
+        0 0 12px rgba(78,205,196,0.3);color: rgba(16, 150, 212, 0.8); font-weight: bolder;">tie them together</span>, <span style="text-shadow:
+        0 0 8px rgba(255,107,107,0.3),
+        0 0 12px rgba(78,205,196,0.3);color: rgba(16, 150, 212, 0.8); font-weight: bolder;">making sure</span> they were strong and <span style="text-shadow:
+        0 0 8px rgba(255,107,107,0.3),
+        0 0 12px rgba(78,205,196,0.3);color: rgba(16, 150, 212, 0.8); font-weight: bolder;">steady</span>. It felt like we were building a little house for the <span style="text-shadow:
+        0 0 8px rgba(255,107,107,0.3),
+        0 0 12px rgba(78,205,196,0.3);color: rgba(16, 150, 212, 0.8); font-weight: bolder;">wind</span>.</strong>
+        </p>
+        <section style="line-height: 1.4; 
+				orphans: 4; 
+				font-family: Times New Roman; 
+				overflow-x: auto; 
+				display: flex; 
+				visibility: visible;">
+        <section style="flex: none; width: calc(100% - 10px);" onclick="this.style.height='0px';this.style.width='0';this.style.opacity='0'; this.style.transform='translateY(-20px) scale(0.9)'; setTimeout(()=>this.remove(), 500)">
+
+<section id="cloudCard" style="
+    width: 100%;
+    font-family: 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background: linear-gradient(145deg, #f5fae6 0%, #e3edd1 100%);
+    border-radius: 25px;
+    box-shadow: 
+        0 6px 20px rgba(140, 151, 114, 0.15),
+        inset 2px 2px 4px rgba(255,255,255,0.8),
+        inset -2px -2px 4px rgba(203,214,170,0.3);
+    position: relative;
+    border: 1px solid #8c9772;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    animation: leaf-float 3s ease-in-out infinite;
+  " onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+
+  <!-- 树叶装饰 -->
+  <div style="
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: url('data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22%236b8c42%22%3E%3Cpath%20d%3D%22M12%2021.35l-1.45-1.32C5.4%2015.36%202%2012.28%202%208.5%202%205.42%204.42%203%207.5%203c1.74%200%203.41.81%204.5%202.09C13.09%203.81%2014.76%203%2016.5%203%2019.58%203%2022%205.42%2022%208.5c0%203.78-3.4%206.86-8.55%2011.54L12%2021.35z%22%2F%3E%3C%2Fsvg%3E');
+    
+    background-size: cover;
+    top: -25px;
+    left: -20px;
+    opacity: 0.8;
+    transform: rotate(-15deg);
+  "></div>
+  
+  <div style="
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background: url('data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22%234a593d%22%3E%3Cpath%20d%3D%22M12%2021.35l-1.45-1.32C5.4%2015.36%202%2012.28%202%208.5%202%205.42%204.42%203%207.5%203c1.74%200%203.41.81%204.5%202.09C13.09%203.81%2014.76%203%2016.5%203%2019.58%203%2022%205.42%2022%208.5c0%203.78-3.4%206.86-8.55%2011.54L12%2021.35z%22%2F%3E%3C%2Fsvg%3E');
+    
+    background-size: cover;
+    top: -35px;
+    right: -30px;
+    opacity: 0.6;
+    transform: rotate(15deg);
+  "></div>
+
+  <!-- 内容区 -->
+  <section style="
+    display: flex; 
+    align-items: center; 
+    background: rgba(255,255,255,0.8);
+    padding: 15px; 
+    border-radius: 15px;
+    margin-bottom: 15px;
+    box-shadow: 
+        0 2px 4px rgba(140,151,114,0.1),
+        inset 1px 1px 2px rgba(255,255,255,0.8);
+    backdrop-filter: blur(2px);
+  ">
+    <span style="
+      font-size: 14px; 
+      font-weight: 600; 
+      background: linear-gradient(145deg, #d8e2c3, #c1d6a9);
+      width: 40px; 
+      height: 40px; 
+      display: flex; 
+      align-items: center; 
+      justify-content: center; 
+      border-radius: 50%; 
+      margin-right: 12px; 
+      color: #4a593d;
+      box-shadow: 
+          0 2px 4px rgba(140,151,114,0.2),
+          inset 1px 1px 2px rgba(255,255,255,0.8);
+    ">
+      13
+    </span>
+    <h2 style="
+      font-size: 14px; 
+      font-weight: 700; 
+      margin: 0; 
+      color: #556b2f;
+      text-shadow: 1px 1px 1px rgba(255,255,255,0.5);
+    ">
+      got home
+    </h2>
+  </section>
+
+  <p style="
+    font-size: 12px; 
+    font-weight: 500; 
+    color: #6b8c42;
+    padding: 15px;
+    background: rgba(255,255,255,0.85);
+    border-radius: 10px;
+    margin: 10px 0;
+    line-height: 1.6;
+    box-shadow: 
+        inset 1px 1px 2px rgba(255,255,255,0.8),
+        inset -1px -1px 2px rgba(203,214,170,0.3);
+  ">
+    v. 回到家 
+  </p>
+
+  <section style="
+    padding: 15px; 
+    background: rgba(255,255,255,0.8);
+    border-radius: 15px; 
+    margin-top: 10px;
+    box-shadow: 
+        0 2px 4px rgba(140,151,114,0.1),
+        inset 1px 1px 2px rgba(255,255,255,0.8);
+    backdrop-filter: blur(2px);
+  ">
+    <p style="
+      font-size: 12px; 
+      font-weight: bold; 
+      color: #4a593d;
+      margin-bottom: 8px; 
+      text-shadow: 1px 1px 1px rgba(255,255,255,0.5);
+    ">
+      例句
+    </p>
+    <p style="
+      font-size: 12px; 
+      color: #556b2f;
+      margin: 0; 
+      line-height: 1.5;
+    ">
+      After school, I got home and immediately started my homework.
+    </p>
+    <p style="
+      font-size: 8px; 
+      color: #8c9772;
+      margin-top: 6px; 
+      letter-spacing: 0.5px;
+    ">
+      放学后，我回到家立刻开始写作业。
+    </p>
+  </section>
+</section>
+</section>
+
+<style>
+@keyframes leaf-float {
+  0% { transform: translateY(0px) rotate(-1deg); }
+  50% { transform: translateY(-8px) rotate(1deg); }
+  100% { transform: translateY(0px) rotate(-1deg); }
+}
+</style><section style="flex: none; width: calc(100% - 10px);" onclick="this.style.height='0px';this.style.width='0';this.style.opacity='0'; this.style.transform='translateY(-20px) scale(0.9)'; setTimeout(()=>this.remove(), 500)">
+
+<section id="cloudCard" style="
+    width: 100%;
+    font-family: 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background: linear-gradient(145deg, #f5fae6 0%, #e3edd1 100%);
+    border-radius: 25px;
+    box-shadow: 
+        0 6px 20px rgba(140, 151, 114, 0.15),
+        inset 2px 2px 4px rgba(255,255,255,0.8),
+        inset -2px -2px 4px rgba(203,214,170,0.3);
+    position: relative;
+    border: 1px solid #8c9772;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    animation: leaf-float 3s ease-in-out infinite;
+  " onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+
+  <!-- 树叶装饰 -->
+  <div style="
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: url('data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22%236b8c42%22%3E%3Cpath%20d%3D%22M12%2021.35l-1.45-1.32C5.4%2015.36%202%2012.28%202%208.5%202%205.42%204.42%203%207.5%203c1.74%200%203.41.81%204.5%202.09C13.09%203.81%2014.76%203%2016.5%203%2019.58%203%2022%205.42%2022%208.5c0%203.78-3.4%206.86-8.55%2011.54L12%2021.35z%22%2F%3E%3C%2Fsvg%3E');
+    
+    background-size: cover;
+    top: -25px;
+    left: -20px;
+    opacity: 0.8;
+    transform: rotate(-15deg);
+  "></div>
+  
+  <div style="
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background: url('data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22%234a593d%22%3E%3Cpath%20d%3D%22M12%2021.35l-1.45-1.32C5.4%2015.36%202%2012.28%202%208.5%202%205.42%204.42%203%207.5%203c1.74%200%203.41.81%204.5%202.09C13.09%203.81%2014.76%203%2016.5%203%2019.58%203%2022%205.42%2022%208.5c0%203.78-3.4%206.86-8.55%2011.54L12%2021.35z%22%2F%3E%3C%2Fsvg%3E');
+    
+    background-size: cover;
+    top: -35px;
+    right: -30px;
+    opacity: 0.6;
+    transform: rotate(15deg);
+  "></div>
+
+  <!-- 内容区 -->
+  <section style="
+    display: flex; 
+    align-items: center; 
+    background: rgba(255,255,255,0.8);
+    padding: 15px; 
+    border-radius: 15px;
+    margin-bottom: 15px;
+    box-shadow: 
+        0 2px 4px rgba(140,151,114,0.1),
+        inset 1px 1px 2px rgba(255,255,255,0.8);
+    backdrop-filter: blur(2px);
+  ">
+    <span style="
+      font-size: 14px; 
+      font-weight: 600; 
+      background: linear-gradient(145deg, #d8e2c3, #c1d6a9);
+      width: 40px; 
+      height: 40px; 
+      display: flex; 
+      align-items: center; 
+      justify-content: center; 
+      border-radius: 50%; 
+      margin-right: 12px; 
+      color: #4a593d;
+      box-shadow: 
+          0 2px 4px rgba(140,151,114,0.2),
+          inset 1px 1px 2px rgba(255,255,255,0.8);
+    ">
+      14
+    </span>
+    <h2 style="
+      font-size: 14px; 
+      font-weight: 700; 
+      margin: 0; 
+      color: #556b2f;
+      text-shadow: 1px 1px 1px rgba(255,255,255,0.5);
+    ">
+      tie
+    </h2>
+  </section>
+
+  <p style="
+    font-size: 12px; 
+    font-weight: 500; 
+    color: #6b8c42;
+    padding: 15px;
+    background: rgba(255,255,255,0.85);
+    border-radius: 10px;
+    margin: 10px 0;
+    line-height: 1.6;
+    box-shadow: 
+        inset 1px 1px 2px rgba(255,255,255,0.8),
+        inset -1px -1px 2px rgba(203,214,170,0.3);
+  ">
+    v. 系；绑 
+  </p>
+
+  <section style="
+    padding: 15px; 
+    background: rgba(255,255,255,0.8);
+    border-radius: 15px; 
+    margin-top: 10px;
+    box-shadow: 
+        0 2px 4px rgba(140,151,114,0.1),
+        inset 1px 1px 2px rgba(255,255,255,0.8);
+    backdrop-filter: blur(2px);
+  ">
+    <p style="
+      font-size: 12px; 
+      font-weight: bold; 
+      color: #4a593d;
+      margin-bottom: 8px; 
+      text-shadow: 1px 1px 1px rgba(255,255,255,0.5);
+    ">
+      例句
+    </p>
+    <p style="
+      font-size: 12px; 
+      color: #556b2f;
+      margin: 0; 
+      line-height: 1.5;
+    ">
+      Can you teach me how to tie a secure knot for this rope?
+    </p>
+    <p style="
+      font-size: 8px; 
+      color: #8c9772;
+      margin-top: 6px; 
+      letter-spacing: 0.5px;
+    ">
+      你能教我怎么给这根绳子打牢结吗？
+    </p>
+  </section>
+</section>
+</section>
+
+<style>
+@keyframes leaf-float {
+  0% { transform: translateY(0px) rotate(-1deg); }
+  50% { transform: translateY(-8px) rotate(1deg); }
+  100% { transform: translateY(0px) rotate(-1deg); }
+}
+</style><section style="flex: none; width: calc(100% - 10px);" onclick="this.style.height='0px';this.style.width='0';this.style.opacity='0'; this.style.transform='translateY(-20px) scale(0.9)'; setTimeout(()=>this.remove(), 500)">
+
+<section id="cloudCard" style="
+    width: 100%;
+    font-family: 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background: linear-gradient(145deg, #f5fae6 0%, #e3edd1 100%);
+    border-radius: 25px;
+    box-shadow: 
+        0 6px 20px rgba(140, 151, 114, 0.15),
+        inset 2px 2px 4px rgba(255,255,255,0.8),
+        inset -2px -2px 4px rgba(203,214,170,0.3);
+    position: relative;
+    border: 1px solid #8c9772;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    animation: leaf-float 3s ease-in-out infinite;
+  " onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+
+  <!-- 树叶装饰 -->
+  <div style="
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: url('data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22%236b8c42%22%3E%3Cpath%20d%3D%22M12%2021.35l-1.45-1.32C5.4%2015.36%202%2012.28%202%208.5%202%205.42%204.42%203%207.5%203c1.74%200%203.41.81%204.5%202.09C13.09%203.81%2014.76%203%2016.5%203%2019.58%203%2022%205.42%2022%208.5c0%203.78-3.4%206.86-8.55%2011.54L12%2021.35z%22%2F%3E%3C%2Fsvg%3E');
+    
+    background-size: cover;
+    top: -25px;
+    left: -20px;
+    opacity: 0.8;
+    transform: rotate(-15deg);
+  "></div>
+  
+  <div style="
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background: url('data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22%234a593d%22%3E%3Cpath%20d%3D%22M12%2021.35l-1.45-1.32C5.4%2015.36%202%2012.28%202%208.5%202%205.42%204.42%203%207.5%203c1.74%200%203.41.81%204.5%202.09C13.09%203.81%2014.76%203%2016.5%203%2019.58%203%2022%205.42%2022%208.5c0%203.78-3.4%206.86-8.55%2011.54L12%2021.35z%22%2F%3E%3C%2Fsvg%3E');
+    
+    background-size: cover;
+    top: -35px;
+    right: -30px;
+    opacity: 0.6;
+    transform: rotate(15deg);
+  "></div>
+
+  <!-- 内容区 -->
+  <section style="
+    display: flex; 
+    align-items: center; 
+    background: rgba(255,255,255,0.8);
+    padding: 15px; 
+    border-radius: 15px;
+    margin-bottom: 15px;
+    box-shadow: 
+        0 2px 4px rgba(140,151,114,0.1),
+        inset 1px 1px 2px rgba(255,255,255,0.8);
+    backdrop-filter: blur(2px);
+  ">
+    <span style="
+      font-size: 14px; 
+      font-weight: 600; 
+      background: linear-gradient(145deg, #d8e2c3, #c1d6a9);
+      width: 40px; 
+      height: 40px; 
+      display: flex; 
+      align-items: center; 
+      justify-content: center; 
+      border-radius: 50%; 
+      margin-right: 12px; 
+      color: #4a593d;
+      box-shadow: 
+          0 2px 4px rgba(140,151,114,0.2),
+          inset 1px 1px 2px rgba(255,255,255,0.8);
+    ">
+      15
+    </span>
+    <h2 style="
+      font-size: 14px; 
+      font-weight: 700; 
+      margin: 0; 
+      color: #556b2f;
+      text-shadow: 1px 1px 1px rgba(255,255,255,0.5);
+    ">
+      frame
+    </h2>
+  </section>
+
+  <p style="
+    font-size: 12px; 
+    font-weight: 500; 
+    color: #6b8c42;
+    padding: 15px;
+    background: rgba(255,255,255,0.85);
+    border-radius: 10px;
+    margin: 10px 0;
+    line-height: 1.6;
+    box-shadow: 
+        inset 1px 1px 2px rgba(255,255,255,0.8),
+        inset -1px -1px 2px rgba(203,214,170,0.3);
+  ">
+    n. 框架；骨架 
+  </p>
+
+  <section style="
+    padding: 15px; 
+    background: rgba(255,255,255,0.8);
+    border-radius: 15px; 
+    margin-top: 10px;
+    box-shadow: 
+        0 2px 4px rgba(140,151,114,0.1),
+        inset 1px 1px 2px rgba(255,255,255,0.8);
+    backdrop-filter: blur(2px);
+  ">
+    <p style="
+      font-size: 12px; 
+      font-weight: bold; 
+      color: #4a593d;
+      margin-bottom: 8px; 
+      text-shadow: 1px 1px 1px rgba(255,255,255,0.5);
+    ">
+      例句
+    </p>
+    <p style="
+      font-size: 12px; 
+      color: #556b2f;
+      margin: 0; 
+      line-height: 1.5;
+    ">
+      The metal frame of the building provided strong support.
+    </p>
+    <p style="
+      font-size: 8px; 
+      color: #8c9772;
+      margin-top: 6px; 
+      letter-spacing: 0.5px;
+    ">
+      建筑的金属框架提供了坚固支撑。
+    </p>
+  </section>
+</section>
+</section>
+
+<style>
+@keyframes leaf-float {
+  0% { transform: translateY(0px) rotate(-1deg); }
+  50% { transform: translateY(-8px) rotate(1deg); }
+  100% { transform: translateY(0px) rotate(-1deg); }
+}
+</style><section style="flex: none; width: calc(100% - 10px);" onclick="this.style.height='0px';this.style.width='0';this.style.opacity='0'; this.style.transform='translateY(-20px) scale(0.9)'; setTimeout(()=>this.remove(), 500)">
+
+<section id="cloudCard" style="
+    width: 100%;
+    font-family: 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background: linear-gradient(145deg, #f5fae6 0%, #e3edd1 100%);
+    border-radius: 25px;
+    box-shadow: 
+        0 6px 20px rgba(140, 151, 114, 0.15),
+        inset 2px 2px 4px rgba(255,255,255,0.8),
+        inset -2px -2px 4px rgba(203,214,170,0.3);
+    position: relative;
+    border: 1px solid #8c9772;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    animation: leaf-float 3s ease-in-out infinite;
+  " onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+
+  <!-- 树叶装饰 -->
+  <div style="
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: url('data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22%236b8c42%22%3E%3Cpath%20d%3D%22M12%2021.35l-1.45-1.32C5.4%2015.36%202%2012.28%202%208.5%202%205.42%204.42%203%207.5%203c1.74%200%203.41.81%204.5%202.09C13.09%203.81%2014.76%203%2016.5%203%2019.58%203%2022%205.42%2022%208.5c0%203.78-3.4%206.86-8.55%2011.54L12%2021.35z%22%2F%3E%3C%2Fsvg%3E');
+    
+    background-size: cover;
+    top: -25px;
+    left: -20px;
+    opacity: 0.8;
+    transform: rotate(-15deg);
+  "></div>
+  
+  <div style="
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background: url('data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22%234a593d%22%3E%3Cpath%20d%3D%22M12%2021.35l-1.45-1.32C5.4%2015.36%202%2012.28%202%208.5%202%205.42%204.42%203%207.5%203c1.74%200%203.41.81%204.5%202.09C13.09%203.81%2014.76%203%2016.5%203%2019.58%203%2022%205.42%2022%208.5c0%203.78-3.4%206.86-8.55%2011.54L12%2021.35z%22%2F%3E%3C%2Fsvg%3E');
+    
+    background-size: cover;
+    top: -35px;
+    right: -30px;
+    opacity: 0.6;
+    transform: rotate(15deg);
+  "></div>
+
+  <!-- 内容区 -->
+  <section style="
+    display: flex; 
+    align-items: center; 
+    background: rgba(255,255,255,0.8);
+    padding: 15px; 
+    border-radius: 15px;
+    margin-bottom: 15px;
+    box-shadow: 
+        0 2px 4px rgba(140,151,114,0.1),
+        inset 1px 1px 2px rgba(255,255,255,0.8);
+    backdrop-filter: blur(2px);
+  ">
+    <span style="
+      font-size: 14px; 
+      font-weight: 600; 
+      background: linear-gradient(145deg, #d8e2c3, #c1d6a9);
+      width: 40px; 
+      height: 40px; 
+      display: flex; 
+      align-items: center; 
+      justify-content: center; 
+      border-radius: 50%; 
+      margin-right: 12px; 
+      color: #4a593d;
+      box-shadow: 
+          0 2px 4px rgba(140,151,114,0.2),
+          inset 1px 1px 2px rgba(255,255,255,0.8);
+    ">
+      16
+    </span>
+    <h2 style="
+      font-size: 14px; 
+      font-weight: 700; 
+      margin: 0; 
+      color: #556b2f;
+      text-shadow: 1px 1px 1px rgba(255,255,255,0.5);
+    ">
+      bones
+    </h2>
+  </section>
+
+  <p style="
+    font-size: 12px; 
+    font-weight: 500; 
+    color: #6b8c42;
+    padding: 15px;
+    background: rgba(255,255,255,0.85);
+    border-radius: 10px;
+    margin: 10px 0;
+    line-height: 1.6;
+    box-shadow: 
+        inset 1px 1px 2px rgba(255,255,255,0.8),
+        inset -1px -1px 2px rgba(203,214,170,0.3);
+  ">
+    n. 骨骼；骨架（比喻） 
+  </p>
+
+  <section style="
+    padding: 15px; 
+    background: rgba(255,255,255,0.8);
+    border-radius: 15px; 
+    margin-top: 10px;
+    box-shadow: 
+        0 2px 4px rgba(140,151,114,0.1),
+        inset 1px 1px 2px rgba(255,255,255,0.8);
+    backdrop-filter: blur(2px);
+  ">
+    <p style="
+      font-size: 12px; 
+      font-weight: bold; 
+      color: #4a593d;
+      margin-bottom: 8px; 
+      text-shadow: 1px 1px 1px rgba(255,255,255,0.5);
+    ">
+      例句
+    </p>
+    <p style="
+      font-size: 12px; 
+      color: #556b2f;
+      margin: 0; 
+      line-height: 1.5;
+    ">
+      The old ship's bones could still be seen on the beach.
+    </p>
+    <p style="
+      font-size: 8px; 
+      color: #8c9772;
+      margin-top: 6px; 
+      letter-spacing: 0.5px;
+    ">
+      旧船的残骸骨架仍可见于海滩。
+    </p>
+  </section>
+</section>
+</section>
+
+<style>
+@keyframes leaf-float {
+  0% { transform: translateY(0px) rotate(-1deg); }
+  50% { transform: translateY(-8px) rotate(1deg); }
+  100% { transform: translateY(0px) rotate(-1deg); }
+}
+</style><section style="flex: none; width: calc(100% - 10px);" onclick="this.style.height='0px';this.style.width='0';this.style.opacity='0'; this.style.transform='translateY(-20px) scale(0.9)'; setTimeout(()=>this.remove(), 500)">
+
+<section id="cloudCard" style="
+    width: 100%;
+    font-family: 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background: linear-gradient(145deg, #f5fae6 0%, #e3edd1 100%);
+    border-radius: 25px;
+    box-shadow: 
+        0 6px 20px rgba(140, 151, 114, 0.15),
+        inset 2px 2px 4px rgba(255,255,255,0.8),
+        inset -2px -2px 4px rgba(203,214,170,0.3);
+    position: relative;
+    border: 1px solid #8c9772;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    animation: leaf-float 3s ease-in-out infinite;
+  " onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+
+  <!-- 树叶装饰 -->
+  <div style="
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: url('data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22%236b8c42%22%3E%3Cpath%20d%3D%22M12%2021.35l-1.45-1.32C5.4%2015.36%202%2012.28%202%208.5%202%205.42%204.42%203%207.5%203c1.74%200%203.41.81%204.5%202.09C13.09%203.81%2014.76%203%2016.5%203%2019.58%203%2022%205.42%2022%208.5c0%203.78-3.4%206.86-8.55%2011.54L12%2021.35z%22%2F%3E%3C%2Fsvg%3E');
+    
+    background-size: cover;
+    top: -25px;
+    left: -20px;
+    opacity: 0.8;
+    transform: rotate(-15deg);
+  "></div>
+  
+  <div style="
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background: url('data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22%234a593d%22%3E%3Cpath%20d%3D%22M12%2021.35l-1.45-1.32C5.4%2015.36%202%2012.28%202%208.5%202%205.42%204.42%203%207.5%203c1.74%200%203.41.81%204.5%202.09C13.09%203.81%2014.76%203%2016.5%203%2019.58%203%2022%205.42%2022%208.5c0%203.78-3.4%206.86-8.55%2011.54L12%2021.35z%22%2F%3E%3C%2Fsvg%3E');
+    
+    background-size: cover;
+    top: -35px;
+    right: -30px;
+    opacity: 0.6;
+    transform: rotate(15deg);
+  "></div>
+
+  <!-- 内容区 -->
+  <section style="
+    display: flex; 
+    align-items: center; 
+    background: rgba(255,255,255,0.8);
+    padding: 15px; 
+    border-radius: 15px;
+    margin-bottom: 15px;
+    box-shadow: 
+        0 2px 4px rgba(140,151,114,0.1),
+        inset 1px 1px 2px rgba(255,255,255,0.8);
+    backdrop-filter: blur(2px);
+  ">
+    <span style="
+      font-size: 14px; 
+      font-weight: 600; 
+      background: linear-gradient(145deg, #d8e2c3, #c1d6a9);
+      width: 40px; 
+      height: 40px; 
+      display: flex; 
+      align-items: center; 
+      justify-content: center; 
+      border-radius: 50%; 
+      margin-right: 12px; 
+      color: #4a593d;
+      box-shadow: 
+          0 2px 4px rgba(140,151,114,0.2),
+          inset 1px 1px 2px rgba(255,255,255,0.8);
+    ">
+      17
+    </span>
+    <h2 style="
+      font-size: 14px; 
+      font-weight: 700; 
+      margin: 0; 
+      color: #556b2f;
+      text-shadow: 1px 1px 1px rgba(255,255,255,0.5);
+    ">
+      tie them together
+    </h2>
+  </section>
+
+  <p style="
+    font-size: 12px; 
+    font-weight: 500; 
+    color: #6b8c42;
+    padding: 15px;
+    background: rgba(255,255,255,0.85);
+    border-radius: 10px;
+    margin: 10px 0;
+    line-height: 1.6;
+    box-shadow: 
+        inset 1px 1px 2px rgba(255,255,255,0.8),
+        inset -1px -1px 2px rgba(203,214,170,0.3);
+  ">
+    v. 将它们绑在一起 
+  </p>
+
+  <section style="
+    padding: 15px; 
+    background: rgba(255,255,255,0.8);
+    border-radius: 15px; 
+    margin-top: 10px;
+    box-shadow: 
+        0 2px 4px rgba(140,151,114,0.1),
+        inset 1px 1px 2px rgba(255,255,255,0.8);
+    backdrop-filter: blur(2px);
+  ">
+    <p style="
+      font-size: 12px; 
+      font-weight: bold; 
+      color: #4a593d;
+      margin-bottom: 8px; 
+      text-shadow: 1px 1px 1px rgba(255,255,255,0.5);
+    ">
+      例句
+    </p>
+    <p style="
+      font-size: 12px; 
+      color: #556b2f;
+      margin: 0; 
+      line-height: 1.5;
+    ">
+      We tied the branches together to make a makeshift raft.
+    </p>
+    <p style="
+      font-size: 8px; 
+      color: #8c9772;
+      margin-top: 6px; 
+      letter-spacing: 0.5px;
+    ">
+      我们把树枝绑在一起做了个临时木筏。
+    </p>
+  </section>
+</section>
+</section>
+
+<style>
+@keyframes leaf-float {
+  0% { transform: translateY(0px) rotate(-1deg); }
+  50% { transform: translateY(-8px) rotate(1deg); }
+  100% { transform: translateY(0px) rotate(-1deg); }
+}
+</style><section style="flex: none; width: calc(100% - 10px);" onclick="this.style.height='0px';this.style.width='0';this.style.opacity='0'; this.style.transform='translateY(-20px) scale(0.9)'; setTimeout(()=>this.remove(), 500)">
+
+<section id="cloudCard" style="
+    width: 100%;
+    font-family: 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background: linear-gradient(145deg, #f5fae6 0%, #e3edd1 100%);
+    border-radius: 25px;
+    box-shadow: 
+        0 6px 20px rgba(140, 151, 114, 0.15),
+        inset 2px 2px 4px rgba(255,255,255,0.8),
+        inset -2px -2px 4px rgba(203,214,170,0.3);
+    position: relative;
+    border: 1px solid #8c9772;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    animation: leaf-float 3s ease-in-out infinite;
+  " onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+
+  <!-- 树叶装饰 -->
+  <div style="
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: url('data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22%236b8c42%22%3E%3Cpath%20d%3D%22M12%2021.35l-1.45-1.32C5.4%2015.36%202%2012.28%202%208.5%202%205.42%204.42%203%207.5%203c1.74%200%203.41.81%204.5%202.09C13.09%203.81%2014.76%203%2016.5%203%2019.58%203%2022%205.42%2022%208.5c0%203.78-3.4%206.86-8.55%2011.54L12%2021.35z%22%2F%3E%3C%2Fsvg%3E');
+    
+    background-size: cover;
+    top: -25px;
+    left: -20px;
+    opacity: 0.8;
+    transform: rotate(-15deg);
+  "></div>
+  
+  <div style="
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background: url('data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22%234a593d%22%3E%3Cpath%20d%3D%22M12%2021.35l-1.45-1.32C5.4%2015.36%202%2012.28%202%208.5%202%205.42%204.42%203%207.5%203c1.74%200%203.41.81%204.5%202.09C13.09%203.81%2014.76%203%2016.5%203%2019.58%203%2022%205.42%2022%208.5c0%203.78-3.4%206.86-8.55%2011.54L12%2021.35z%22%2F%3E%3C%2Fsvg%3E');
+    
+    background-size: cover;
+    top: -35px;
+    right: -30px;
+    opacity: 0.6;
+    transform: rotate(15deg);
+  "></div>
+
+  <!-- 内容区 -->
+  <section style="
+    display: flex; 
+    align-items: center; 
+    background: rgba(255,255,255,0.8);
+    padding: 15px; 
+    border-radius: 15px;
+    margin-bottom: 15px;
+    box-shadow: 
+        0 2px 4px rgba(140,151,114,0.1),
+        inset 1px 1px 2px rgba(255,255,255,0.8);
+    backdrop-filter: blur(2px);
+  ">
+    <span style="
+      font-size: 14px; 
+      font-weight: 600; 
+      background: linear-gradient(145deg, #d8e2c3, #c1d6a9);
+      width: 40px; 
+      height: 40px; 
+      display: flex; 
+      align-items: center; 
+      justify-content: center; 
+      border-radius: 50%; 
+      margin-right: 12px; 
+      color: #4a593d;
+      box-shadow: 
+          0 2px 4px rgba(140,151,114,0.2),
+          inset 1px 1px 2px rgba(255,255,255,0.8);
+    ">
+      18
+    </span>
+    <h2 style="
+      font-size: 14px; 
+      font-weight: 700; 
+      margin: 0; 
+      color: #556b2f;
+      text-shadow: 1px 1px 1px rgba(255,255,255,0.5);
+    ">
+      making sure
+    </h2>
+  </section>
+
+  <p style="
+    font-size: 12px; 
+    font-weight: 500; 
+    color: #6b8c42;
+    padding: 15px;
+    background: rgba(255,255,255,0.85);
+    border-radius: 10px;
+    margin: 10px 0;
+    line-height: 1.6;
+    box-shadow: 
+        inset 1px 1px 2px rgba(255,255,255,0.8),
+        inset -1px -1px 2px rgba(203,214,170,0.3);
+  ">
+    v. 确保；确认 
+  </p>
+
+  <section style="
+    padding: 15px; 
+    background: rgba(255,255,255,0.8);
+    border-radius: 15px; 
+    margin-top: 10px;
+    box-shadow: 
+        0 2px 4px rgba(140,151,114,0.1),
+        inset 1px 1px 2px rgba(255,255,255,0.8);
+    backdrop-filter: blur(2px);
+  ">
+    <p style="
+      font-size: 12px; 
+      font-weight: bold; 
+      color: #4a593d;
+      margin-bottom: 8px; 
+      text-shadow: 1px 1px 1px rgba(255,255,255,0.5);
+    ">
+      例句
+    </p>
+    <p style="
+      font-size: 12px; 
+      color: #556b2f;
+      margin: 0; 
+      line-height: 1.5;
+    ">
+      She checked the map twice, making sure they were on the right path.
+    </p>
+    <p style="
+      font-size: 8px; 
+      color: #8c9772;
+      margin-top: 6px; 
+      letter-spacing: 0.5px;
+    ">
+      她两次查看地图，确保路线正确。
+    </p>
+  </section>
+</section>
+</section>
+
+<style>
+@keyframes leaf-float {
+  0% { transform: translateY(0px) rotate(-1deg); }
+  50% { transform: translateY(-8px) rotate(1deg); }
+  100% { transform: translateY(0px) rotate(-1deg); }
+}
+</style><section style="flex: none; width: calc(100% - 10px);" onclick="this.style.height='0px';this.style.width='0';this.style.opacity='0'; this.style.transform='translateY(-20px) scale(0.9)'; setTimeout(()=>this.remove(), 500)">
+
+<section id="cloudCard" style="
+    width: 100%;
+    font-family: 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background: linear-gradient(145deg, #f5fae6 0%, #e3edd1 100%);
+    border-radius: 25px;
+    box-shadow: 
+        0 6px 20px rgba(140, 151, 114, 0.15),
+        inset 2px 2px 4px rgba(255,255,255,0.8),
+        inset -2px -2px 4px rgba(203,214,170,0.3);
+    position: relative;
+    border: 1px solid #8c9772;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    animation: leaf-float 3s ease-in-out infinite;
+  " onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+
+  <!-- 树叶装饰 -->
+  <div style="
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: url('data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22%236b8c42%22%3E%3Cpath%20d%3D%22M12%2021.35l-1.45-1.32C5.4%2015.36%202%2012.28%202%208.5%202%205.42%204.42%203%207.5%203c1.74%200%203.41.81%204.5%202.09C13.09%203.81%2014.76%203%2016.5%203%2019.58%203%2022%205.42%2022%208.5c0%203.78-3.4%206.86-8.55%2011.54L12%2021.35z%22%2F%3E%3C%2Fsvg%3E');
+    
+    background-size: cover;
+    top: -25px;
+    left: -20px;
+    opacity: 0.8;
+    transform: rotate(-15deg);
+  "></div>
+  
+  <div style="
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background: url('data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22%234a593d%22%3E%3Cpath%20d%3D%22M12%2021.35l-1.45-1.32C5.4%2015.36%202%2012.28%202%208.5%202%205.42%204.42%203%207.5%203c1.74%200%203.41.81%204.5%202.09C13.09%203.81%2014.76%203%2016.5%203%2019.58%203%2022%205.42%2022%208.5c0%203.78-3.4%206.86-8.55%2011.54L12%2021.35z%22%2F%3E%3C%2Fsvg%3E');
+    
+    background-size: cover;
+    top: -35px;
+    right: -30px;
+    opacity: 0.6;
+    transform: rotate(15deg);
+  "></div>
+
+  <!-- 内容区 -->
+  <section style="
+    display: flex; 
+    align-items: center; 
+    background: rgba(255,255,255,0.8);
+    padding: 15px; 
+    border-radius: 15px;
+    margin-bottom: 15px;
+    box-shadow: 
+        0 2px 4px rgba(140,151,114,0.1),
+        inset 1px 1px 2px rgba(255,255,255,0.8);
+    backdrop-filter: blur(2px);
+  ">
+    <span style="
+      font-size: 14px; 
+      font-weight: 600; 
+      background: linear-gradient(145deg, #d8e2c3, #c1d6a9);
+      width: 40px; 
+      height: 40px; 
+      display: flex; 
+      align-items: center; 
+      justify-content: center; 
+      border-radius: 50%; 
+      margin-right: 12px; 
+      color: #4a593d;
+      box-shadow: 
+          0 2px 4px rgba(140,151,114,0.2),
+          inset 1px 1px 2px rgba(255,255,255,0.8);
+    ">
+      19
+    </span>
+    <h2 style="
+      font-size: 14px; 
+      font-weight: 700; 
+      margin: 0; 
+      color: #556b2f;
+      text-shadow: 1px 1px 1px rgba(255,255,255,0.5);
+    ">
+      steady
+    </h2>
+  </section>
+
+  <p style="
+    font-size: 12px; 
+    font-weight: 500; 
+    color: #6b8c42;
+    padding: 15px;
+    background: rgba(255,255,255,0.85);
+    border-radius: 10px;
+    margin: 10px 0;
+    line-height: 1.6;
+    box-shadow: 
+        inset 1px 1px 2px rgba(255,255,255,0.8),
+        inset -1px -1px 2px rgba(203,214,170,0.3);
+  ">
+    adj. 稳固的；平稳的 
+  </p>
+
+  <section style="
+    padding: 15px; 
+    background: rgba(255,255,255,0.8);
+    border-radius: 15px; 
+    margin-top: 10px;
+    box-shadow: 
+        0 2px 4px rgba(140,151,114,0.1),
+        inset 1px 1px 2px rgba(255,255,255,0.8);
+    backdrop-filter: blur(2px);
+  ">
+    <p style="
+      font-size: 12px; 
+      font-weight: bold; 
+      color: #4a593d;
+      margin-bottom: 8px; 
+      text-shadow: 1px 1px 1px rgba(255,255,255,0.5);
+    ">
+      例句
+    </p>
+    <p style="
+      font-size: 12px; 
+      color: #556b2f;
+      margin: 0; 
+      line-height: 1.5;
+    ">
+      Hold the ladder steady while I climb up.
+    </p>
+    <p style="
+      font-size: 8px; 
+      color: #8c9772;
+      margin-top: 6px; 
+      letter-spacing: 0.5px;
+    ">
+      我爬梯子时请扶稳它。
+    </p>
+  </section>
+</section>
+</section>
+
+<style>
+@keyframes leaf-float {
+  0% { transform: translateY(0px) rotate(-1deg); }
+  50% { transform: translateY(-8px) rotate(1deg); }
+  100% { transform: translateY(0px) rotate(-1deg); }
+}
+</style><section style="flex: none; width: calc(100% - 10px);" onclick="this.style.height='0px';this.style.width='0';this.style.opacity='0'; this.style.transform='translateY(-20px) scale(0.9)'; setTimeout(()=>this.remove(), 500)">
+
+<section id="cloudCard" style="
+    width: 100%;
+    font-family: 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background: linear-gradient(145deg, #f5fae6 0%, #e3edd1 100%);
+    border-radius: 25px;
+    box-shadow: 
+        0 6px 20px rgba(140, 151, 114, 0.15),
+        inset 2px 2px 4px rgba(255,255,255,0.8),
+        inset -2px -2px 4px rgba(203,214,170,0.3);
+    position: relative;
+    border: 1px solid #8c9772;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    animation: leaf-float 3s ease-in-out infinite;
+  " onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+
+  <!-- 树叶装饰 -->
+  <div style="
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: url('data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22%236b8c42%22%3E%3Cpath%20d%3D%22M12%2021.35l-1.45-1.32C5.4%2015.36%202%2012.28%202%208.5%202%205.42%204.42%203%207.5%203c1.74%200%203.41.81%204.5%202.09C13.09%203.81%2014.76%203%2016.5%203%2019.58%203%2022%205.42%2022%208.5c0%203.78-3.4%206.86-8.55%2011.54L12%2021.35z%22%2F%3E%3C%2Fsvg%3E');
+    
+    background-size: cover;
+    top: -25px;
+    left: -20px;
+    opacity: 0.8;
+    transform: rotate(-15deg);
+  "></div>
+  
+  <div style="
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background: url('data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22%234a593d%22%3E%3Cpath%20d%3D%22M12%2021.35l-1.45-1.32C5.4%2015.36%202%2012.28%202%208.5%202%205.42%204.42%203%207.5%203c1.74%200%203.41.81%204.5%202.09C13.09%203.81%2014.76%203%2016.5%203%2019.58%203%2022%205.42%2022%208.5c0%203.78-3.4%206.86-8.55%2011.54L12%2021.35z%22%2F%3E%3C%2Fsvg%3E');
+    
+    background-size: cover;
+    top: -35px;
+    right: -30px;
+    opacity: 0.6;
+    transform: rotate(15deg);
+  "></div>
+
+  <!-- 内容区 -->
+  <section style="
+    display: flex; 
+    align-items: center; 
+    background: rgba(255,255,255,0.8);
+    padding: 15px; 
+    border-radius: 15px;
+    margin-bottom: 15px;
+    box-shadow: 
+        0 2px 4px rgba(140,151,114,0.1),
+        inset 1px 1px 2px rgba(255,255,255,0.8);
+    backdrop-filter: blur(2px);
+  ">
+    <span style="
+      font-size: 14px; 
+      font-weight: 600; 
+      background: linear-gradient(145deg, #d8e2c3, #c1d6a9);
+      width: 40px; 
+      height: 40px; 
+      display: flex; 
+      align-items: center; 
+      justify-content: center; 
+      border-radius: 50%; 
+      margin-right: 12px; 
+      color: #4a593d;
+      box-shadow: 
+          0 2px 4px rgba(140,151,114,0.2),
+          inset 1px 1px 2px rgba(255,255,255,0.8);
+    ">
+      20
+    </span>
+    <h2 style="
+      font-size: 14px; 
+      font-weight: 700; 
+      margin: 0; 
+      color: #556b2f;
+      text-shadow: 1px 1px 1px rgba(255,255,255,0.5);
+    ">
+      wind
+    </h2>
+  </section>
+
+  <p style="
+    font-size: 12px; 
+    font-weight: 500; 
+    color: #6b8c42;
+    padding: 15px;
+    background: rgba(255,255,255,0.85);
+    border-radius: 10px;
+    margin: 10px 0;
+    line-height: 1.6;
+    box-shadow: 
+        inset 1px 1px 2px rgba(255,255,255,0.8),
+        inset -1px -1px 2px rgba(203,214,170,0.3);
+  ">
+    n. 风 
+  </p>
+
+  <section style="
+    padding: 15px; 
+    background: rgba(255,255,255,0.8);
+    border-radius: 15px; 
+    margin-top: 10px;
+    box-shadow: 
+        0 2px 4px rgba(140,151,114,0.1),
+        inset 1px 1px 2px rgba(255,255,255,0.8);
+    backdrop-filter: blur(2px);
+  ">
+    <p style="
+      font-size: 12px; 
+      font-weight: bold; 
+      color: #4a593d;
+      margin-bottom: 8px; 
+      text-shadow: 1px 1px 1px rgba(255,255,255,0.5);
+    ">
+      例句
+    </p>
+    <p style="
+      font-size: 12px; 
+      color: #556b2f;
+      margin: 0; 
+      line-height: 1.5;
+    ">
+      The wind carried the scent of pine trees across the valley.
+    </p>
+    <p style="
+      font-size: 8px; 
+      color: #8c9772;
+      margin-top: 6px; 
+      letter-spacing: 0.5px;
+    ">
+      风将松树的香气吹遍山谷。
+    </p>
+  </section>
+</section>
+</section>
+
+<style>
+@keyframes leaf-float {
+  0% { transform: translateY(0px) rotate(-1deg); }
+  50% { transform: translateY(-8px) rotate(1deg); }
+  100% { transform: translateY(0px) rotate(-1deg); }
+}
+</style>
+    <section style="flex: none;width: calc(100% - 10px);">
+<section style="width: 100%; font-family: 'SF Pro Text', 'Helvetica Neue', sans-serif; max-width: 400px; margin: 0 auto; padding: 20px; background: #fefefe; border-radius: 12px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);">
+<p style="font-size: 12px; font-weight: 500; color: #333; padding-left: 20px 0;">
+**回到家**后，我们开始制作。爸爸教我如何**绑扎**木棍制作**框架**。木棍如同风筝的**骨骼**，我们用细绳**固定它们**，**确保**结构牢固**稳定**，仿佛在搭建迎接**风**的小屋。
+</p>
+</section>
+</section>
+        </section>
+    </div>
+</section><section class="section-term"></section>
+            <section id="target" style="
+            
+    position: relative;
+    background: #fffef7;
+    border: 1px solid #e0e0e0;
+    border-radius: 0 8px 8px 8px;
+    padding: 2rem 2rem 2rem 3rem;
+    margin: 1.5rem 0;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.08), inset 0 0 12px rgba(0, 0, 0, 0.04);
+    font-family: Georgia, serif;
+    min-height: 200px;
+">
+    <div style="
+        position: absolute;
+        top: -12px;
+        left: -12px;
+        width: 60px;
+        height: 60px;
+        background: #f0f4c3;
+        transform: rotate(-15deg);
+        border-radius: 4px;
+        box-shadow: 1px 1px 4px rgba(0,0,0,0.1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    ">
+        <svg onclick="document.getElementById('target').remove()" style="width:30px;height:30px;transform: rotate(10deg)" viewBox="0 0 24 24">
+            <path fill="#4CAF50" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path>
+        </svg>
+    </div>
+    <div style="
+        position: absolute;
+        left: 2rem;
+        right: 2rem;
+        height: 100%;
+        background: repeating-linear-gradient(to bottom, transparent, transparent 23px, rgba(0,0,0,0.08) 24px, rgba(0,0,0,0.08) 24px);
+        pointer-events: none;
+    "></div>
+    <div style="position: relative; z-index: 2; line-height: 24px;">
+        <h2 style="
+            color: #2e7d32;
+            margin: 0 0 1rem 0;
+            padding-left: 2em;
+            position: relative;
+            font-size: 1.4rem;
+        ">
+           标题
+        </h2>
+        <p style="
+            color: #424242;
+            margin: 0 0 24px 0;
+            padding-left: 28px;
+            position: relative;">
+            <span style="
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 20px;
+                height: 24px;
+            "></span>
+            <strong style="color: #1b5e20;">Next, we took the colorful paper and <span style="text-shadow:
+        0 0 8px rgba(255,107,107,0.3),
+        0 0 12px rgba(78,205,196,0.3);color: rgba(16, 150, 212, 0.8); font-weight: bolder;">wrapped</span> it around the frame. I carefully <span style="text-shadow:
+        0 0 8px rgba(255,107,107,0.3),
+        0 0 12px rgba(78,205,196,0.3);color: rgba(16, 150, 212, 0.8); font-weight: bolder;">glued</span> the paper to the sticks, making sure it was <span style="text-shadow:
+        0 0 8px rgba(255,107,107,0.3),
+        0 0 12px rgba(78,205,196,0.3);color: rgba(16, 150, 212, 0.8); font-weight: bolder;">smooth</span> and <span style="text-shadow:
+        0 0 8px rgba(255,107,107,0.3),
+        0 0 12px rgba(78,205,196,0.3);color: rgba(16, 150, 212, 0.8); font-weight: bolder;">tight</span>. The paper felt soft and smooth, like a cloud. When <span style="text-shadow:
+        0 0 8px rgba(255,107,107,0.3),
+        0 0 12px rgba(78,205,196,0.3);color: rgba(16, 150, 212, 0.8); font-weight: bolder;">it was all done</span>, the kite looked like a beautiful, <span style="text-shadow:
+        0 0 8px rgba(255,107,107,0.3),
+        0 0 12px rgba(78,205,196,0.3);color: rgba(16, 150, 212, 0.8); font-weight: bolder;">flying creature</span>.</strong>
+        </p>
+        <section style="line-height: 1.4; 
+				orphans: 4; 
+				font-family: Times New Roman; 
+				overflow-x: auto; 
+				display: flex; 
+				visibility: visible;">
+        <section style="flex: none; width: calc(100% - 10px);" onclick="this.style.height='0px';this.style.width='0';this.style.opacity='0'; this.style.transform='translateY(-20px) scale(0.9)'; setTimeout(()=>this.remove(), 500)">
+
+<section id="cloudCard" style="
+    width: 100%;
+    font-family: 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background: linear-gradient(145deg, #f5fae6 0%, #e3edd1 100%);
+    border-radius: 25px;
+    box-shadow: 
+        0 6px 20px rgba(140, 151, 114, 0.15),
+        inset 2px 2px 4px rgba(255,255,255,0.8),
+        inset -2px -2px 4px rgba(203,214,170,0.3);
+    position: relative;
+    border: 1px solid #8c9772;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    animation: leaf-float 3s ease-in-out infinite;
+  " onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+
+  <!-- 树叶装饰 -->
+  <div style="
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: url('data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22%236b8c42%22%3E%3Cpath%20d%3D%22M12%2021.35l-1.45-1.32C5.4%2015.36%202%2012.28%202%208.5%202%205.42%204.42%203%207.5%203c1.74%200%203.41.81%204.5%202.09C13.09%203.81%2014.76%203%2016.5%203%2019.58%203%2022%205.42%2022%208.5c0%203.78-3.4%206.86-8.55%2011.54L12%2021.35z%22%2F%3E%3C%2Fsvg%3E');
+    
+    background-size: cover;
+    top: -25px;
+    left: -20px;
+    opacity: 0.8;
+    transform: rotate(-15deg);
+  "></div>
+  
+  <div style="
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background: url('data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22%234a593d%22%3E%3Cpath%20d%3D%22M12%2021.35l-1.45-1.32C5.4%2015.36%202%2012.28%202%208.5%202%205.42%204.42%203%207.5%203c1.74%200%203.41.81%204.5%202.09C13.09%203.81%2014.76%203%2016.5%203%2019.58%203%2022%205.42%2022%208.5c0%203.78-3.4%206.86-8.55%2011.54L12%2021.35z%22%2F%3E%3C%2Fsvg%3E');
+    
+    background-size: cover;
+    top: -35px;
+    right: -30px;
+    opacity: 0.6;
+    transform: rotate(15deg);
+  "></div>
+
+  <!-- 内容区 -->
+  <section style="
+    display: flex; 
+    align-items: center; 
+    background: rgba(255,255,255,0.8);
+    padding: 15px; 
+    border-radius: 15px;
+    margin-bottom: 15px;
+    box-shadow: 
+        0 2px 4px rgba(140,151,114,0.1),
+        inset 1px 1px 2px rgba(255,255,255,0.8);
+    backdrop-filter: blur(2px);
+  ">
+    <span style="
+      font-size: 14px; 
+      font-weight: 600; 
+      background: linear-gradient(145deg, #d8e2c3, #c1d6a9);
+      width: 40px; 
+      height: 40px; 
+      display: flex; 
+      align-items: center; 
+      justify-content: center; 
+      border-radius: 50%; 
+      margin-right: 12px; 
+      color: #4a593d;
+      box-shadow: 
+          0 2px 4px rgba(140,151,114,0.2),
+          inset 1px 1px 2px rgba(255,255,255,0.8);
+    ">
+      21
+    </span>
+    <h2 style="
+      font-size: 14px; 
+      font-weight: 700; 
+      margin: 0; 
+      color: #556b2f;
+      text-shadow: 1px 1px 1px rgba(255,255,255,0.5);
+    ">
+      wrapped
+    </h2>
+  </section>
+
+  <p style="
+    font-size: 12px; 
+    font-weight: 500; 
+    color: #6b8c42;
+    padding: 15px;
+    background: rgba(255,255,255,0.85);
+    border-radius: 10px;
+    margin: 10px 0;
+    line-height: 1.6;
+    box-shadow: 
+        inset 1px 1px 2px rgba(255,255,255,0.8),
+        inset -1px -1px 2px rgba(203,214,170,0.3);
+  ">
+    v. 包裹；缠绕 
+  </p>
+
+  <section style="
+    padding: 15px; 
+    background: rgba(255,255,255,0.8);
+    border-radius: 15px; 
+    margin-top: 10px;
+    box-shadow: 
+        0 2px 4px rgba(140,151,114,0.1),
+        inset 1px 1px 2px rgba(255,255,255,0.8);
+    backdrop-filter: blur(2px);
+  ">
+    <p style="
+      font-size: 12px; 
+      font-weight: bold; 
+      color: #4a593d;
+      margin-bottom: 8px; 
+      text-shadow: 1px 1px 1px rgba(255,255,255,0.5);
+    ">
+      例句
+    </p>
+    <p style="
+      font-size: 12px; 
+      color: #556b2f;
+      margin: 0; 
+      line-height: 1.5;
+    ">
+      She wrapped the gift in golden paper with a silver ribbon.
+    </p>
+    <p style="
+      font-size: 8px; 
+      color: #8c9772;
+      margin-top: 6px; 
+      letter-spacing: 0.5px;
+    ">
+      她用金纸和银丝带包装礼物。
+    </p>
+  </section>
+</section>
+</section>
+
+<style>
+@keyframes leaf-float {
+  0% { transform: translateY(0px) rotate(-1deg); }
+  50% { transform: translateY(-8px) rotate(1deg); }
+  100% { transform: translateY(0px) rotate(-1deg); }
+}
+</style><section style="flex: none; width: calc(100% - 10px);" onclick="this.style.height='0px';this.style.width='0';this.style.opacity='0'; this.style.transform='translateY(-20px) scale(0.9)'; setTimeout(()=>this.remove(), 500)">
+
+<section id="cloudCard" style="
+    width: 100%;
+    font-family: 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background: linear-gradient(145deg, #f5fae6 0%, #e3edd1 100%);
+    border-radius: 25px;
+    box-shadow: 
+        0 6px 20px rgba(140, 151, 114, 0.15),
+        inset 2px 2px 4px rgba(255,255,255,0.8),
+        inset -2px -2px 4px rgba(203,214,170,0.3);
+    position: relative;
+    border: 1px solid #8c9772;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    animation: leaf-float 3s ease-in-out infinite;
+  " onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+
+  <!-- 树叶装饰 -->
+  <div style="
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: url('data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22%236b8c42%22%3E%3Cpath%20d%3D%22M12%2021.35l-1.45-1.32C5.4%2015.36%202%2012.28%202%208.5%202%205.42%204.42%203%207.5%203c1.74%200%203.41.81%204.5%202.09C13.09%203.81%2014.76%203%2016.5%203%2019.58%203%2022%205.42%2022%208.5c0%203.78-3.4%206.86-8.55%2011.54L12%2021.35z%22%2F%3E%3C%2Fsvg%3E');
+    
+    background-size: cover;
+    top: -25px;
+    left: -20px;
+    opacity: 0.8;
+    transform: rotate(-15deg);
+  "></div>
+  
+  <div style="
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background: url('data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22%234a593d%22%3E%3Cpath%20d%3D%22M12%2021.35l-1.45-1.32C5.4%2015.36%202%2012.28%202%208.5%202%205.42%204.42%203%207.5%203c1.74%200%203.41.81%204.5%202.09C13.09%203.81%2014.76%203%2016.5%203%2019.58%203%2022%205.42%2022%208.5c0%203.78-3.4%206.86-8.55%2011.54L12%2021.35z%22%2F%3E%3C%2Fsvg%3E');
+    
+    background-size: cover;
+    top: -35px;
+    right: -30px;
+    opacity: 0.6;
+    transform: rotate(15deg);
+  "></div>
+
+  <!-- 内容区 -->
+  <section style="
+    display: flex; 
+    align-items: center; 
+    background: rgba(255,255,255,0.8);
+    padding: 15px; 
+    border-radius: 15px;
+    margin-bottom: 15px;
+    box-shadow: 
+        0 2px 4px rgba(140,151,114,0.1),
+        inset 1px 1px 2px rgba(255,255,255,0.8);
+    backdrop-filter: blur(2px);
+  ">
+    <span style="
+      font-size: 14px; 
+      font-weight: 600; 
+      background: linear-gradient(145deg, #d8e2c3, #c1d6a9);
+      width: 40px; 
+      height: 40px; 
+      display: flex; 
+      align-items: center; 
+      justify-content: center; 
+      border-radius: 50%; 
+      margin-right: 12px; 
+      color: #4a593d;
+      box-shadow: 
+          0 2px 4px rgba(140,151,114,0.2),
+          inset 1px 1px 2px rgba(255,255,255,0.8);
+    ">
+      22
+    </span>
+    <h2 style="
+      font-size: 14px; 
+      font-weight: 700; 
+      margin: 0; 
+      color: #556b2f;
+      text-shadow: 1px 1px 1px rgba(255,255,255,0.5);
+    ">
+      glued
+    </h2>
+  </section>
+
+  <p style="
+    font-size: 12px; 
+    font-weight: 500; 
+    color: #6b8c42;
+    padding: 15px;
+    background: rgba(255,255,255,0.85);
+    border-radius: 10px;
+    margin: 10px 0;
+    line-height: 1.6;
+    box-shadow: 
+        inset 1px 1px 2px rgba(255,255,255,0.8),
+        inset -1px -1px 2px rgba(203,214,170,0.3);
+  ">
+    v. 粘贴（glue的过去式） 
+  </p>
+
+  <section style="
+    padding: 15px; 
+    background: rgba(255,255,255,0.8);
+    border-radius: 15px; 
+    margin-top: 10px;
+    box-shadow: 
+        0 2px 4px rgba(140,151,114,0.1),
+        inset 1px 1px 2px rgba(255,255,255,0.8);
+    backdrop-filter: blur(2px);
+  ">
+    <p style="
+      font-size: 12px; 
+      font-weight: bold; 
+      color: #4a593d;
+      margin-bottom: 8px; 
+      text-shadow: 1px 1px 1px rgba(255,255,255,0.5);
+    ">
+      例句
+    </p>
+    <p style="
+      font-size: 12px; 
+      color: #556b2f;
+      margin: 0; 
+      line-height: 1.5;
+    ">
+      He glued the broken pieces of the vase back together.
+    </p>
+    <p style="
+      font-size: 8px; 
+      color: #8c9772;
+      margin-top: 6px; 
+      letter-spacing: 0.5px;
+    ">
+      他把花瓶的碎片重新粘合。
+    </p>
+  </section>
+</section>
+</section>
+
+<style>
+@keyframes leaf-float {
+  0% { transform: translateY(0px) rotate(-1deg); }
+  50% { transform: translateY(-8px) rotate(1deg); }
+  100% { transform: translateY(0px) rotate(-1deg); }
+}
+</style><section style="flex: none; width: calc(100% - 10px);" onclick="this.style.height='0px';this.style.width='0';this.style.opacity='0'; this.style.transform='translateY(-20px) scale(0.9)'; setTimeout(()=>this.remove(), 500)">
+
+<section id="cloudCard" style="
+    width: 100%;
+    font-family: 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background: linear-gradient(145deg, #f5fae6 0%, #e3edd1 100%);
+    border-radius: 25px;
+    box-shadow: 
+        0 6px 20px rgba(140, 151, 114, 0.15),
+        inset 2px 2px 4px rgba(255,255,255,0.8),
+        inset -2px -2px 4px rgba(203,214,170,0.3);
+    position: relative;
+    border: 1px solid #8c9772;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    animation: leaf-float 3s ease-in-out infinite;
+  " onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+
+  <!-- 树叶装饰 -->
+  <div style="
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: url('data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22%236b8c42%22%3E%3Cpath%20d%3D%22M12%2021.35l-1.45-1.32C5.4%2015.36%202%2012.28%202%208.5%202%205.42%204.42%203%207.5%203c1.74%200%203.41.81%204.5%202.09C13.09%203.81%2014.76%203%2016.5%203%2019.58%203%2022%205.42%2022%208.5c0%203.78-3.4%206.86-8.55%2011.54L12%2021.35z%22%2F%3E%3C%2Fsvg%3E');
+    
+    background-size: cover;
+    top: -25px;
+    left: -20px;
+    opacity: 0.8;
+    transform: rotate(-15deg);
+  "></div>
+  
+  <div style="
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background: url('data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22%234a593d%22%3E%3Cpath%20d%3D%22M12%2021.35l-1.45-1.32C5.4%2015.36%202%2012.28%202%208.5%202%205.42%204.42%203%207.5%203c1.74%200%203.41.81%204.5%202.09C13.09%203.81%2014.76%203%2016.5%203%2019.58%203%2022%205.42%2022%208.5c0%203.78-3.4%206.86-8.55%2011.54L12%2021.35z%22%2F%3E%3C%2Fsvg%3E');
+    
+    background-size: cover;
+    top: -35px;
+    right: -30px;
+    opacity: 0.6;
+    transform: rotate(15deg);
+  "></div>
+
+  <!-- 内容区 -->
+  <section style="
+    display: flex; 
+    align-items: center; 
+    background: rgba(255,255,255,0.8);
+    padding: 15px; 
+    border-radius: 15px;
+    margin-bottom: 15px;
+    box-shadow: 
+        0 2px 4px rgba(140,151,114,0.1),
+        inset 1px 1px 2px rgba(255,255,255,0.8);
+    backdrop-filter: blur(2px);
+  ">
+    <span style="
+      font-size: 14px; 
+      font-weight: 600; 
+      background: linear-gradient(145deg, #d8e2c3, #c1d6a9);
+      width: 40px; 
+      height: 40px; 
+      display: flex; 
+      align-items: center; 
+      justify-content: center; 
+      border-radius: 50%; 
+      margin-right: 12px; 
+      color: #4a593d;
+      box-shadow: 
+          0 2px 4px rgba(140,151,114,0.2),
+          inset 1px 1px 2px rgba(255,255,255,0.8);
+    ">
+      23
+    </span>
+    <h2 style="
+      font-size: 14px; 
+      font-weight: 700; 
+      margin: 0; 
+      color: #556b2f;
+      text-shadow: 1px 1px 1px rgba(255,255,255,0.5);
+    ">
+      smooth
+    </h2>
+  </section>
+
+  <p style="
+    font-size: 12px; 
+    font-weight: 500; 
+    color: #6b8c42;
+    padding: 15px;
+    background: rgba(255,255,255,0.85);
+    border-radius: 10px;
+    margin: 10px 0;
+    line-height: 1.6;
+    box-shadow: 
+        inset 1px 1px 2px rgba(255,255,255,0.8),
+        inset -1px -1px 2px rgba(203,214,170,0.3);
+  ">
+    adj. 平滑的；平整的 
+  </p>
+
+  <section style="
+    padding: 15px; 
+    background: rgba(255,255,255,0.8);
+    border-radius: 15px; 
+    margin-top: 10px;
+    box-shadow: 
+        0 2px 4px rgba(140,151,114,0.1),
+        inset 1px 1px 2px rgba(255,255,255,0.8);
+    backdrop-filter: blur(2px);
+  ">
+    <p style="
+      font-size: 12px; 
+      font-weight: bold; 
+      color: #4a593d;
+      margin-bottom: 8px; 
+      text-shadow: 1px 1px 1px rgba(255,255,255,0.5);
+    ">
+      例句
+    </p>
+    <p style="
+      font-size: 12px; 
+      color: #556b2f;
+      margin: 0; 
+      line-height: 1.5;
+    ">
+      The surface of the lake was as smooth as glass.
+    </p>
+    <p style="
+      font-size: 8px; 
+      color: #8c9772;
+      margin-top: 6px; 
+      letter-spacing: 0.5px;
+    ">
+      湖面平滑如镜。
+    </p>
+  </section>
+</section>
+</section>
+
+<style>
+@keyframes leaf-float {
+  0% { transform: translateY(0px) rotate(-1deg); }
+  50% { transform: translateY(-8px) rotate(1deg); }
+  100% { transform: translateY(0px) rotate(-1deg); }
+}
+</style><section style="flex: none; width: calc(100% - 10px);" onclick="this.style.height='0px';this.style.width='0';this.style.opacity='0'; this.style.transform='translateY(-20px) scale(0.9)'; setTimeout(()=>this.remove(), 500)">
+
+<section id="cloudCard" style="
+    width: 100%;
+    font-family: 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background: linear-gradient(145deg, #f5fae6 0%, #e3edd1 100%);
+    border-radius: 25px;
+    box-shadow: 
+        0 6px 20px rgba(140, 151, 114, 0.15),
+        inset 2px 2px 4px rgba(255,255,255,0.8),
+        inset -2px -2px 4px rgba(203,214,170,0.3);
+    position: relative;
+    border: 1px solid #8c9772;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    animation: leaf-float 3s ease-in-out infinite;
+  " onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+
+  <!-- 树叶装饰 -->
+  <div style="
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: url('data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22%236b8c42%22%3E%3Cpath%20d%3D%22M12%2021.35l-1.45-1.32C5.4%2015.36%202%2012.28%202%208.5%202%205.42%204.42%203%207.5%203c1.74%200%203.41.81%204.5%202.09C13.09%203.81%2014.76%203%2016.5%203%2019.58%203%2022%205.42%2022%208.5c0%203.78-3.4%206.86-8.55%2011.54L12%2021.35z%22%2F%3E%3C%2Fsvg%3E');
+    
+    background-size: cover;
+    top: -25px;
+    left: -20px;
+    opacity: 0.8;
+    transform: rotate(-15deg);
+  "></div>
+  
+  <div style="
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background: url('data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22%234a593d%22%3E%3Cpath%20d%3D%22M12%2021.35l-1.45-1.32C5.4%2015.36%202%2012.28%202%208.5%202%205.42%204.42%203%207.5%203c1.74%200%203.41.81%204.5%202.09C13.09%203.81%2014.76%203%2016.5%203%2019.58%203%2022%205.42%2022%208.5c0%203.78-3.4%206.86-8.55%2011.54L12%2021.35z%22%2F%3E%3C%2Fsvg%3E');
+    
+    background-size: cover;
+    top: -35px;
+    right: -30px;
+    opacity: 0.6;
+    transform: rotate(15deg);
+  "></div>
+
+  <!-- 内容区 -->
+  <section style="
+    display: flex; 
+    align-items: center; 
+    background: rgba(255,255,255,0.8);
+    padding: 15px; 
+    border-radius: 15px;
+    margin-bottom: 15px;
+    box-shadow: 
+        0 2px 4px rgba(140,151,114,0.1),
+        inset 1px 1px 2px rgba(255,255,255,0.8);
+    backdrop-filter: blur(2px);
+  ">
+    <span style="
+      font-size: 14px; 
+      font-weight: 600; 
+      background: linear-gradient(145deg, #d8e2c3, #c1d6a9);
+      width: 40px; 
+      height: 40px; 
+      display: flex; 
+      align-items: center; 
+      justify-content: center; 
+      border-radius: 50%; 
+      margin-right: 12px; 
+      color: #4a593d;
+      box-shadow: 
+          0 2px 4px rgba(140,151,114,0.2),
+          inset 1px 1px 2px rgba(255,255,255,0.8);
+    ">
+      24
+    </span>
+    <h2 style="
+      font-size: 14px; 
+      font-weight: 700; 
+      margin: 0; 
+      color: #556b2f;
+      text-shadow: 1px 1px 1px rgba(255,255,255,0.5);
+    ">
+      tight
+    </h2>
+  </section>
+
+  <p style="
+    font-size: 12px; 
+    font-weight: 500; 
+    color: #6b8c42;
+    padding: 15px;
+    background: rgba(255,255,255,0.85);
+    border-radius: 10px;
+    margin: 10px 0;
+    line-height: 1.6;
+    box-shadow: 
+        inset 1px 1px 2px rgba(255,255,255,0.8),
+        inset -1px -1px 2px rgba(203,214,170,0.3);
+  ">
+    adj. 紧的；牢固的 
+  </p>
+
+  <section style="
+    padding: 15px; 
+    background: rgba(255,255,255,0.8);
+    border-radius: 15px; 
+    margin-top: 10px;
+    box-shadow: 
+        0 2px 4px rgba(140,151,114,0.1),
+        inset 1px 1px 2px rgba(255,255,255,0.8);
+    backdrop-filter: blur(2px);
+  ">
+    <p style="
+      font-size: 12px; 
+      font-weight: bold; 
+      color: #4a593d;
+      margin-bottom: 8px; 
+      text-shadow: 1px 1px 1px rgba(255,255,255,0.5);
+    ">
+      例句
+    </p>
+    <p style="
+      font-size: 12px; 
+      color: #556b2f;
+      margin: 0; 
+      line-height: 1.5;
+    ">
+      Make sure the lid is on tight to keep the food fresh.
+    </p>
+    <p style="
+      font-size: 8px; 
+      color: #8c9772;
+      margin-top: 6px; 
+      letter-spacing: 0.5px;
+    ">
+      确保盖子拧紧以保持食物新鲜。
+    </p>
+  </section>
+</section>
+</section>
+
+<style>
+@keyframes leaf-float {
+  0% { transform: translateY(0px) rotate(-1deg); }
+  50% { transform: translateY(-8px) rotate(1deg); }
+  100% { transform: translateY(0px) rotate(-1deg); }
+}
+</style><section style="flex: none; width: calc(100% - 10px);" onclick="this.style.height='0px';this.style.width='0';this.style.opacity='0'; this.style.transform='translateY(-20px) scale(0.9)'; setTimeout(()=>this.remove(), 500)">
+
+<section id="cloudCard" style="
+    width: 100%;
+    font-family: 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background: linear-gradient(145deg, #f5fae6 0%, #e3edd1 100%);
+    border-radius: 25px;
+    box-shadow: 
+        0 6px 20px rgba(140, 151, 114, 0.15),
+        inset 2px 2px 4px rgba(255,255,255,0.8),
+        inset -2px -2px 4px rgba(203,214,170,0.3);
+    position: relative;
+    border: 1px solid #8c9772;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    animation: leaf-float 3s ease-in-out infinite;
+  " onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+
+  <!-- 树叶装饰 -->
+  <div style="
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: url('data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22%236b8c42%22%3E%3Cpath%20d%3D%22M12%2021.35l-1.45-1.32C5.4%2015.36%202%2012.28%202%208.5%202%205.42%204.42%203%207.5%203c1.74%200%203.41.81%204.5%202.09C13.09%203.81%2014.76%203%2016.5%203%2019.58%203%2022%205.42%2022%208.5c0%203.78-3.4%206.86-8.55%2011.54L12%2021.35z%22%2F%3E%3C%2Fsvg%3E');
+    
+    background-size: cover;
+    top: -25px;
+    left: -20px;
+    opacity: 0.8;
+    transform: rotate(-15deg);
+  "></div>
+  
+  <div style="
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background: url('data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22%234a593d%22%3E%3Cpath%20d%3D%22M12%2021.35l-1.45-1.32C5.4%2015.36%202%2012.28%202%208.5%202%205.42%204.42%203%207.5%203c1.74%200%203.41.81%204.5%202.09C13.09%203.81%2014.76%203%2016.5%203%2019.58%203%2022%205.42%2022%208.5c0%203.78-3.4%206.86-8.55%2011.54L12%2021.35z%22%2F%3E%3C%2Fsvg%3E');
+    
+    background-size: cover;
+    top: -35px;
+    right: -30px;
+    opacity: 0.6;
+    transform: rotate(15deg);
+  "></div>
+
+  <!-- 内容区 -->
+  <section style="
+    display: flex; 
+    align-items: center; 
+    background: rgba(255,255,255,0.8);
+    padding: 15px; 
+    border-radius: 15px;
+    margin-bottom: 15px;
+    box-shadow: 
+        0 2px 4px rgba(140,151,114,0.1),
+        inset 1px 1px 2px rgba(255,255,255,0.8);
+    backdrop-filter: blur(2px);
+  ">
+    <span style="
+      font-size: 14px; 
+      font-weight: 600; 
+      background: linear-gradient(145deg, #d8e2c3, #c1d6a9);
+      width: 40px; 
+      height: 40px; 
+      display: flex; 
+      align-items: center; 
+      justify-content: center; 
+      border-radius: 50%; 
+      margin-right: 12px; 
+      color: #4a593d;
+      box-shadow: 
+          0 2px 4px rgba(140,151,114,0.2),
+          inset 1px 1px 2px rgba(255,255,255,0.8);
+    ">
+      25
+    </span>
+    <h2 style="
+      font-size: 14px; 
+      font-weight: 700; 
+      margin: 0; 
+      color: #556b2f;
+      text-shadow: 1px 1px 1px rgba(255,255,255,0.5);
+    ">
+      it was all done
+    </h2>
+  </section>
+
+  <p style="
+    font-size: 12px; 
+    font-weight: 500; 
+    color: #6b8c42;
+    padding: 15px;
+    background: rgba(255,255,255,0.85);
+    border-radius: 10px;
+    margin: 10px 0;
+    line-height: 1.6;
+    box-shadow: 
+        inset 1px 1px 2px rgba(255,255,255,0.8),
+        inset -1px -1px 2px rgba(203,214,170,0.3);
+  ">
+    phr. 全部完成 
+  </p>
+
+  <section style="
+    padding: 15px; 
+    background: rgba(255,255,255,0.8);
+    border-radius: 15px; 
+    margin-top: 10px;
+    box-shadow: 
+        0 2px 4px rgba(140,151,114,0.1),
+        inset 1px 1px 2px rgba(255,255,255,0.8);
+    backdrop-filter: blur(2px);
+  ">
+    <p style="
+      font-size: 12px; 
+      font-weight: bold; 
+      color: #4a593d;
+      margin-bottom: 8px; 
+      text-shadow: 1px 1px 1px rgba(255,255,255,0.5);
+    ">
+      例句
+    </p>
+    <p style="
+      font-size: 12px; 
+      color: #556b2f;
+      margin: 0; 
+      line-height: 1.5;
+    ">
+      After hours of painting, it was all done and looked perfect.
+    </p>
+    <p style="
+      font-size: 8px; 
+      color: #8c9772;
+      margin-top: 6px; 
+      letter-spacing: 0.5px;
+    ">
+      经过数小时绘画，作品完成且完美无瑕。
+    </p>
+  </section>
+</section>
+</section>
+
+<style>
+@keyframes leaf-float {
+  0% { transform: translateY(0px) rotate(-1deg); }
+  50% { transform: translateY(-8px) rotate(1deg); }
+  100% { transform: translateY(0px) rotate(-1deg); }
+}
+</style><section style="flex: none; width: calc(100% - 10px);" onclick="this.style.height='0px';this.style.width='0';this.style.opacity='0'; this.style.transform='translateY(-20px) scale(0.9)'; setTimeout(()=>this.remove(), 500)">
+
+<section id="cloudCard" style="
+    width: 100%;
+    font-family: 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background: linear-gradient(145deg, #f5fae6 0%, #e3edd1 100%);
+    border-radius: 25px;
+    box-shadow: 
+        0 6px 20px rgba(140, 151, 114, 0.15),
+        inset 2px 2px 4px rgba(255,255,255,0.8),
+        inset -2px -2px 4px rgba(203,214,170,0.3);
+    position: relative;
+    border: 1px solid #8c9772;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    animation: leaf-float 3s ease-in-out infinite;
+  " onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+
+  <!-- 树叶装饰 -->
+  <div style="
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: url('data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22%236b8c42%22%3E%3Cpath%20d%3D%22M12%2021.35l-1.45-1.32C5.4%2015.36%202%2012.28%202%208.5%202%205.42%204.42%203%207.5%203c1.74%200%203.41.81%204.5%202.09C13.09%203.81%2014.76%203%2016.5%203%2019.58%203%2022%205.42%2022%208.5c0%203.78-3.4%206.86-8.55%2011.54L12%2021.35z%22%2F%3E%3C%2Fsvg%3E');
+    
+    background-size: cover;
+    top: -25px;
+    left: -20px;
+    opacity: 0.8;
+    transform: rotate(-15deg);
+  "></div>
+  
+  <div style="
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background: url('data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22%234a593d%22%3E%3Cpath%20d%3D%22M12%2021.35l-1.45-1.32C5.4%2015.36%202%2012.28%202%208.5%202%205.42%204.42%203%207.5%203c1.74%200%203.41.81%204.5%202.09C13.09%203.81%2014.76%203%2016.5%203%2019.58%203%2022%205.42%2022%208.5c0%203.78-3.4%206.86-8.55%2011.54L12%2021.35z%22%2F%3E%3C%2Fsvg%3E');
+    
+    background-size: cover;
+    top: -35px;
+    right: -30px;
+    opacity: 0.6;
+    transform: rotate(15deg);
+  "></div>
+
+  <!-- 内容区 -->
+  <section style="
+    display: flex; 
+    align-items: center; 
+    background: rgba(255,255,255,0.8);
+    padding: 15px; 
+    border-radius: 15px;
+    margin-bottom: 15px;
+    box-shadow: 
+        0 2px 4px rgba(140,151,114,0.1),
+        inset 1px 1px 2px rgba(255,255,255,0.8);
+    backdrop-filter: blur(2px);
+  ">
+    <span style="
+      font-size: 14px; 
+      font-weight: 600; 
+      background: linear-gradient(145deg, #d8e2c3, #c1d6a9);
+      width: 40px; 
+      height: 40px; 
+      display: flex; 
+      align-items: center; 
+      justify-content: center; 
+      border-radius: 50%; 
+      margin-right: 12px; 
+      color: #4a593d;
+      box-shadow: 
+          0 2px 4px rgba(140,151,114,0.2),
+          inset 1px 1px 2px rgba(255,255,255,0.8);
+    ">
+      26
+    </span>
+    <h2 style="
+      font-size: 14px; 
+      font-weight: 700; 
+      margin: 0; 
+      color: #556b2f;
+      text-shadow: 1px 1px 1px rgba(255,255,255,0.5);
+    ">
+      flying creature
+    </h2>
+  </section>
+
+  <p style="
+    font-size: 12px; 
+    font-weight: 500; 
+    color: #6b8c42;
+    padding: 15px;
+    background: rgba(255,255,255,0.85);
+    border-radius: 10px;
+    margin: 10px 0;
+    line-height: 1.6;
+    box-shadow: 
+        inset 1px 1px 2px rgba(255,255,255,0.8),
+        inset -1px -1px 2px rgba(203,214,170,0.3);
+  ">
+    n. 飞行生物 
+  </p>
+
+  <section style="
+    padding: 15px; 
+    background: rgba(255,255,255,0.8);
+    border-radius: 15px; 
+    margin-top: 10px;
+    box-shadow: 
+        0 2px 4px rgba(140,151,114,0.1),
+        inset 1px 1px 2px rgba(255,255,255,0.8);
+    backdrop-filter: blur(2px);
+  ">
+    <p style="
+      font-size: 12px; 
+      font-weight: bold; 
+      color: #4a593d;
+      margin-bottom: 8px; 
+      text-shadow: 1px 1px 1px rgba(255,255,255,0.5);
+    ">
+      例句
+    </p>
+    <p style="
+      font-size: 12px; 
+      color: #556b2f;
+      margin: 0; 
+      line-height: 1.5;
+    ">
+      Bats are the only flying creatures that are mammals.
+    </p>
+    <p style="
+      font-size: 8px; 
+      color: #8c9772;
+      margin-top: 6px; 
+      letter-spacing: 0.5px;
+    ">
+      蝙蝠是唯一会飞的哺乳动物。
+    </p>
+  </section>
+</section>
+</section>
+
+<style>
+@keyframes leaf-float {
+  0% { transform: translateY(0px) rotate(-1deg); }
+  50% { transform: translateY(-8px) rotate(1deg); }
+  100% { transform: translateY(0px) rotate(-1deg); }
+}
+</style>
+    <section style="flex: none;width: calc(100% - 10px);">
+<section style="width: 100%; font-family: 'SF Pro Text', 'Helvetica Neue', sans-serif; max-width: 400px; margin: 0 auto; padding: 20px; background: #fefefe; border-radius: 12px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);">
+<p style="font-size: 12px; font-weight: 500; color: #333; padding-left: 20px 0;">
+接着，我们将彩纸**包裹**在框架上。我仔细**粘贴**纸张，确保表面**平整**且**绷紧**。纸张柔软顺滑如云朵，**完成后**的风筝宛如一只美丽的**飞行生物**。
+</p>
+</section>
+</section>
+        </section>
+    </div>
+</section><section class="section-term"></section>
+            <section id="target" style="
+            
+    position: relative;
+    background: #fffef7;
+    border: 1px solid #e0e0e0;
+    border-radius: 0 8px 8px 8px;
+    padding: 2rem 2rem 2rem 3rem;
+    margin: 1.5rem 0;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.08), inset 0 0 12px rgba(0, 0, 0, 0.04);
+    font-family: Georgia, serif;
+    min-height: 200px;
+">
+    <div style="
+        position: absolute;
+        top: -12px;
+        left: -12px;
+        width: 60px;
+        height: 60px;
+        background: #f0f4c3;
+        transform: rotate(-15deg);
+        border-radius: 4px;
+        box-shadow: 1px 1px 4px rgba(0,0,0,0.1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    ">
+        <svg onclick="document.getElementById('target').remove()" style="width:30px;height:30px;transform: rotate(10deg)" viewBox="0 0 24 24">
+            <path fill="#4CAF50" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path>
+        </svg>
+    </div>
+    <div style="
+        position: absolute;
+        left: 2rem;
+        right: 2rem;
+        height: 100%;
+        background: repeating-linear-gradient(to bottom, transparent, transparent 23px, rgba(0,0,0,0.08) 24px, rgba(0,0,0,0.08) 24px);
+        pointer-events: none;
+    "></div>
+    <div style="position: relative; z-index: 2; line-height: 24px;">
+        <h2 style="
+            color: #2e7d32;
+            margin: 0 0 1rem 0;
+            padding-left: 2em;
+            position: relative;
+            font-size: 1.4rem;
+        ">
+           标题
+        </h2>
+        <p style="
+            color: #424242;
+            margin: 0 0 24px 0;
+            padding-left: 28px;
+            position: relative;">
+            <span style="
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 20px;
+                height: 24px;
+            "></span>
+            <strong style="color: #1b5e20;">We <span style="text-shadow:
+        0 0 8px rgba(255,107,107,0.3),
+        0 0 12px rgba(78,205,196,0.3);color: rgba(16, 150, 212, 0.8); font-weight: bolder;">added</span> a long <span style="text-shadow:
+        0 0 8px rgba(255,107,107,0.3),
+        0 0 12px rgba(78,205,196,0.3);color: rgba(16, 150, 212, 0.8); font-weight: bolder;">tail</span> to the kite. The tail was made of colorful <span style="text-shadow:
+        0 0 8px rgba(255,107,107,0.3),
+        0 0 12px rgba(78,205,196,0.3);color: rgba(16, 150, 212, 0.8); font-weight: bolder;">ribbons</span> that <span style="text-shadow:
+        0 0 8px rgba(255,107,107,0.3),
+        0 0 12px rgba(78,205,196,0.3);color: rgba(16, 150, 212, 0.8); font-weight: bolder;">fluttered</span> in the wind. It looked like the kite was wearing a <span style="text-shadow:
+        0 0 8px rgba(255,107,107,0.3),
+        0 0 12px rgba(78,205,196,0.3);color: rgba(16, 150, 212, 0.8); font-weight: bolder;">fancy</span> dress. I felt proud of my <span style="text-shadow:
+        0 0 8px rgba(255,107,107,0.3),
+        0 0 12px rgba(78,205,196,0.3);color: rgba(16, 150, 212, 0.8); font-weight: bolder;">creation</span> and couldn't wait to see it fly.</strong>
+        </p>
+        <section style="line-height: 1.4; 
+				orphans: 4; 
+				font-family: Times New Roman; 
+				overflow-x: auto; 
+				display: flex; 
+				visibility: visible;">
+        <section style="flex: none; width: calc(100% - 10px);" onclick="this.style.height='0px';this.style.width='0';this.style.opacity='0'; this.style.transform='translateY(-20px) scale(0.9)'; setTimeout(()=>this.remove(), 500)">
+
+<section id="cloudCard" style="
+    width: 100%;
+    font-family: 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background: linear-gradient(145deg, #f5fae6 0%, #e3edd1 100%);
+    border-radius: 25px;
+    box-shadow: 
+        0 6px 20px rgba(140, 151, 114, 0.15),
+        inset 2px 2px 4px rgba(255,255,255,0.8),
+        inset -2px -2px 4px rgba(203,214,170,0.3);
+    position: relative;
+    border: 1px solid #8c9772;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    animation: leaf-float 3s ease-in-out infinite;
+  " onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+
+  <!-- 树叶装饰 -->
+  <div style="
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: url('data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22%236b8c42%22%3E%3Cpath%20d%3D%22M12%2021.35l-1.45-1.32C5.4%2015.36%202%2012.28%202%208.5%202%205.42%204.42%203%207.5%203c1.74%200%203.41.81%204.5%202.09C13.09%203.81%2014.76%203%2016.5%203%2019.58%203%2022%205.42%2022%208.5c0%203.78-3.4%206.86-8.55%2011.54L12%2021.35z%22%2F%3E%3C%2Fsvg%3E');
+    
+    background-size: cover;
+    top: -25px;
+    left: -20px;
+    opacity: 0.8;
+    transform: rotate(-15deg);
+  "></div>
+  
+  <div style="
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background: url('data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22%234a593d%22%3E%3Cpath%20d%3D%22M12%2021.35l-1.45-1.32C5.4%2015.36%202%2012.28%202%208.5%202%205.42%204.42%203%207.5%203c1.74%200%203.41.81%204.5%202.09C13.09%203.81%2014.76%203%2016.5%203%2019.58%203%2022%205.42%2022%208.5c0%203.78-3.4%206.86-8.55%2011.54L12%2021.35z%22%2F%3E%3C%2Fsvg%3E');
+    
+    background-size: cover;
+    top: -35px;
+    right: -30px;
+    opacity: 0.6;
+    transform: rotate(15deg);
+  "></div>
+
+  <!-- 内容区 -->
+  <section style="
+    display: flex; 
+    align-items: center; 
+    background: rgba(255,255,255,0.8);
+    padding: 15px; 
+    border-radius: 15px;
+    margin-bottom: 15px;
+    box-shadow: 
+        0 2px 4px rgba(140,151,114,0.1),
+        inset 1px 1px 2px rgba(255,255,255,0.8);
+    backdrop-filter: blur(2px);
+  ">
+    <span style="
+      font-size: 14px; 
+      font-weight: 600; 
+      background: linear-gradient(145deg, #d8e2c3, #c1d6a9);
+      width: 40px; 
+      height: 40px; 
+      display: flex; 
+      align-items: center; 
+      justify-content: center; 
+      border-radius: 50%; 
+      margin-right: 12px; 
+      color: #4a593d;
+      box-shadow: 
+          0 2px 4px rgba(140,151,114,0.2),
+          inset 1px 1px 2px rgba(255,255,255,0.8);
+    ">
+      27
+    </span>
+    <h2 style="
+      font-size: 14px; 
+      font-weight: 700; 
+      margin: 0; 
+      color: #556b2f;
+      text-shadow: 1px 1px 1px rgba(255,255,255,0.5);
+    ">
+      added
+    </h2>
+  </section>
+
+  <p style="
+    font-size: 12px; 
+    font-weight: 500; 
+    color: #6b8c42;
+    padding: 15px;
+    background: rgba(255,255,255,0.85);
+    border-radius: 10px;
+    margin: 10px 0;
+    line-height: 1.6;
+    box-shadow: 
+        inset 1px 1px 2px rgba(255,255,255,0.8),
+        inset -1px -1px 2px rgba(203,214,170,0.3);
+  ">
+    v. 添加；增加 
+  </p>
+
+  <section style="
+    padding: 15px; 
+    background: rgba(255,255,255,0.8);
+    border-radius: 15px; 
+    margin-top: 10px;
+    box-shadow: 
+        0 2px 4px rgba(140,151,114,0.1),
+        inset 1px 1px 2px rgba(255,255,255,0.8);
+    backdrop-filter: blur(2px);
+  ">
+    <p style="
+      font-size: 12px; 
+      font-weight: bold; 
+      color: #4a593d;
+      margin-bottom: 8px; 
+      text-shadow: 1px 1px 1px rgba(255,255,255,0.5);
+    ">
+      例句
+    </p>
+    <p style="
+      font-size: 12px; 
+      color: #556b2f;
+      margin: 0; 
+      line-height: 1.5;
+    ">
+      She added a pinch of salt to enhance the flavor.
+    </p>
+    <p style="
+      font-size: 8px; 
+      color: #8c9772;
+      margin-top: 6px; 
+      letter-spacing: 0.5px;
+    ">
+      她加了一撮盐提味。
+    </p>
+  </section>
+</section>
+</section>
+
+<style>
+@keyframes leaf-float {
+  0% { transform: translateY(0px) rotate(-1deg); }
+  50% { transform: translateY(-8px) rotate(1deg); }
+  100% { transform: translateY(0px) rotate(-1deg); }
+}
+</style><section style="flex: none; width: calc(100% - 10px);" onclick="this.style.height='0px';this.style.width='0';this.style.opacity='0'; this.style.transform='translateY(-20px) scale(0.9)'; setTimeout(()=>this.remove(), 500)">
+
+<section id="cloudCard" style="
+    width: 100%;
+    font-family: 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background: linear-gradient(145deg, #f5fae6 0%, #e3edd1 100%);
+    border-radius: 25px;
+    box-shadow: 
+        0 6px 20px rgba(140, 151, 114, 0.15),
+        inset 2px 2px 4px rgba(255,255,255,0.8),
+        inset -2px -2px 4px rgba(203,214,170,0.3);
+    position: relative;
+    border: 1px solid #8c9772;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    animation: leaf-float 3s ease-in-out infinite;
+  " onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+
+  <!-- 树叶装饰 -->
+  <div style="
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: url('data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22%236b8c42%22%3E%3Cpath%20d%3D%22M12%2021.35l-1.45-1.32C5.4%2015.36%202%2012.28%202%208.5%202%205.42%204.42%203%207.5%203c1.74%200%203.41.81%204.5%202.09C13.09%203.81%2014.76%203%2016.5%203%2019.58%203%2022%205.42%2022%208.5c0%203.78-3.4%206.86-8.55%2011.54L12%2021.35z%22%2F%3E%3C%2Fsvg%3E');
+    
+    background-size: cover;
+    top: -25px;
+    left: -20px;
+    opacity: 0.8;
+    transform: rotate(-15deg);
+  "></div>
+  
+  <div style="
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background: url('data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22%234a593d%22%3E%3Cpath%20d%3D%22M12%2021.35l-1.45-1.32C5.4%2015.36%202%2012.28%202%208.5%202%205.42%204.42%203%207.5%203c1.74%200%203.41.81%204.5%202.09C13.09%203.81%2014.76%203%2016.5%203%2019.58%203%2022%205.42%2022%208.5c0%203.78-3.4%206.86-8.55%2011.54L12%2021.35z%22%2F%3E%3C%2Fsvg%3E');
+    
+    background-size: cover;
+    top: -35px;
+    right: -30px;
+    opacity: 0.6;
+    transform: rotate(15deg);
+  "></div>
+
+  <!-- 内容区 -->
+  <section style="
+    display: flex; 
+    align-items: center; 
+    background: rgba(255,255,255,0.8);
+    padding: 15px; 
+    border-radius: 15px;
+    margin-bottom: 15px;
+    box-shadow: 
+        0 2px 4px rgba(140,151,114,0.1),
+        inset 1px 1px 2px rgba(255,255,255,0.8);
+    backdrop-filter: blur(2px);
+  ">
+    <span style="
+      font-size: 14px; 
+      font-weight: 600; 
+      background: linear-gradient(145deg, #d8e2c3, #c1d6a9);
+      width: 40px; 
+      height: 40px; 
+      display: flex; 
+      align-items: center; 
+      justify-content: center; 
+      border-radius: 50%; 
+      margin-right: 12px; 
+      color: #4a593d;
+      box-shadow: 
+          0 2px 4px rgba(140,151,114,0.2),
+          inset 1px 1px 2px rgba(255,255,255,0.8);
+    ">
+      28
+    </span>
+    <h2 style="
+      font-size: 14px; 
+      font-weight: 700; 
+      margin: 0; 
+      color: #556b2f;
+      text-shadow: 1px 1px 1px rgba(255,255,255,0.5);
+    ">
+      tail
+    </h2>
+  </section>
+
+  <p style="
+    font-size: 12px; 
+    font-weight: 500; 
+    color: #6b8c42;
+    padding: 15px;
+    background: rgba(255,255,255,0.85);
+    border-radius: 10px;
+    margin: 10px 0;
+    line-height: 1.6;
+    box-shadow: 
+        inset 1px 1px 2px rgba(255,255,255,0.8),
+        inset -1px -1px 2px rgba(203,214,170,0.3);
+  ">
+    n. 尾巴；尾部 
+  </p>
+
+  <section style="
+    padding: 15px; 
+    background: rgba(255,255,255,0.8);
+    border-radius: 15px; 
+    margin-top: 10px;
+    box-shadow: 
+        0 2px 4px rgba(140,151,114,0.1),
+        inset 1px 1px 2px rgba(255,255,255,0.8);
+    backdrop-filter: blur(2px);
+  ">
+    <p style="
+      font-size: 12px; 
+      font-weight: bold; 
+      color: #4a593d;
+      margin-bottom: 8px; 
+      text-shadow: 1px 1px 1px rgba(255,255,255,0.5);
+    ">
+      例句
+    </p>
+    <p style="
+      font-size: 12px; 
+      color: #556b2f;
+      margin: 0; 
+      line-height: 1.5;
+    ">
+      The peacock spread its colorful tail feathers proudly.
+    </p>
+    <p style="
+      font-size: 8px; 
+      color: #8c9772;
+      margin-top: 6px; 
+      letter-spacing: 0.5px;
+    ">
+      孔雀骄傲地展开它彩色的尾羽。
+    </p>
+  </section>
+</section>
+</section>
+
+<style>
+@keyframes leaf-float {
+  0% { transform: translateY(0px) rotate(-1deg); }
+  50% { transform: translateY(-8px) rotate(1deg); }
+  100% { transform: translateY(0px) rotate(-1deg); }
+}
+</style><section style="flex: none; width: calc(100% - 10px);" onclick="this.style.height='0px';this.style.width='0';this.style.opacity='0'; this.style.transform='translateY(-20px) scale(0.9)'; setTimeout(()=>this.remove(), 500)">
+
+<section id="cloudCard" style="
+    width: 100%;
+    font-family: 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background: linear-gradient(145deg, #f5fae6 0%, #e3edd1 100%);
+    border-radius: 25px;
+    box-shadow: 
+        0 6px 20px rgba(140, 151, 114, 0.15),
+        inset 2px 2px 4px rgba(255,255,255,0.8),
+        inset -2px -2px 4px rgba(203,214,170,0.3);
+    position: relative;
+    border: 1px solid #8c9772;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    animation: leaf-float 3s ease-in-out infinite;
+  " onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+
+  <!-- 树叶装饰 -->
+  <div style="
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: url('data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22%236b8c42%22%3E%3Cpath%20d%3D%22M12%2021.35l-1.45-1.32C5.4%2015.36%202%2012.28%202%208.5%202%205.42%204.42%203%207.5%203c1.74%200%203.41.81%204.5%202.09C13.09%203.81%2014.76%203%2016.5%203%2019.58%203%2022%205.42%2022%208.5c0%203.78-3.4%206.86-8.55%2011.54L12%2021.35z%22%2F%3E%3C%2Fsvg%3E');
+    
+    background-size: cover;
+    top: -25px;
+    left: -20px;
+    opacity: 0.8;
+    transform: rotate(-15deg);
+  "></div>
+  
+  <div style="
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background: url('data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22%234a593d%22%3E%3Cpath%20d%3D%22M12%2021.35l-1.45-1.32C5.4%2015.36%202%2012.28%202%208.5%202%205.42%204.42%203%207.5%203c1.74%200%203.41.81%204.5%202.09C13.09%203.81%2014.76%203%2016.5%203%2019.58%203%2022%205.42%2022%208.5c0%203.78-3.4%206.86-8.55%2011.54L12%2021.35z%22%2F%3E%3C%2Fsvg%3E');
+    
+    background-size: cover;
+    top: -35px;
+    right: -30px;
+    opacity: 0.6;
+    transform: rotate(15deg);
+  "></div>
+
+  <!-- 内容区 -->
+  <section style="
+    display: flex; 
+    align-items: center; 
+    background: rgba(255,255,255,0.8);
+    padding: 15px; 
+    border-radius: 15px;
+    margin-bottom: 15px;
+    box-shadow: 
+        0 2px 4px rgba(140,151,114,0.1),
+        inset 1px 1px 2px rgba(255,255,255,0.8);
+    backdrop-filter: blur(2px);
+  ">
+    <span style="
+      font-size: 14px; 
+      font-weight: 600; 
+      background: linear-gradient(145deg, #d8e2c3, #c1d6a9);
+      width: 40px; 
+      height: 40px; 
+      display: flex; 
+      align-items: center; 
+      justify-content: center; 
+      border-radius: 50%; 
+      margin-right: 12px; 
+      color: #4a593d;
+      box-shadow: 
+          0 2px 4px rgba(140,151,114,0.2),
+          inset 1px 1px 2px rgba(255,255,255,0.8);
+    ">
+      29
+    </span>
+    <h2 style="
+      font-size: 14px; 
+      font-weight: 700; 
+      margin: 0; 
+      color: #556b2f;
+      text-shadow: 1px 1px 1px rgba(255,255,255,0.5);
+    ">
+      ribbons
+    </h2>
+  </section>
+
+  <p style="
+    font-size: 12px; 
+    font-weight: 500; 
+    color: #6b8c42;
+    padding: 15px;
+    background: rgba(255,255,255,0.85);
+    border-radius: 10px;
+    margin: 10px 0;
+    line-height: 1.6;
+    box-shadow: 
+        inset 1px 1px 2px rgba(255,255,255,0.8),
+        inset -1px -1px 2px rgba(203,214,170,0.3);
+  ">
+    n. 丝带；缎带 
+  </p>
+
+  <section style="
+    padding: 15px; 
+    background: rgba(255,255,255,0.8);
+    border-radius: 15px; 
+    margin-top: 10px;
+    box-shadow: 
+        0 2px 4px rgba(140,151,114,0.1),
+        inset 1px 1px 2px rgba(255,255,255,0.8);
+    backdrop-filter: blur(2px);
+  ">
+    <p style="
+      font-size: 12px; 
+      font-weight: bold; 
+      color: #4a593d;
+      margin-bottom: 8px; 
+      text-shadow: 1px 1px 1px rgba(255,255,255,0.5);
+    ">
+      例句
+    </p>
+    <p style="
+      font-size: 12px; 
+      color: #556b2f;
+      margin: 0; 
+      line-height: 1.5;
+    ">
+      The dancer's costume was decorated with flowing ribbons.
+    </p>
+    <p style="
+      font-size: 8px; 
+      color: #8c9772;
+      margin-top: 6px; 
+      letter-spacing: 0.5px;
+    ">
+      舞者的服装装饰着飘逸的丝带。
+    </p>
+  </section>
+</section>
+</section>
+
+<style>
+@keyframes leaf-float {
+  0% { transform: translateY(0px) rotate(-1deg); }
+  50% { transform: translateY(-8px) rotate(1deg); }
+  100% { transform: translateY(0px) rotate(-1deg); }
+}
+</style><section style="flex: none; width: calc(100% - 10px);" onclick="this.style.height='0px';this.style.width='0';this.style.opacity='0'; this.style.transform='translateY(-20px) scale(0.9)'; setTimeout(()=>this.remove(), 500)">
+
+<section id="cloudCard" style="
+    width: 100%;
+    font-family: 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background: linear-gradient(145deg, #f5fae6 0%, #e3edd1 100%);
+    border-radius: 25px;
+    box-shadow: 
+        0 6px 20px rgba(140, 151, 114, 0.15),
+        inset 2px 2px 4px rgba(255,255,255,0.8),
+        inset -2px -2px 4px rgba(203,214,170,0.3);
+    position: relative;
+    border: 1px solid #8c9772;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    animation: leaf-float 3s ease-in-out infinite;
+  " onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+
+  <!-- 树叶装饰 -->
+  <div style="
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: url('data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22%236b8c42%22%3E%3Cpath%20d%3D%22M12%2021.35l-1.45-1.32C5.4%2015.36%202%2012.28%202%208.5%202%205.42%204.42%203%207.5%203c1.74%200%203.41.81%204.5%202.09C13.09%203.81%2014.76%203%2016.5%203%2019.58%203%2022%205.42%2022%208.5c0%203.78-3.4%206.86-8.55%2011.54L12%2021.35z%22%2F%3E%3C%2Fsvg%3E');
+    
+    background-size: cover;
+    top: -25px;
+    left: -20px;
+    opacity: 0.8;
+    transform: rotate(-15deg);
+  "></div>
+  
+  <div style="
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background: url('data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22%234a593d%22%3E%3Cpath%20d%3D%22M12%2021.35l-1.45-1.32C5.4%2015.36%202%2012.28%202%208.5%202%205.42%204.42%203%207.5%203c1.74%200%203.41.81%204.5%202.09C13.09%203.81%2014.76%203%2016.5%203%2019.58%203%2022%205.42%2022%208.5c0%203.78-3.4%206.86-8.55%2011.54L12%2021.35z%22%2F%3E%3C%2Fsvg%3E');
+    
+    background-size: cover;
+    top: -35px;
+    right: -30px;
+    opacity: 0.6;
+    transform: rotate(15deg);
+  "></div>
+
+  <!-- 内容区 -->
+  <section style="
+    display: flex; 
+    align-items: center; 
+    background: rgba(255,255,255,0.8);
+    padding: 15px; 
+    border-radius: 15px;
+    margin-bottom: 15px;
+    box-shadow: 
+        0 2px 4px rgba(140,151,114,0.1),
+        inset 1px 1px 2px rgba(255,255,255,0.8);
+    backdrop-filter: blur(2px);
+  ">
+    <span style="
+      font-size: 14px; 
+      font-weight: 600; 
+      background: linear-gradient(145deg, #d8e2c3, #c1d6a9);
+      width: 40px; 
+      height: 40px; 
+      display: flex; 
+      align-items: center; 
+      justify-content: center; 
+      border-radius: 50%; 
+      margin-right: 12px; 
+      color: #4a593d;
+      box-shadow: 
+          0 2px 4px rgba(140,151,114,0.2),
+          inset 1px 1px 2px rgba(255,255,255,0.8);
+    ">
+      30
+    </span>
+    <h2 style="
+      font-size: 14px; 
+      font-weight: 700; 
+      margin: 0; 
+      color: #556b2f;
+      text-shadow: 1px 1px 1px rgba(255,255,255,0.5);
+    ">
+      fluttered
+    </h2>
+  </section>
+
+  <p style="
+    font-size: 12px; 
+    font-weight: 500; 
+    color: #6b8c42;
+    padding: 15px;
+    background: rgba(255,255,255,0.85);
+    border-radius: 10px;
+    margin: 10px 0;
+    line-height: 1.6;
+    box-shadow: 
+        inset 1px 1px 2px rgba(255,255,255,0.8),
+        inset -1px -1px 2px rgba(203,214,170,0.3);
+  ">
+    v. 飘动；摆动 
+  </p>
+
+  <section style="
+    padding: 15px; 
+    background: rgba(255,255,255,0.8);
+    border-radius: 15px; 
+    margin-top: 10px;
+    box-shadow: 
+        0 2px 4px rgba(140,151,114,0.1),
+        inset 1px 1px 2px rgba(255,255,255,0.8);
+    backdrop-filter: blur(2px);
+  ">
+    <p style="
+      font-size: 12px; 
+      font-weight: bold; 
+      color: #4a593d;
+      margin-bottom: 8px; 
+      text-shadow: 1px 1px 1px rgba(255,255,255,0.5);
+    ">
+      例句
+    </p>
+    <p style="
+      font-size: 12px; 
+      color: #556b2f;
+      margin: 0; 
+      line-height: 1.5;
+    ">
+      The curtains fluttered gently in the breeze from the window.
+    </p>
+    <p style="
+      font-size: 8px; 
+      color: #8c9772;
+      margin-top: 6px; 
+      letter-spacing: 0.5px;
+    ">
+      窗帘随着窗外的微风轻轻飘动。
+    </p>
+  </section>
+</section>
+</section>
+
+<style>
+@keyframes leaf-float {
+  0% { transform: translateY(0px) rotate(-1deg); }
+  50% { transform: translateY(-8px) rotate(1deg); }
+  100% { transform: translateY(0px) rotate(-1deg); }
+}
+</style><section style="flex: none; width: calc(100% - 10px);" onclick="this.style.height='0px';this.style.width='0';this.style.opacity='0'; this.style.transform='translateY(-20px) scale(0.9)'; setTimeout(()=>this.remove(), 500)">
+
+<section id="cloudCard" style="
+    width: 100%;
+    font-family: 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background: linear-gradient(145deg, #f5fae6 0%, #e3edd1 100%);
+    border-radius: 25px;
+    box-shadow: 
+        0 6px 20px rgba(140, 151, 114, 0.15),
+        inset 2px 2px 4px rgba(255,255,255,0.8),
+        inset -2px -2px 4px rgba(203,214,170,0.3);
+    position: relative;
+    border: 1px solid #8c9772;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    animation: leaf-float 3s ease-in-out infinite;
+  " onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+
+  <!-- 树叶装饰 -->
+  <div style="
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: url('data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22%236b8c42%22%3E%3Cpath%20d%3D%22M12%2021.35l-1.45-1.32C5.4%2015.36%202%2012.28%202%208.5%202%205.42%204.42%203%207.5%203c1.74%200%203.41.81%204.5%202.09C13.09%203.81%2014.76%203%2016.5%203%2019.58%203%2022%205.42%2022%208.5c0%203.78-3.4%206.86-8.55%2011.54L12%2021.35z%22%2F%3E%3C%2Fsvg%3E');
+    
+    background-size: cover;
+    top: -25px;
+    left: -20px;
+    opacity: 0.8;
+    transform: rotate(-15deg);
+  "></div>
+  
+  <div style="
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background: url('data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22%234a593d%22%3E%3Cpath%20d%3D%22M12%2021.35l-1.45-1.32C5.4%2015.36%202%2012.28%202%208.5%202%205.42%204.42%203%207.5%203c1.74%200%203.41.81%204.5%202.09C13.09%203.81%2014.76%203%2016.5%203%2019.58%203%2022%205.42%2022%208.5c0%203.78-3.4%206.86-8.55%2011.54L12%2021.35z%22%2F%3E%3C%2Fsvg%3E');
+    
+    background-size: cover;
+    top: -35px;
+    right: -30px;
+    opacity: 0.6;
+    transform: rotate(15deg);
+  "></div>
+
+  <!-- 内容区 -->
+  <section style="
+    display: flex; 
+    align-items: center; 
+    background: rgba(255,255,255,0.8);
+    padding: 15px; 
+    border-radius: 15px;
+    margin-bottom: 15px;
+    box-shadow: 
+        0 2px 4px rgba(140,151,114,0.1),
+        inset 1px 1px 2px rgba(255,255,255,0.8);
+    backdrop-filter: blur(2px);
+  ">
+    <span style="
+      font-size: 14px; 
+      font-weight: 600; 
+      background: linear-gradient(145deg, #d8e2c3, #c1d6a9);
+      width: 40px; 
+      height: 40px; 
+      display: flex; 
+      align-items: center; 
+      justify-content: center; 
+      border-radius: 50%; 
+      margin-right: 12px; 
+      color: #4a593d;
+      box-shadow: 
+          0 2px 4px rgba(140,151,114,0.2),
+          inset 1px 1px 2px rgba(255,255,255,0.8);
+    ">
+      31
+    </span>
+    <h2 style="
+      font-size: 14px; 
+      font-weight: 700; 
+      margin: 0; 
+      color: #556b2f;
+      text-shadow: 1px 1px 1px rgba(255,255,255,0.5);
+    ">
+      fancy
+    </h2>
+  </section>
+
+  <p style="
+    font-size: 12px; 
+    font-weight: 500; 
+    color: #6b8c42;
+    padding: 15px;
+    background: rgba(255,255,255,0.85);
+    border-radius: 10px;
+    margin: 10px 0;
+    line-height: 1.6;
+    box-shadow: 
+        inset 1px 1px 2px rgba(255,255,255,0.8),
+        inset -1px -1px 2px rgba(203,214,170,0.3);
+  ">
+    adj. 华丽的；精美的 
+  </p>
+
+  <section style="
+    padding: 15px; 
+    background: rgba(255,255,255,0.8);
+    border-radius: 15px; 
+    margin-top: 10px;
+    box-shadow: 
+        0 2px 4px rgba(140,151,114,0.1),
+        inset 1px 1px 2px rgba(255,255,255,0.8);
+    backdrop-filter: blur(2px);
+  ">
+    <p style="
+      font-size: 12px; 
+      font-weight: bold; 
+      color: #4a593d;
+      margin-bottom: 8px; 
+      text-shadow: 1px 1px 1px rgba(255,255,255,0.5);
+    ">
+      例句
+    </p>
+    <p style="
+      font-size: 12px; 
+      color: #556b2f;
+      margin: 0; 
+      line-height: 1.5;
+    ">
+      They attended the party in fancy costumes from the 18th century.
+    </p>
+    <p style="
+      font-size: 8px; 
+      color: #8c9772;
+      margin-top: 6px; 
+      letter-spacing: 0.5px;
+    ">
+      他们穿着18世纪的华丽服装参加派对。
+    </p>
+  </section>
+</section>
+</section>
+
+<style>
+@keyframes leaf-float {
+  0% { transform: translateY(0px) rotate(-1deg); }
+  50% { transform: translateY(-8px) rotate(1deg); }
+  100% { transform: translateY(0px) rotate(-1deg); }
+}
+</style><section style="flex: none; width: calc(100% - 10px);" onclick="this.style.height='0px';this.style.width='0';this.style.opacity='0'; this.style.transform='translateY(-20px) scale(0.9)'; setTimeout(()=>this.remove(), 500)">
+
+<section id="cloudCard" style="
+    width: 100%;
+    font-family: 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background: linear-gradient(145deg, #f5fae6 0%, #e3edd1 100%);
+    border-radius: 25px;
+    box-shadow: 
+        0 6px 20px rgba(140, 151, 114, 0.15),
+        inset 2px 2px 4px rgba(255,255,255,0.8),
+        inset -2px -2px 4px rgba(203,214,170,0.3);
+    position: relative;
+    border: 1px solid #8c9772;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    animation: leaf-float 3s ease-in-out infinite;
+  " onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+
+  <!-- 树叶装饰 -->
+  <div style="
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: url('data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22%236b8c42%22%3E%3Cpath%20d%3D%22M12%2021.35l-1.45-1.32C5.4%2015.36%202%2012.28%202%208.5%202%205.42%204.42%203%207.5%203c1.74%200%203.41.81%204.5%202.09C13.09%203.81%2014.76%203%2016.5%203%2019.58%203%2022%205.42%2022%208.5c0%203.78-3.4%206.86-8.55%2011.54L12%2021.35z%22%2F%3E%3C%2Fsvg%3E');
+    
+    background-size: cover;
+    top: -25px;
+    left: -20px;
+    opacity: 0.8;
+    transform: rotate(-15deg);
+  "></div>
+  
+  <div style="
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background: url('data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22%234a593d%22%3E%3Cpath%20d%3D%22M12%2021.35l-1.45-1.32C5.4%2015.36%202%2012.28%202%208.5%202%205.42%204.42%203%207.5%203c1.74%200%203.41.81%204.5%202.09C13.09%203.81%2014.76%203%2016.5%203%2019.58%203%2022%205.42%2022%208.5c0%203.78-3.4%206.86-8.55%2011.54L12%2021.35z%22%2F%3E%3C%2Fsvg%3E');
+    
+    background-size: cover;
+    top: -35px;
+    right: -30px;
+    opacity: 0.6;
+    transform: rotate(15deg);
+  "></div>
+
+  <!-- 内容区 -->
+  <section style="
+    display: flex; 
+    align-items: center; 
+    background: rgba(255,255,255,0.8);
+    padding: 15px; 
+    border-radius: 15px;
+    margin-bottom: 15px;
+    box-shadow: 
+        0 2px 4px rgba(140,151,114,0.1),
+        inset 1px 1px 2px rgba(255,255,255,0.8);
+    backdrop-filter: blur(2px);
+  ">
+    <span style="
+      font-size: 14px; 
+      font-weight: 600; 
+      background: linear-gradient(145deg, #d8e2c3, #c1d6a9);
+      width: 40px; 
+      height: 40px; 
+      display: flex; 
+      align-items: center; 
+      justify-content: center; 
+      border-radius: 50%; 
+      margin-right: 12px; 
+      color: #4a593d;
+      box-shadow: 
+          0 2px 4px rgba(140,151,114,0.2),
+          inset 1px 1px 2px rgba(255,255,255,0.8);
+    ">
+      32
+    </span>
+    <h2 style="
+      font-size: 14px; 
+      font-weight: 700; 
+      margin: 0; 
+      color: #556b2f;
+      text-shadow: 1px 1px 1px rgba(255,255,255,0.5);
+    ">
+      creation
+    </h2>
+  </section>
+
+  <p style="
+    font-size: 12px; 
+    font-weight: 500; 
+    color: #6b8c42;
+    padding: 15px;
+    background: rgba(255,255,255,0.85);
+    border-radius: 10px;
+    margin: 10px 0;
+    line-height: 1.6;
+    box-shadow: 
+        inset 1px 1px 2px rgba(255,255,255,0.8),
+        inset -1px -1px 2px rgba(203,214,170,0.3);
+  ">
+    n. 作品；创造物 
+  </p>
+
+  <section style="
+    padding: 15px; 
+    background: rgba(255,255,255,0.8);
+    border-radius: 15px; 
+    margin-top: 10px;
+    box-shadow: 
+        0 2px 4px rgba(140,151,114,0.1),
+        inset 1px 1px 2px rgba(255,255,255,0.8);
+    backdrop-filter: blur(2px);
+  ">
+    <p style="
+      font-size: 12px; 
+      font-weight: bold; 
+      color: #4a593d;
+      margin-bottom: 8px; 
+      text-shadow: 1px 1px 1px rgba(255,255,255,0.5);
+    ">
+      例句
+    </p>
+    <p style="
+      font-size: 12px; 
+      color: #556b2f;
+      margin: 0; 
+      line-height: 1.5;
+    ">
+      The sculpture was his greatest creation, admired by many.
+    </p>
+    <p style="
+      font-size: 8px; 
+      color: #8c9772;
+      margin-top: 6px; 
+      letter-spacing: 0.5px;
+    ">
+      这座雕塑是他最受赞誉的创作。
+    </p>
+  </section>
+</section>
+</section>
+
+<style>
+@keyframes leaf-float {
+  0% { transform: translateY(0px) rotate(-1deg); }
+  50% { transform: translateY(-8px) rotate(1deg); }
+  100% { transform: translateY(0px) rotate(-1deg); }
+}
+</style>
+    <section style="flex: none;width: calc(100% - 10px);">
+<section style="width: 100%; font-family: 'SF Pro Text', 'Helvetica Neue', sans-serif; max-width: 400px; margin: 0 auto; padding: 20px; background: #fefefe; border-radius: 12px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);">
+<p style="font-size: 12px; font-weight: 500; color: #333; padding-left: 20px 0;">
+我们为风筝**添加**了长长的**尾巴**，用彩色**丝带**制成，随风**飘动**。风筝仿佛穿着**华丽**礼服。我为自己的**作品**感到自豪，迫不及待想看它飞翔。
+</p>
+</section>
+</section>
+        </section>
+    </div>
+</section>
+<section class="section-term"></section>
+            <section id="target" style="
+            
+    position: relative;
+    background: #fffef7;
+    border: 1px solid #e0e0e0;
+    border-radius: 0 8px 8px 8px;
+    padding: 2rem 2rem 2rem 3rem;
+    margin: 1.5rem 0;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.08), inset 0 0 12px rgba(0, 0, 0, 0.04);
+    font-family: Georgia, serif;
+    min-height: 200px;
+">
+    <div style="
+        position: absolute;
+        top: -12px;
+        left: -12px;
+        width: 60px;
+        height: 60px;
+        background: #f0f4c3;
+        transform: rotate(-15deg);
+        border-radius: 4px;
+        box-shadow: 1px 1px 4px rgba(0,0,0,0.1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    ">
+        <svg onclick="document.getElementById('target').remove()" style="width:30px;height:30px;transform: rotate(10deg)" viewBox="0 0 24 24">
+            <path fill="#4CAF50" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path>
+        </svg>
+    </div>
+    <div style="
+        position: absolute;
+        left: 2rem;
+        right: 2rem;
+        height: 100%;
+        background: repeating-linear-gradient(to bottom, transparent, transparent 23px, rgba(0,0,0,0.08) 24px, rgba(0,0,0,0.08) 24px);
+        pointer-events: none;
+    "></div>
+    <div style="position: relative; z-index: 2; line-height: 24px;">
+        <h2 style="
+            color: #2e7d32;
+            margin: 0 0 1rem 0;
+            padding-left: 2em;
+            position: relative;
+            font-size: 1.4rem;
+        ">
+           标题
+        </h2>
+        <p style="
+            color: #424242;
+            margin: 0 0 24px 0;
+            padding-left: 28px;
+            position: relative;">
+            <span style="
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 20px;
+                height: 24px;
+            "></span>
+            <strong style="color: #1b5e20;"><span style="text-shadow:
+        0 0 8px rgba(255,107,107,0.3),
+        0 0 12px rgba(78,205,196,0.3);color: rgba(16, 150, 212, 0.8); font-weight: bolder;">Finally</span>, it was time to test our kite. We went to the park, where the sky was wide and open. I held the kite, and my dad held the string. When the wind was just right, I <span style="text-shadow:
+        0 0 8px rgba(255,107,107,0.3),
+        0 0 12px rgba(78,205,196,0.3);color: rgba(16, 150, 212, 0.8); font-weight: bolder;">let go</span>, and the kite caught the wind. It <span style="text-shadow:
+        0 0 8px rgba(255,107,107,0.3),
+        0 0 12px rgba(78,205,196,0.3);color: rgba(16, 150, 212, 0.8); font-weight: bolder;">soared</span> higher and higher, like a bird in the sky. I felt so happy and proud that I had made something that could fly.</strong>
+        </p>
+        <section style="line-height: 1.4; 
+				orphans: 4; 
+				font-family: Times New Roman; 
+				overflow-x: auto; 
+				display: flex; 
+				visibility: visible;">
+        <section style="flex: none; width: calc(100% - 10px);" onclick="this.style.height='0px';this.style.width='0';this.style.opacity='0'; this.style.transform='translateY(-20px) scale(0.9)'; setTimeout(()=>this.remove(), 500)">
+
+<section id="cloudCard" style="
+    width: 100%;
+    font-family: 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background: linear-gradient(145deg, #f5fae6 0%, #e3edd1 100%);
+    border-radius: 25px;
+    box-shadow: 
+        0 6px 20px rgba(140, 151, 114, 0.15),
+        inset 2px 2px 4px rgba(255,255,255,0.8),
+        inset -2px -2px 4px rgba(203,214,170,0.3);
+    position: relative;
+    border: 1px solid #8c9772;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    animation: leaf-float 3s ease-in-out infinite;
+  " onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+
+  <!-- 树叶装饰 -->
+  <div style="
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: url('data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22%236b8c42%22%3E%3Cpath%20d%3D%22M12%2021.35l-1.45-1.32C5.4%2015.36%202%2012.28%202%208.5%202%205.42%204.42%203%207.5%203c1.74%200%203.41.81%204.5%202.09C13.09%203.81%2014.76%203%2016.5%203%2019.58%203%2022%205.42%2022%208.5c0%203.78-3.4%206.86-8.55%2011.54L12%2021.35z%22%2F%3E%3C%2Fsvg%3E');
+    
+    background-size: cover;
+    top: -25px;
+    left: -20px;
+    opacity: 0.8;
+    transform: rotate(-15deg);
+  "></div>
+  
+  <div style="
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background: url('data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22%234a593d%22%3E%3Cpath%20d%3D%22M12%2021.35l-1.45-1.32C5.4%2015.36%202%2012.28%202%208.5%202%205.42%204.42%203%207.5%203c1.74%200%203.41.81%204.5%202.09C13.09%203.81%2014.76%203%2016.5%203%2019.58%203%2022%205.42%2022%208.5c0%203.78-3.4%206.86-8.55%2011.54L12%2021.35z%22%2F%3E%3C%2Fsvg%3E');
+    
+    background-size: cover;
+    top: -35px;
+    right: -30px;
+    opacity: 0.6;
+    transform: rotate(15deg);
+  "></div>
+
+  <!-- 内容区 -->
+  <section style="
+    display: flex; 
+    align-items: center; 
+    background: rgba(255,255,255,0.8);
+    padding: 15px; 
+    border-radius: 15px;
+    margin-bottom: 15px;
+    box-shadow: 
+        0 2px 4px rgba(140,151,114,0.1),
+        inset 1px 1px 2px rgba(255,255,255,0.8);
+    backdrop-filter: blur(2px);
+  ">
+    <span style="
+      font-size: 14px; 
+      font-weight: 600; 
+      background: linear-gradient(145deg, #d8e2c3, #c1d6a9);
+      width: 40px; 
+      height: 40px; 
+      display: flex; 
+      align-items: center; 
+      justify-content: center; 
+      border-radius: 50%; 
+      margin-right: 12px; 
+      color: #4a593d;
+      box-shadow: 
+          0 2px 4px rgba(140,151,114,0.2),
+          inset 1px 1px 2px rgba(255,255,255,0.8);
+    ">
+      33
+    </span>
+    <h2 style="
+      font-size: 14px; 
+      font-weight: 700; 
+      margin: 0; 
+      color: #556b2f;
+      text-shadow: 1px 1px 1px rgba(255,255,255,0.5);
+    ">
+      Finally
+    </h2>
+  </section>
+
+  <p style="
+    font-size: 12px; 
+    font-weight: 500; 
+    color: #6b8c42;
+    padding: 15px;
+    background: rgba(255,255,255,0.85);
+    border-radius: 10px;
+    margin: 10px 0;
+    line-height: 1.6;
+    box-shadow: 
+        inset 1px 1px 2px rgba(255,255,255,0.8),
+        inset -1px -1px 2px rgba(203,214,170,0.3);
+  ">
+    adv. 最后；最终 
+  </p>
+
+  <section style="
+    padding: 15px; 
+    background: rgba(255,255,255,0.8);
+    border-radius: 15px; 
+    margin-top: 10px;
+    box-shadow: 
+        0 2px 4px rgba(140,151,114,0.1),
+        inset 1px 1px 2px rgba(255,255,255,0.8);
+    backdrop-filter: blur(2px);
+  ">
+    <p style="
+      font-size: 12px; 
+      font-weight: bold; 
+      color: #4a593d;
+      margin-bottom: 8px; 
+      text-shadow: 1px 1px 1px rgba(255,255,255,0.5);
+    ">
+      例句
+    </p>
+    <p style="
+      font-size: 12px; 
+      color: #556b2f;
+      margin: 0; 
+      line-height: 1.5;
+    ">
+      Finally, after months of preparation, the event began.
+    </p>
+    <p style="
+      font-size: 8px; 
+      color: #8c9772;
+      margin-top: 6px; 
+      letter-spacing: 0.5px;
+    ">
+      经过数月准备，活动终于开始了。
+    </p>
+  </section>
+</section>
+</section>
+
+<style>
+@keyframes leaf-float {
+  0% { transform: translateY(0px) rotate(-1deg); }
+  50% { transform: translateY(-8px) rotate(1deg); }
+  100% { transform: translateY(0px) rotate(-1deg); }
+}
+</style><section style="flex: none; width: calc(100% - 10px);" onclick="this.style.height='0px';this.style.width='0';this.style.opacity='0'; this.style.transform='translateY(-20px) scale(0.9)'; setTimeout(()=>this.remove(), 500)">
+
+<section id="cloudCard" style="
+    width: 100%;
+    font-family: 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background: linear-gradient(145deg, #f5fae6 0%, #e3edd1 100%);
+    border-radius: 25px;
+    box-shadow: 
+        0 6px 20px rgba(140, 151, 114, 0.15),
+        inset 2px 2px 4px rgba(255,255,255,0.8),
+        inset -2px -2px 4px rgba(203,214,170,0.3);
+    position: relative;
+    border: 1px solid #8c9772;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    animation: leaf-float 3s ease-in-out infinite;
+  " onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+
+  <!-- 树叶装饰 -->
+  <div style="
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: url('data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22%236b8c42%22%3E%3Cpath%20d%3D%22M12%2021.35l-1.45-1.32C5.4%2015.36%202%2012.28%202%208.5%202%205.42%204.42%203%207.5%203c1.74%200%203.41.81%204.5%202.09C13.09%203.81%2014.76%203%2016.5%203%2019.58%203%2022%205.42%2022%208.5c0%203.78-3.4%206.86-8.55%2011.54L12%2021.35z%22%2F%3E%3C%2Fsvg%3E');
+    
+    background-size: cover;
+    top: -25px;
+    left: -20px;
+    opacity: 0.8;
+    transform: rotate(-15deg);
+  "></div>
+  
+  <div style="
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background: url('data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22%234a593d%22%3E%3Cpath%20d%3D%22M12%2021.35l-1.45-1.32C5.4%2015.36%202%2012.28%202%208.5%202%205.42%204.42%203%207.5%203c1.74%200%203.41.81%204.5%202.09C13.09%203.81%2014.76%203%2016.5%203%2019.58%203%2022%205.42%2022%208.5c0%203.78-3.4%206.86-8.55%2011.54L12%2021.35z%22%2F%3E%3C%2Fsvg%3E');
+    
+    background-size: cover;
+    top: -35px;
+    right: -30px;
+    opacity: 0.6;
+    transform: rotate(15deg);
+  "></div>
+
+  <!-- 内容区 -->
+  <section style="
+    display: flex; 
+    align-items: center; 
+    background: rgba(255,255,255,0.8);
+    padding: 15px; 
+    border-radius: 15px;
+    margin-bottom: 15px;
+    box-shadow: 
+        0 2px 4px rgba(140,151,114,0.1),
+        inset 1px 1px 2px rgba(255,255,255,0.8);
+    backdrop-filter: blur(2px);
+  ">
+    <span style="
+      font-size: 14px; 
+      font-weight: 600; 
+      background: linear-gradient(145deg, #d8e2c3, #c1d6a9);
+      width: 40px; 
+      height: 40px; 
+      display: flex; 
+      align-items: center; 
+      justify-content: center; 
+      border-radius: 50%; 
+      margin-right: 12px; 
+      color: #4a593d;
+      box-shadow: 
+          0 2px 4px rgba(140,151,114,0.2),
+          inset 1px 1px 2px rgba(255,255,255,0.8);
+    ">
+      34
+    </span>
+    <h2 style="
+      font-size: 14px; 
+      font-weight: 700; 
+      margin: 0; 
+      color: #556b2f;
+      text-shadow: 1px 1px 1px rgba(255,255,255,0.5);
+    ">
+      let go
+    </h2>
+  </section>
+
+  <p style="
+    font-size: 12px; 
+    font-weight: 500; 
+    color: #6b8c42;
+    padding: 15px;
+    background: rgba(255,255,255,0.85);
+    border-radius: 10px;
+    margin: 10px 0;
+    line-height: 1.6;
+    box-shadow: 
+        inset 1px 1px 2px rgba(255,255,255,0.8),
+        inset -1px -1px 2px rgba(203,214,170,0.3);
+  ">
+    v. 松开；放开 
+  </p>
+
+  <section style="
+    padding: 15px; 
+    background: rgba(255,255,255,0.8);
+    border-radius: 15px; 
+    margin-top: 10px;
+    box-shadow: 
+        0 2px 4px rgba(140,151,114,0.1),
+        inset 1px 1px 2px rgba(255,255,255,0.8);
+    backdrop-filter: blur(2px);
+  ">
+    <p style="
+      font-size: 12px; 
+      font-weight: bold; 
+      color: #4a593d;
+      margin-bottom: 8px; 
+      text-shadow: 1px 1px 1px rgba(255,255,255,0.5);
+    ">
+      例句
+    </p>
+    <p style="
+      font-size: 12px; 
+      color: #556b2f;
+      margin: 0; 
+      line-height: 1.5;
+    ">
+      The child reluctantly let go of the balloon and watched it rise.
+    </p>
+    <p style="
+      font-size: 8px; 
+      color: #8c9772;
+      margin-top: 6px; 
+      letter-spacing: 0.5px;
+    ">
+      孩子不舍地松开气球，看着它升空。
+    </p>
+  </section>
+</section>
+</section>
+
+<style>
+@keyframes leaf-float {
+  0% { transform: translateY(0px) rotate(-1deg); }
+  50% { transform: translateY(-8px) rotate(1deg); }
+  100% { transform: translateY(0px) rotate(-1deg); }
+}
+</style><section style="flex: none; width: calc(100% - 10px);" onclick="this.style.height='0px';this.style.width='0';this.style.opacity='0'; this.style.transform='translateY(-20px) scale(0.9)'; setTimeout(()=>this.remove(), 500)">
+
+<section id="cloudCard" style="
+    width: 100%;
+    font-family: 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background: linear-gradient(145deg, #f5fae6 0%, #e3edd1 100%);
+    border-radius: 25px;
+    box-shadow: 
+        0 6px 20px rgba(140, 151, 114, 0.15),
+        inset 2px 2px 4px rgba(255,255,255,0.8),
+        inset -2px -2px 4px rgba(203,214,170,0.3);
+    position: relative;
+    border: 1px solid #8c9772;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    animation: leaf-float 3s ease-in-out infinite;
+  " onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+
+  <!-- 树叶装饰 -->
+  <div style="
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: url('data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22%236b8c42%22%3E%3Cpath%20d%3D%22M12%2021.35l-1.45-1.32C5.4%2015.36%202%2012.28%202%208.5%202%205.42%204.42%203%207.5%203c1.74%200%203.41.81%204.5%202.09C13.09%203.81%2014.76%203%2016.5%203%2019.58%203%2022%205.42%2022%208.5c0%203.78-3.4%206.86-8.55%2011.54L12%2021.35z%22%2F%3E%3C%2Fsvg%3E');
+    
+    background-size: cover;
+    top: -25px;
+    left: -20px;
+    opacity: 0.8;
+    transform: rotate(-15deg);
+  "></div>
+  
+  <div style="
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background: url('data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22%234a593d%22%3E%3Cpath%20d%3D%22M12%2021.35l-1.45-1.32C5.4%2015.36%202%2012.28%202%208.5%202%205.42%204.42%203%207.5%203c1.74%200%203.41.81%204.5%202.09C13.09%203.81%2014.76%203%2016.5%203%2019.58%203%2022%205.42%2022%208.5c0%203.78-3.4%206.86-8.55%2011.54L12%2021.35z%22%2F%3E%3C%2Fsvg%3E');
+    
+    background-size: cover;
+    top: -35px;
+    right: -30px;
+    opacity: 0.6;
+    transform: rotate(15deg);
+  "></div>
+
+  <!-- 内容区 -->
+  <section style="
+    display: flex; 
+    align-items: center; 
+    background: rgba(255,255,255,0.8);
+    padding: 15px; 
+    border-radius: 15px;
+    margin-bottom: 15px;
+    box-shadow: 
+        0 2px 4px rgba(140,151,114,0.1),
+        inset 1px 1px 2px rgba(255,255,255,0.8);
+    backdrop-filter: blur(2px);
+  ">
+    <span style="
+      font-size: 14px; 
+      font-weight: 600; 
+      background: linear-gradient(145deg, #d8e2c3, #c1d6a9);
+      width: 40px; 
+      height: 40px; 
+      display: flex; 
+      align-items: center; 
+      justify-content: center; 
+      border-radius: 50%; 
+      margin-right: 12px; 
+      color: #4a593d;
+      box-shadow: 
+          0 2px 4px rgba(140,151,114,0.2),
+          inset 1px 1px 2px rgba(255,255,255,0.8);
+    ">
+      35
+    </span>
+    <h2 style="
+      font-size: 14px; 
+      font-weight: 700; 
+      margin: 0; 
+      color: #556b2f;
+      text-shadow: 1px 1px 1px rgba(255,255,255,0.5);
+    ">
+      soared
+    </h2>
+  </section>
+
+  <p style="
+    font-size: 12px; 
+    font-weight: 500; 
+    color: #6b8c42;
+    padding: 15px;
+    background: rgba(255,255,255,0.85);
+    border-radius: 10px;
+    margin: 10px 0;
+    line-height: 1.6;
+    box-shadow: 
+        inset 1px 1px 2px rgba(255,255,255,0.8),
+        inset -1px -1px 2px rgba(203,214,170,0.3);
+  ">
+    v. 高飞；翱翔 
+  </p>
+
+  <section style="
+    padding: 15px; 
+    background: rgba(255,255,255,0.8);
+    border-radius: 15px; 
+    margin-top: 10px;
+    box-shadow: 
+        0 2px 4px rgba(140,151,114,0.1),
+        inset 1px 1px 2px rgba(255,255,255,0.8);
+    backdrop-filter: blur(2px);
+  ">
+    <p style="
+      font-size: 12px; 
+      font-weight: bold; 
+      color: #4a593d;
+      margin-bottom: 8px; 
+      text-shadow: 1px 1px 1px rgba(255,255,255,0.5);
+    ">
+      例句
+    </p>
+    <p style="
+      font-size: 12px; 
+      color: #556b2f;
+      margin: 0; 
+      line-height: 1.5;
+    ">
+      The eagle soared above the mountains, searching for prey.
+    </p>
+    <p style="
+      font-size: 8px; 
+      color: #8c9772;
+      margin-top: 6px; 
+      letter-spacing: 0.5px;
+    ">
+      鹰在山巅翱翔，寻找猎物。
+    </p>
+  </section>
+</section>
+</section>
+
+<style>
+@keyframes leaf-float {
+  0% { transform: translateY(0px) rotate(-1deg); }
+  50% { transform: translateY(-8px) rotate(1deg); }
+  100% { transform: translateY(0px) rotate(-1deg); }
+}
+</style>
+    <section style="flex: none;width: calc(100% - 10px);">
+<section style="width: 100%; font-family: 'SF Pro Text', 'Helvetica Neue', sans-serif; max-width: 400px; margin: 0 auto; padding: 20px; background: #fefefe; border-radius: 12px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);">
+<p style="font-size: 12px; font-weight: 500; color: #333; padding-left: 20px 0;">
+**最后**，我们到公园试飞风筝。我举着风筝，爸爸握着线轴。当风势正好时，我**松手**放飞，风筝乘风**翱翔**，如飞鸟直入云霄。这份亲手创造飞翔的喜悦令我无比自豪。
+</p>
+</section>
+</section>
+        </section>
+    </div>
+</section><section class="section-term"></section></section></body></html>
