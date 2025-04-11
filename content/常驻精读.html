@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+	<!-- 主页-->
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>精读解析器-1.0版本</title>
-	<!-- PDF生成库 -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-
+	<!-- 新PDF生成库 -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.72/pdfmake.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.72/vfs_fonts.js"></script>
+	<!-- 导入粒子背景的依赖 -->
+	<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 	<!-- 本地样式 -->
 	<link rel="stylesheet" href="css/基本样式.css">
 	<link rel="stylesheet" href="css/mainPage.css">
+	<link rel="stylesheet" href="css/pdf.css">
+	<link rel="stylesheet" href="css/moment.css">
 	<!-- 代码高亮 -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/codemirror.min.css" />
 	<!-- CodeMirror 样式 & 主题 -->
@@ -19,81 +22,172 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/theme/material.min.css">
 	<style>
-
 	</style>
 </head>
 
 <body>
-	<canvas class="data-stream" id="particles-js"></canvas>
+	<div id="particles-js"></div>
 	<h1>精读解析器</h1>
-	<p>内容格式示范</p>
-	<textarea id="jsonInput" placeholder="输入数据流...">
-	</textarea>
+	<p>这是你需要输入的内容(仅支持电脑操作)</p>
+	<div class="code-wrapper">
+		<div class="code-header">
+			<span class="dot red"></span>
+			<span class="dot yellow"></span>
+			<span class="dot green use"></span>
+		</div>
+		<textarea id="jsonInput"></textarea>
+	</div>
 	<div class="button-group">
 		<button onclick="convertJson()">解析</button>
 		<button onclick="copyToClipboard()">颗皮</button>
 		<button onclick="copyToClipboardDiv()">颗皮html class</button>
-		<button onclick="copyToClipboardStyle()">复制style</button>
-		<button onclick="clickToPDF()">点击制作PDF</button>
-		<button onclick="convertClassToInlineStyleInId('output')">一键转换 class → style</button>
+		<button onclick="copyToClipboardStyle()">style</button>
+		<button onclick="exportPdf()">点击制作PDF</button>
+		<button onclick="convertClassToInlineStyleInId('output')">一键转换 class → style(检查样式)</button>
 	</div>
-	<section id="output">
-		<section class="index">welcome to this tool</section>
-	</section>
+	<div class="phone-frame">
+		<div class="phone-statusbar">
+			<div class="left">6:26</div>
+			<div class="right">
+				<span>📶</span>
+				<span>📡</span>
+				<div class="battery">
+					<div class="battery-level"></div>
+				</div>
+			</div>
+		</div>
+		<div id="output">
+			<!-- 输出内容放这里 -->
+			<!-- 假输入区域 -->
+			<section
+				style="max-width: 600px; margin: 2rem auto; background: #f5f5f5; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;">
+				<!-- 微信朋友圈 顶部封面区 -->
+				<section
+					style=" position: relative; width: 100%; height: 240px; background: #000;top: 0%;  font-family: Arial, sans-serif;">
+					<!-- 封面背景图 -->
+					<img src="https://mmbiz.qpic.cn/sz_mmbiz_png/4vWm7Iev4CaibzA2zyVVrLONTHTfPFbnWM6E2D6oObqLqd7cahfJFo0qUm6yUuKHib0AOAgjjmPCP6NF9fwScAXA/640?wx_fmt=png&from=appmsg"
+						alt="Cover" style="width: 100%; height: 100%; object-fit: cover; filter: brightness(0.8);">
+					<!-- 用户名和头像 -->
+					<div
+						style="position: absolute; bottom: -1.5em;  right: 16px; display: flex; align-items: center; gap: 12px;">
+						<span
+							style="color: white; font-size: 18px; font-weight: bold; text-shadow: 1px 1px 3px rgba(0,0,0,0.5);">Ge32</span>
+						<img src="https://mmbiz.qpic.cn/sz_mmbiz_jpg/4vWm7Iev4CaicPvJzTHLRY5tdhbN9b3ppg8zIvu3weJbxHgVJuwicJiavFRBB42fjE2VxGIC0ib6iaq95c7ibAwTvvCA/640?wx_fmt=jpeg"
+							alt="Avatar"
+							style="width: 60px; z-index: 20; height: 60px; border-radius: 8px; border: 2px solid #fff; box-shadow: 0 4px 10px rgba(0,0,0,0.4);">
+					</div>
+					<br>
+				</section>
+				<!-- 头部区域 -->
+				<div class="moment-card">
+					<div class="moment-header">
+						<img class="avatar"
+							src="https://mmbiz.qpic.cn/sz_mmbiz_jpg/4vWm7Iev4CaicPvJzTHLRY5tdhbN9b3ppg8zIvu3weJbxHgVJuwicJiavFRBB42fjE2VxGIC0ib6iaq95c7ibAwTvvCA/640?wx_fmt=jpeg" />
+						<div class="moment-userinfo">
+							<div class="username">Ge32</div>
+							<div class="moment-content typewriter-text"  data-text='["这是一条朋友圈内容，可以是你发布的学习资料。", "也可以是AI生成的语法提示。", "又或者是来自其他用户的神评。"]'>
+							</div>
+						</div>
+					</div>
+					<div class="moment-footer">
+						<div class="time">2024-03-25 12:00</div>
+						<div class="moment-actions">
+							<span class="private">👁️ 仅你可见</span>
+							<span class="delete">删除</span>
+						</div>
+					</div>
+				</div>
 
+			</section>
+			<div class="fake-input-area">
+				<div class="fake-input" id="fakeInput"></div>
+			</div>
+		</div>
+		<div class="phone-home">
+			<div class="home-button"></div>
+		</div>
+	</div>
+	<!-- 虚拟键盘 -->
+	<div class="keyboard" id="keyboard">
+		<div class="key-row">
+			<button class="key">Q</button><button class="key">W</button><button class="key">E</button>
+			<button class="key">R</button><button class="key">T</button><button class="key">Y</button>
+			<button class="key">U</button><button class="key">I</button><button class="key">O</button><button
+				class="key">P</button>
+		</div>
+		<div class="key-row">
+			<button class="key">A</button><button class="key">S</button><button class="key">D</button>
+			<button class="key">F</button><button class="key">G</button><button class="key">H</button>
+			<button class="key">J</button><button class="key">K</button><button class="key">L</button>
+		</div>
+		<div class="key-row">
+			<button class="key">Z</button><button class="key">X</button><button class="key">C</button>
+			<button class="key">V</button><button class="key">B</button><button class="key">N</button>
+			<button class="key">M</button>
+			<button class="key wide-key" data-action="space">␣</button>
+			<button class="key wide-key" data-action="backspace">⌫</button>
+		</div>
+	</div>
 	<!-- CodeMirror 核心 & 语言 -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/javascript/javascript.min.js"></script>
 	<!-- 本地js导入 -->
+	<script src="js//NotoSansSC-Light-normal.js"></script>
 	<script src="js/convertJson.js"></script>
 	<script src="js/initializeData.js"></script>
 	<script src="js/doPDF.js"></script>
+	<script src="js/card.js"></script>
+	<script src="js/keyboard.js"></script>
 	<script>
 		let editor; // 全局变量,解析器的入口，全部内容通过这个解析
-
 		document.addEventListener("DOMContentLoaded", function () {
-		editor = CodeMirror.fromTextArea(document.getElementById("jsonInput"), {
-			mode: { name: "javascript", json: true },
-			lineNumbers: true,
-			theme: "material",
-			tabSize: 2,
-			autoCloseBrackets: true,
+			editor = CodeMirror.fromTextArea(document.getElementById("jsonInput"), {
+				mode: { name: "javascript", json: true },
+				theme: "material",
+				lineNumbers: true,
+				tabSize: 2,
+				indentUnit: 2,
+				autoCloseBrackets: true,
+				matchBrackets: true,
+				lineWrapping: true,
+				styleActiveLine: true,
+				highlightSelectionMatches: { showToken: /\w/, annotateScrollbar: true },
+				lint: true,
+				gutters: ["CodeMirror-linenumbers", "CodeMirror-foldgutter", "CodeMirror-lint-markers"],
+				foldGutter: true,
+				viewportMargin: Infinity,
+			});
 		});
+		function initializeEditor() {
+			console.log("初始化测试");
 
-		initializeEditor();
-	});
-
-
-	function initializeEditor() {
-		console.log("初始化测试");
-		
-		if (editor && typeof initialData !== 'undefined') {
-			editor.setValue(JSON.stringify(initialData, null, 2));
-		} else {
-			console.warn("Editor 或 initialData 未定义");
+			if (editor && typeof initialData !== 'undefined') {
+				editor.setValue(JSON.stringify(initialData, null, 2));
+			} else {
+				console.warn("Editor 或 initialData 未定义");
+			}
 		}
-	}
-		// 没有导入对于依赖，暂时抛弃
-		// 初始化粒子背景
-		// particlesJS('particles-js', {
-		// 	particles: {
-		// 		number: { value: 80 },
-		// 		color: { value: '#00f3ff' },
-		// 		shape: { type: 'circle' },
-		// 		opacity: { value: 0.5 },
-		// 		size: { value: 3 },
-		// 		move: {
-		// 			enable: true,
-		// 			speed: 2,
-		// 			direction: 'none',
-		// 			random: true
-		// 		}
-		// 	}
-		// });
+
+		particlesJS('particles-js', {
+			particles: {
+				number: { value: 80 },
+				color: { value: '#00f3ff' },
+				shape: { type: 'circle' },
+				opacity: { value: 0.5 },
+				size: { value: 3 },
+				move: {
+					enable: true,
+					speed: 2,
+					direction: 'none',
+					random: true
+				}
+			}
+		});
 		//初始化 
 		document.addEventListener("DOMContentLoaded", function () {
 			initializeEditor();
 		});
 	</script>
 </body>
+
 </html>
