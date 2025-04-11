@@ -1,0 +1,114 @@
+.hologram-header {
+    text-align: center;
+    margin-bottom: 2rem;
+    page-break-inside: avoid;
+  }
+
+  .cyber-paragraph, .term-card, .hologram-header {
+    page-break-inside: avoid;
+  }
+  
+  .hologram-header h2 {
+    font-size: 2.5rem;
+    color: #00f3ff;
+    text-shadow: 0 0 10px #00f3ff;
+  }
+  
+  .cyber-intro {
+    font-size: 1.2rem;
+    color: #cccccc;
+    text-shadow: 0 0 5px #0099cc;
+  }
+  
+  .cyber-paragraph {
+    margin-bottom: 3rem;
+    padding: 1.5rem;
+    border: 1px solid #1f1f2e;
+    border-radius: 12px;
+    background: rgba(20, 20, 40, 0.7);
+    box-shadow: 0 0 12px #00f3ff33;
+    page-break-inside: avoid;
+  }
+  
+  .en-content, .cn-content {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    line-height: 1.8;
+  }
+  
+  .glow-text {
+    color: #00f3ff;
+    text-shadow: 0 0 5px #00f3ffaa;
+  }
+  
+  .neon-highlight {
+    background: linear-gradient(90deg, #00f3ff, #0fffc3);
+    color: #000;
+    padding: 0 4px;
+    border-radius: 4px;
+  }
+  
+  .term-card {
+    margin-top: 1rem;
+    padding: 1rem;
+    background: #1c1c2e;
+    border-left: 4px solid #00f3ff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px #00f3ff44;
+    page-break-inside: avoid;
+  }
+  
+  .cyber-term {
+    font-size: 1.2rem;
+    color: #00f3ff;
+    margin-bottom: 0.3rem;
+  }
+  
+  .example-box {
+    margin-top: 0.5rem;
+    padding-left: 1rem;
+    border-left: 2px dashed #00f3ff66;
+  }
+  
+  .en-example {
+    color: #99eeff;
+    font-style: italic;
+    margin-bottom: 0.3rem;
+  }
+  
+  .cn-example {
+    color: #cccccc;
+  }
+  
+  /* 打印和PDF分页控制 */
+  @media print {
+    body {
+      background: white !important;
+      color: black !important;
+    }
+    .hologram-header h2,
+    .cyber-term,
+    .glow-text {
+      color: black !important;
+      text-shadow: none !important;
+    }
+    .cyber-paragraph,
+    .term-card {
+      background: white !important;
+      box-shadow: none !important;
+      border: 1px solid #ccc !important;
+    }
+  
+    .neon-highlight {
+      background: #eee !important;
+      color: black !important;
+    }
+  
+    .cyber-paragraph, .term-card, .hologram-header {
+      page-break-inside: avoid;
+    }
+  
+    .cyber-paragraph {
+      margin-bottom: 2rem;
+    }
+  }
