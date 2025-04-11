@@ -1,0 +1,477 @@
+			body {
+				font-family: Arial, sans-serif;
+				margin: 20px;
+			}
+
+			textarea {
+				width: 100%;
+				height: 200px;
+				margin-bottom: 20px;
+
+			}
+			button {
+				padding: 10px 20px;
+				background-color: #3498db;
+				color: white;
+				border: none;
+				cursor: pointer;
+				margin-right: 10px;						
+			}
+			.head
+			button:hover {
+				background-color: #2980b9;
+			}
+			#output {
+				margin-top: 20px;
+				padding: 15px;
+				border: 1px solid #ddd;
+				background-color: #f9f9f9;
+			}
+			p {
+				line-height: 1.4;
+				text-align: justify;
+				font-size: 14px;
+			}
+			.tips {
+				background: linear-gradient(45deg, rgb(97, 97, 97), #80cbc4, #ff4081, #ff5722);
+				background-size: 400% 400%;
+				-webkit-background-clip: text;
+				color: transparent;
+				font-family: 'Courier New', monospace;
+				font-size: 18px;
+				font-weight: bold;
+				text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4), 0 0 25px rgba(255, 255, 255, 0.6);
+				border: 1px solid rgb(30, 104, 146);
+				border-radius: 6px;
+				padding: 3px 8px;
+				display: inline-block;
+				transform: rotate(-2deg);
+				letter-spacing: 1px;
+				user-select: none;
+			}
+			.content-text{
+				line-height: 1.4; 
+				orphans: 4; 
+				font-family: Times New Roman; 
+				overflow-x: auto; 
+				display: flex; 
+				visibility: visible;
+			}
+			.newCn{
+				flex: 0 0 auto; 
+				padding: 15px; 
+				color: rgb(44, 62, 80); 
+				visibility: visible;
+				font-size: 14px;
+			}
+			.section-p {
+				overflow-x: auto;
+				display: flex;
+				width: 100%;
+			}
+			.en-text{
+				word-break: break-word;
+    			overflow-wrap: break-word;
+    			hyphens: auto;
+				color: rgb(51, 51, 51); 
+				font-family: Times New Roman; 
+				font-size: 18px; 
+				orphans: 4; 
+				background-color: rgb(254, 254, 254); 
+				visibility: visible;
+			}
+			.en-box{
+				
+				flex: 0 0 auto;
+			}
+			.section-p > .content-en  {
+				font-size: 12px;
+				flex: none;
+				width: calc(100% - 1px);;
+				color: #2c3e50;
+				background-color: #ffffff;
+			}
+			.section-p > .content-cn {
+				flex: none;
+				width: calc(100% - 20px); /* 卡片宽度适配 */
+				padding: 25px; font-size: 15px; line-height: 1.7; 
+				color: #dcf1ff; 
+				font-family: 'Courier New', monospace;
+				border: 2px dashed #3498db; 
+				border-radius: 10px; 
+				background-image: linear-gradient(90deg, rgba(46, 204, 113, 0.1) 1px, transparent 1px), linear-gradient(180deg, rgba(46, 204, 113, 0.1) 1px, transparent 1px); 
+				background-size: 20px 20px, 20px 20px; 
+				background-position: 0 0, 0 0; 
+				box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+				background: rgba(255, 255, 255, 0.5) 
+							url('https://mmbiz.qpic.cn/sz_mmbiz_jpg/4vWm7Iev4CbFe5FmWWesNEWX0xbyHZSayQZXoncAoY4QPeoJac9III0ricyNy0oBHVJhjMMtwcvd7ic8QsjG2N1A/640?wx_fmt=jpeg');
+    			background-size: cover;
+    			background-position: top right;
+    			background-repeat: no-repeat;
+				text-shadow: 
+					-1px -1px 0 #000000, /* 左上 */
+					1px -1px 0 #004688,  /* 右上 */
+					-1px 1px 0 #000000,  /* 左下 */
+					1px 1px 0 #070404;   /* 右下，形成黑色边框效果 */
+			}
+			
+			.content-en > p {
+				margin: 0; /* 去除默认外边距 */
+				line-height: 1.5; /* 设置合适的行高 */
+				text-align: justify; /* 文本两端对齐 */
+				word-break: break-word; /* 长单词强制断词 */
+				overflow-wrap: break-word; /* 兼容旧版浏览器，自动断词 */
+				word-wrap: break-word; /* 长单词换行 */
+				white-space: normal; /* 允许正常换行 */
+				font-size: 13px; /* 确保字体大小 */
+			}
+			.content-en {
+				/* text-indent: 0;
+				font-family: "Vollkorn", Palatino, Times;
+				color: #333;
+				line-height: 1.4;
+				text-align: justify;
+				font-size: 15px;
+				margin-left: 0%;
+    			margin-right: 0%;
+				background-color: white; */
+
+				color: rgb(51, 51, 51); 
+				font-family: Times New Roman; 
+				font-size: 12px; 
+				letter-spacing: normal; 
+				orphans: 4; 
+				white-space: pre-wrap; 
+				background-color: rgb(254, 254, 254); 
+				visibility: visible;
+
+			}
+			.content-en strong {
+				font-family: "Vollkorn", Palatino, Times;
+				line-height: 1.4;
+				text-align: justify;
+				font-size: 15px;
+				font-weight: bold;
+				color: #3498db;
+			}
+			/* .important-vocabulary{
+				color: rgb(0, 9, 88); 
+				line-height: 1.5; 
+				text-align: justify; 
+				font-size: 16px; 
+				margin: 0px; 
+				word-break: break-word; 
+				overflow-wrap: break-word; 
+				white-space: normal;
+				
+			} */
+			.important-vocabulary:nth-child(odd){
+				/* color: rgb(0, 139, 204); 
+				line-height: 1.5; 
+				text-align: justify; 
+				font-size: 16px; 
+				margin: 0px; 
+				word-break: break-word; 
+				overflow-wrap: break-word; 
+				white-space: normal; */
+			
+				/* font-weight: bolder;  */
+				border-radius: 3px;
+				color: rgb(22, 164, 230);
+				background: linear-gradient(transparent 60%, rgba(22, 164, 230, 0.2) 100%);
+				padding: 2px 5px;
+				
+			}
+
+			.important-vocabulary:nth-child(even) {
+				color: rgb(202, 0, 175);
+				border-radius: 3px;
+				background: linear-gradient(transparent 60%, rgba(202, 0, 175, 0.2) 100%);
+				padding: 2px 5px;
+			}
+			
+			.sup-style {
+
+
+				color: #3498db; 
+				font-size: 6px; 
+				font-weight: bold; 
+				text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5), 0px 0px 25px rgba(255, 255, 255, 0.2); /* 多层阴影，形成3D效果 */
+				margin-left: 0.2em;
+				margin-top: -0.4em;
+				display: inline-block;
+				vertical-align: top;
+				user-select: none;
+
+
+
+				
+			}
+			.top-block {
+				font-size: 24px;
+				color: #d1c4a4; /* 类似古铜色的字体 */
+				margin-bottom: 15px;
+				padding: 15px; /* 增加内边距以增强厚重感 */
+				background: linear-gradient(145deg, #2d2d2d, #3b3b3b); /* 大理石质感的深灰渐变背景 */
+				border: 2px solid #857d6a; /* 仿石质纹理的边框 */
+				border-radius: 10px;
+				display: flex;
+				align-items: center;
+				justify-content: center; /* 中心对齐内容 */
+				box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.5), /* 内阴影，模仿雕刻效果 */
+							4px 4px 8px rgba(0, 0, 0, 0.3); /* 外阴影增强立体感 */
+				user-select: none;
+				text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8); /* 模拟雕刻深度 */
+			}
+			
+			.top-block:hover {
+				transform: scale(1.05); /* 悬停时轻微放大，增加交互性 */
+				box-shadow: inset 2px 2px 8px rgba(0, 0, 0, 0.7), /* 增加更强的内阴影 */
+							8px 8px 20px rgba(0, 0, 0, 0.6); /* 更深的外部阴影效果 */
+			}
+			
+			.log-icon {
+				display: inline-block;
+				width: 60px; /* 增大尺寸，确保其更加显眼 */
+				height: 60px;
+				line-height: 55px; 
+				text-align: center;
+				border-radius: 20px; /* 增加圆角，增加现代感 */
+				margin-right: 20px; /* 适当增大右边距 */
+				
+				background-image: url(https://mmbiz.qpic.cn/sz_mmbiz_jpg/4vWm7Iev4CaqgN3XcQq8v9VTkENmkma6WyvYsBgaXVCeaztsjiaInujAlBS3pKB2daGfNibJyAIn46qNvnApYcGw/640?wx_fmt=jpeg);
+				background-position: center center;
+				background-size: cover;
+				background-repeat: no-repeat;
+				box-shadow: 
+					0 0 20px rgba(0, 0, 0, 0.8), /* 强烈外阴影 */
+					inset 0 4px 8px rgba(255, 255, 255, 0.4), /* 内部高光更强 */
+					inset -4px -4px 12px rgba(0, 0, 0, 0.9), /* 加深浮雕效果 */
+					0 0 25px rgba(255, 0, 0, 0.5), /* 发光效果 */
+					0 0 30px rgba(0, 255, 255, 0.6); /* 增强外部发光效果 */
+				font-family: 'Arial', sans-serif;
+				font-size: 15px; /* 更大字体，提高可读性 */
+				font-weight: bold;
+				color: #fff; /* 保持白色字体，确保对比明显 */
+				text-shadow: 
+					-3px -3px 6px rgba(0, 0, 0, 0.8), 
+					3px -3px 6px rgba(0, 0, 0, 0.8), 
+					-3px 3px 6px rgba(0, 0, 0, 0.8), 
+					3px 3px 6px rgba(0, 0, 0, 0.8); /* 强烈的文字阴影，增添深度感 */
+				transform: rotate(6deg); /* 稍微加大旋转角度，产生动感 */
+				border: 3px solid rgba(255, 255, 255, 0.3); /* 更明显的白色边框 */
+				transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* 平滑过渡效果 */
+
+			}
+			.log-icon{
+				display: inline-block; 
+				width: 50px; 
+				height: 50px; 
+				line-height: 50px; 
+				text-align: center; 
+    			border-radius: 12px; 
+				margin-right: 12px; 
+    			background-image: url(https://mmbiz.qpic.cn/sz_mmbiz_jpg/4vWm7Iev4CaqgN3XcQq8v9VTkENmkma6WyvYsBgaXVCeaztsjiaInujAlBS3pKB2daGfNibJyAIn46qNvnApYcGw/640?wx_fmt=jpeg); 
+    			background-position: center center; 
+				background-size: cover; 
+				background-repeat: no-repeat; 
+    			box-shadow: rgba(255, 255, 255, 0.9) 0px 0px 20px, rgba(49, 46, 46, 0.5) 0px 0px 10px inset; 
+    			box-shadow: 
+        			2px 2px 6px rgba(0, 0, 0, 0.5), /* 外部阴影 */
+        			inset 0 1px 4px rgba(255, 255, 255, 0.4), /* 内部高光模拟雕刻 */
+        			inset -2px -2px 6px rgba(0, 0, 0, 0.7); /* 内部阴影增加浮雕感 */
+				font-family: Arial, sans-serif; 
+				font-size: 16px; 
+				font-weight: bold; 
+    			color: #fff; 
+				text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+			}
+			
+			.log-icon:hover {
+				transform: scale(1.1) rotate(6deg); /* 鼠标悬停时放大和旋转，带来动感效果 */
+				box-shadow: 
+					0 0 35px rgba(0, 0, 0, 0.8), /* 更强的外阴影 */
+					inset 0 6px 14px rgba(255, 255, 255, 0.6), /* 更强的内部高光 */
+					inset -6px -6px 20px rgba(0, 0, 0, 0.9), /* 更深的内部阴影 */
+					0 0 45px rgba(255, 0, 0, 0.8), /* 更强的发光效果 */
+					0 0 50px rgba(0, 255, 255, 0.8); /* 更强的外部发光效果 */
+			}
+			
+			
+			.level-style {
+				font-size: 13px;
+			}
+			
+			.level-style:hover {
+				transform: scale(1.1); /* 悬停时放大元素，增加动感 */
+				box-shadow: 0px 0px 25px rgba(255, 64, 129, 0.8), 0px 4px 15px rgba(0, 0, 0, 0.5); /* 悬停时增强阴影 */
+				background: linear-gradient(135deg, rgba(255, 64, 129, 1), rgba(255, 255, 255, 0.4)); /* 悬停时渐变更强 */
+			}
+			
+			.phr-index {
+				margin-left: auto;
+				padding: 8px 16px; /* 增加内边距，使元素更大更显眼 */
+				background: linear-gradient(45deg, #1c1f23, #333636); /* 渐变背景，深色更有冲击力 */
+				color: #fff; /* 保持白色字体，突出对比 */
+				border-radius: 8px; /* 更大的圆角，提升现代感 */
+				font-size: 16px; /* 增大字体大小，让内容更易读 */
+				font-weight: bold; /* 加粗字体，增强存在感 */
+				text-shadow: 1px 1px 3px rgb(255, 134, 134), 0 0 8px rgba(255, 255, 255, 0.7); /* 强烈的文字阴影，增加立体感 */
+				
+			}
+			
+			.phr-index:hover {
+				transform: scale(1.1); /* 悬停时放大，增强交互感 */
+				background: linear-gradient(45deg, #ff6b6b, #ff4040); /* 悬停时背景渐变变成鲜艳的红色 */
+				box-shadow: 0 6px 12px rgba(0, 0, 0, 0.7), inset 0 4px 8px rgba(255, 255, 255, 0.3); /* 更强的阴影效果 */
+			}
+			
+			
+
+			.index {
+				margin-left: -1em; /* 偏移感保持 */
+				color: #00ff00; /* 荧光绿色字体 */
+				font-family: "Courier New", Courier, monospace; /* 等宽字体，终端风格 */
+				text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00; /* 文字发光效果 */
+				width: fit-content; /* 内容大小自适应 */
+				white-space: nowrap; /* 不换行，模拟终端 */
+			}
+
+			.section-term {
+				width: 100%;
+				margin: 0 auto;
+				/* background: rgba(255, 255, 255, 0.5) url('https://mmbiz.qpic.cn/sz_mmbiz_jpg/4vWm7Iev4CbIicTk0iaLib39uzIN67YncRJn6JNbjsOrOcpPF0vN3gZrDibPP620ibpN7JckibeYl281iaicFEmHriaskAA/640?wx_fmt=jpeg&from=appmsg');
+    			background-size: cover;
+    			background-position: top center;
+    			background-repeat: no-repeat; */
+				/* background-size: contain;  */
+				overflow-x: auto;
+				display: flex;
+				padding: 0;
+				margin: 0;
+			}
+			
+			.section-term-roll-block {
+				flex: none;
+				width: calc(100% - 10px);
+				
+			}
+			
+			/* 奇数项背景颜色 */
+			.section-term-roll-block:nth-child(odd) {
+				
+				width: 100%;
+			}
+			
+			/* 偶数项背景颜色 */
+			.section-term > span:nth-child(even) {
+				flex: none;
+				width: calc(100% - 10px);
+				border: none;
+			
+				margin-right: 15px;
+				box-shadow: none;
+				
+			}
+	
+			
+			.term-word.odd {
+				color: rgb(128, 196, 228); /* 蓝色 */
+			}
+			
+			.term-word.even {
+				color: rgb(228, 101, 211); /* 紫色 */
+			}
+			
+			.term-word {
+				
+				font-weight: bold; /* 加粗 */
+				font-size: 14px; /* 调大字体，使其更显眼 */
+				text-transform: capitalize; /* 首字母大写 */
+			
+				padding: 6px 8px; /* 内边距增大，提高点击区域 */
+				
+				
+				text-shadow: 
+					-1px -1px 0 #000, /* 左上 */
+					1px -1px 0 #000,  /* 右上 */
+					-1px 1px 0 #000,  /* 左下 */
+					1px 1px 0 #000,   /* 右下，黑色边框效果 */
+					2px 2px 3px rgba(0, 0, 0, 0.3); /* 增加深度感的文字阴影 */
+				transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out;
+			}
+			
+			.term-word:hover {
+				transform: scale(1.05); /* 鼠标悬停时放大 */
+				box-shadow: 
+					0px 0px 15px rgba(0, 0, 0, 0.6), /* 鼠标悬停时更强的外部阴影 */
+					inset 0 2px 8px rgba(255, 255, 255, 0.8); /* 内部阴影加强 */
+			}
+			
+			
+			
+			.term-definition {
+				margin-top: 2em;
+				padding: 2px;
+				font-style: italic;
+				font-size: 12px;
+				color: #ffffff; /* 中性灰色，避免抢眼 */
+				text-shadow: 
+					-1px -1px 0 #0a588b, /* 左上 */
+					1px -1px 0 #056b94,  /* 右上 */
+					-1px 1px 0 #000,  /* 左下 */
+					1px 1px 0 #000;   /* 右下，形成黑色边框效果 */
+				
+			}
+			
+			.term-sentence-en {
+				font-size: 12px;
+				font-weight: normal;
+				color: #ffffff; /* 高亮灰色，适合例句 */
+				line-height: 1.6;
+				text-shadow: 
+					-1px -1px 0 #061624, /* 左上 */
+					1px -1px 0 #000,  /* 右上 */
+					-1px 1px 0 #000,  /* 左下 */
+					1px 1px 0 #000;   /* 右下，形成黑色边框效果 */
+			}
+			.term-sentence-cn {
+				font-size: 12px;
+				font-weight: 50; /* 超细字体 */
+				color: #868686; /* 高亮灰色，适合例句 */
+				line-height: 1.6;
+				font-family: 'Arial', 'PingFang SC', 'Microsoft YaHei', 'Hiragino Sans GB', sans-serif; /* 确保等衬字体 */
+				text-shadow: 
+					-1px -1px 0 #000, /* 左上 */
+					1px -1px 0 #000,  /* 右上 */
+					-1px 1px 0 #000,  /* 左下 */
+					1px 1px 0 #000;   /* 右下，形成黑色边框效果 */
+			}
+			
+			
+			footer {
+				margin-top: 30px;
+				font-size: 16px; /* 稍微调大字体，使其更加醒目 */
+				color: #fff; /* 白色字体更加突出 */
+				text-align: center;
+				background: linear-gradient(135deg, rgba(15, 15, 15, 0.8), rgba(0, 0, 0, 0.9)); /* 深色渐变背景 */
+				border-top: 3px solid #ff4081; /* 引人注目的粉色边框 */
+				padding: 20px 0; /* 增加上下内边距，增强底部区域感 */
+				font-style: italic; /* 添加意大利斜体风格 */
+				text-transform: uppercase; /* 强调大写字母，让文字更有力量 */
+				letter-spacing: 1px; /* 增加字母间距，提升整体美感 */
+				box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* 增加阴影，提升浮动效果 */
+				border-radius: 8px; /* 圆角边缘，柔和过渡 */
+			}
+			
+			footer a {
+				color: #ff4081; /* 链接颜色与边框一致，形成视觉一致性 */
+				text-decoration: none; /* 去除默认下划线 */
+				font-weight: bold;
+			}
+			
+			footer a:hover {
+				color: #fff; /* 鼠标悬停时链接变成白色 */
+				text-decoration: underline; /* 鼠标悬停时下划线效果 */
+			}
+			
