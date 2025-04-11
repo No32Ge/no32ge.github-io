@@ -1,10 +1,7 @@
 
-
 var errMassage = '';
 
 var number = 1 //单词编号
-
-const output = document.getElementById("output");
 
 
 // 替换加粗的单词样式
@@ -41,11 +38,15 @@ function convertParagraphs(paragraphs){
 
 // 解析排版
 function convertJson() {
-    const jsonInput = document.getElementById("jsonInput").value; // 获取输入的JSON文本
+    // 获取输入的JSON文本
+    // const jsonInput = document.getElementById("jsonInput").value; 
+    const output = document.getElementById("output");
+    
+    const jsonInput = editor.getValue();
     output.innerHTML = "";
     try {
         const data = JSON.parse(jsonInput); // 解析JSON文本
-
+        console.log("数据"+data)
         let introduce = data.introduction //文章介绍
         let pageTop = top_log(introduce) //文章顶部的卡片
         console.log(pageTop) 
