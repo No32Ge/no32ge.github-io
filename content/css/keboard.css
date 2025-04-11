@@ -1,0 +1,79 @@
+.fake-input-area {
+    padding: 10px;
+    background: #fff;
+    border-top: 1px solid #ddd;
+}
+
+.fake-input {
+    height: 40px;
+    background: #f2f2f2;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    padding: 8px 12px;
+    font-size: 16px;
+    color: #333;
+    font-family: 'Courier New', monospace;
+    display: flex;
+    align-items: center;
+    min-height: 40px;
+    overflow-x: auto;
+}
+
+.keyboard {
+    z-index: 1;
+    position: fixed;
+    bottom: 1em;
+    background: #e3e3e3;
+    padding: 2px;
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    border-top: 1px solid #ccc;
+}
+
+.keyboard.show {
+    display: flex;
+    animation: slideUp 0.3s ease-out;
+}
+
+.key-row {
+    display: flex;
+    justify-content: center;
+    gap: 1px;
+    flex-wrap: wrap;
+}
+
+.key {
+    padding: 2px 2px;
+    background: #fff;
+    border: 1px solid #bbb;
+    border-radius: 6px;
+    font-size: 10px;
+    font-weight: bold;
+    transition: 0.15s;
+    cursor: pointer;
+    min-width: 36px;
+    text-align: center;
+    color: #333;
+}
+
+.key:hover {
+    background: #ddd;
+}
+
+.wide-key {
+    min-width: 60px;
+    color: #333;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
