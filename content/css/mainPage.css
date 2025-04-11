@@ -101,15 +101,108 @@ button::after {
     animation: scan 3s infinite linear;
 }
 
-/* 输出面板 */
-#output {
-    background: rgba(10, 10, 20, 0.95);
-    border: 1px solid var(--neon-purple);
-    border-radius: 10px;
-    padding: 2rem;
+/* 手机整体容器 */
+.phone-frame {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    aspect-ratio: 9 / 19.5;
     margin: 2rem auto;
-    width: 80%;
-    box-shadow: 0 0 30px rgba(188, 19, 254, 0.3);
+    border: 16px solid #222;
+    border-radius: 36px;
+    background: #111;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    font-family: "Helvetica Neue", sans-serif;
+}
+
+/* 状态栏 */
+.phone-statusbar {
+    height: 26px;
+    background: #1a1a1a;
+    color: #ccc;
+    font-size: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+.phone-statusbar .left {
+    font-weight: 500;
+}
+
+.phone-statusbar .right {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.battery {
+    width: 22px;
+    height: 10px;
+    border: 1.5px solid #ccc;
+    position: relative;
+    border-radius: 2px;
+}
+
+.battery::after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    right: -4px;
+    width: 3px;
+    height: 6px;
+    background: #ccc;
+    border-radius: 1px;
+}
+
+.battery-level {
+    height: 100%;
+    width: 70%;
+    background: #27c93f;
+}
+
+/* 内容区域 */
+#output {
+    background: rgba(252, 252, 252, 0.97);
+    flex: 1;
+    padding: 0px;
+    border-radius: 0;
+    box-sizing: border-box;
+    overflow-y: auto;
+    font-size: 14px;
+}
+
+/* Home 键 */
+.phone-home {
+    z-index: 0;
+    bottom: 5px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    border-top: 1px solid #333;
+    position: relative;
+}
+
+.home-button {
+    width: 48px;
+    height: 48px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 50%;
+    box-shadow: inset 0 0 6px rgba(255, 255, 255, 0.1);
+    border: 1px solid #444;
+    transition: all 0.2s ease;
+}
+
+.home-button:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: scale(1.05);
 }
 
 /* 动态扫描线动画 */
@@ -124,10 +217,114 @@ button::after {
 }
 
 /* 数据流效果 */
-.data-stream {
+#particles-js {
     position: fixed;
     top: 0;
     left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    /* 如果你想让它在背景 */
     pointer-events: none;
-    z-index: 8;
+    /* 避免影响点击 */
+}
+
+
+.code-wrapper {
+    border-radius: 16px;
+    overflow: hidden;
+    background: #1a1c1e;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    font-family: 'Fira Code', monospace;
+    margin: 40px auto;
+    max-width: 900px;
+    backdrop-filter: blur(10px);
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.code-wrapper:hover {
+    transform: translateY(-4px);
+}
+
+.code-header {
+    height: 42px;
+    background: linear-gradient(120deg, #2b2d31 0%, #1f2023 100%);
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    position: relative;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+    box-shadow:
+        inset -1px -1px 2px rgba(0, 0, 0, 0.5),
+        inset 1px 1px 2px rgba(255, 255, 255, 0.15),
+        0 1px 3px rgba(0, 0, 0, 0.4);
+    transition: transform 0.25s ease, box-shadow 0.3s ease;
+    background-image: linear-gradient(to bottom right, rgba(255, 255, 255, 0.15), rgba(0, 0, 0, 0.1));
+}
+
+.dot:hover {
+    transform: scale(1.3);
+    box-shadow: 0 0 6px rgba(255, 255, 255, 0.3);
+}
+
+.red {
+    background-color: #ff5f56;
+    background-image: radial-gradient(circle at 30% 30%, #ff8b84, #ff5f56);
+}
+
+.yellow {
+    background-color: #ffbd2e;
+    background-image: radial-gradient(circle at 30% 30%, #ffe08c, #ffbd2e);
+}
+
+.green {
+    background-color: #27c93f;
+    background-image: radial-gradient(circle at 30% 30%, #6ff994, #27c93f);
+}
+
+.green.use {
+    background-color: #27c93f;
+    background-image: radial-gradient(circle at 30% 30%, #6ff994, #27c93f);
+    animation: greenPulse 1s infinite;
+}
+
+@keyframes greenPulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(39, 201, 63, 0.6);
+    }
+
+    50% {
+        box-shadow: 0 0 8px 4px rgba(39, 201, 63, 0.4);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(39, 201, 63, 0.6);
+    }
+}
+
+/* 显示文件名更高级 */
+.code-header::after {
+    content: "精读文章1.0.json";
+    color: #ddd;
+    font-size: 14px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Fira Code', monospace;
+    opacity: 0.85;
+    letter-spacing: 0.5px;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 4px 10px;
+    border-radius: 6px;
+    box-shadow: inset 0 0 2px rgba(255, 255, 255, 0.05);
 }
