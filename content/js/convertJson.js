@@ -4,6 +4,11 @@ var errMassage = '';
 var number = 1 //单词编号
 
 
+
+
+
+
+
 // 替换加粗的单词样式
 function replace_bold_from_paragraph_en(content_en) {
     const temp = (content_en || "【无数据】").replace(
